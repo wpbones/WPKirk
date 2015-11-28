@@ -36,9 +36,6 @@ class Plugin extends Container implements PluginContract{
   {
     $this->basePath = rtrim( $basePath, '\/' );
 
-    // Fires after the opening tag for the admin footer.
-    add_action( "in_admin_footer", array( $this, "in_admin_footer" ) );
-
     // Fires before the administration menu loads in the admin.
     add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 
@@ -127,23 +124,6 @@ class Plugin extends Container implements PluginContract{
 
     return $view;
 
-
-//    $filename  = str_replace( '.', '/', $key ) . '.php';
-//    $variables = [ ];
-//
-//    if ( ! is_null( $data ) && is_array( $data ) ) {
-//      foreach ( $data as $k => $v ) {
-//        $variables[] = sprintf( '$%s=unserialize( \'%s\' );', $k, serialize( $v ) );
-//      }
-//    }
-//
-//    $func = create_function( '$this',
-//                             sprintf( "%s include_once '%s';",
-//                                      implode( "", $variables ),
-//                                      $this->basePath . '/resources/views/' . $filename ) );
-//
-//    return $func( $this );
-
   }
 
   /**
@@ -184,18 +164,6 @@ class Plugin extends Container implements PluginContract{
         }
       }
     }
-  }
-
-
-  /**
-   * Fires after the opening tag for the admin footer.
-   *
-   */
-  public function in_admin_footer()
-  {
-    ?>
-    <p>PHP Version <?php echo PHP_VERSION ?> - Bones Version <?php ?></p>
-    <?php
   }
 
 }
