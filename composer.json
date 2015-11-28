@@ -1,0 +1,32 @@
+{
+  "name": "WPKirk",
+  "description": "A WPBones WordPress plugin demo.",
+  "keywords": [ "wordpress" ],
+  "homepage": "https://wordpress.org/plugins/",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Giovambattista Fazioli",
+      "email": "giovambattista.fazioli@gmail.com",
+      "homepage": "http://undolog.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/.../issues",
+    "forum": "https://wordpress.org/support/...",
+    "source": "https://github.com/..."
+  },
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=5.5.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "WPKirk\\": "plugin/",
+      "WPKirk\\WPBones\\": "vendor/wpbones/src/"
+    },
+    "files": [
+      "vendor/wpbones/src/helpers.php"
+    ]
+  }
+}
