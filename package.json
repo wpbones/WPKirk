@@ -1,23 +1,8 @@
 {
-  "name": "WPKirk",
-  "version": "0.1.0",
-  "description": "WPKirk is a boilerplate plugin wiritten with [WPBones](https://github.com/gfazioli/WPBones). You can use this repo as a boilerplate to create a plugin.",
-  "main": "gulpfile.js",
+  "private": true,
   "devDependencies": {
     "gulp": "~3.9.0",
     "gulp-less": "~3.0.5",
     "gulp-minify-css": "~1.2.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gfazioli/WPKirk.git"
-  },
-  "author": "",
-  "license": "BSD-2-Clause",
-  "bugs": {
-    "url": "https://github.com/gfazioli/WPKirk/issues"
   }
 }
