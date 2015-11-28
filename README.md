@@ -19,7 +19,7 @@ As you know, WordPress doesn't support composer. So, I have used a little trick 
 
 ### Gulp
 
-    $ sudo npm install --global gulp
+    $ npm install 
 
 ## I love Laravel
 
