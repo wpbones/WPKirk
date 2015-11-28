@@ -19,6 +19,8 @@ As you know, WordPress doesn't support composer. So, I have used a little trick 
 
 ### Gulp
 
+You will find a `package.json` with a few package such as `gulp`. Feel free to add your own.
+
     $ npm install 
 
 ## I love Laravel
