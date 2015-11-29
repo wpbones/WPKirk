@@ -15,7 +15,9 @@ class DashboardController extends Controller {
   //
   public function secondMenu()
   {
-    return WPKirk()->view( 'dashboard.second' );
+    return WPKirk()->view( 'dashboard.second' )
+                   ->styles( 'common' )
+                   ->footerScripts( 'main' );
   }
 
 }
