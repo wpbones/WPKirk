@@ -37,7 +37,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
  */
 class BonesCommandLine {
 
-  const VERSION = '0.1.6';
+  const VERSION = '0.1.7';
 
   //
   public function __construct()
@@ -239,8 +239,11 @@ class BonesCommandLine {
 
     $res = `git clone -b develop https://github.com/gfazioli/WPBones.git vendor/wpbones`;
 
-    if ( isset( $argv[ 2 ] ) || empty( $argv[ 2 ] ) ) {
+    if ( ! isset( $argv[ 2 ] ) || empty( $argv[ 2 ] ) ) {
       $namespace = $this->ask( 'Enter name of your plugin:' );
+    }
+    elseif ( isset( $argv[ 2 ] ) && "--help" === $argv[ 2 ] ) {
+      $this->line( "php bones install <plugin name>" );
     }
     else {
       $namespace = $argv[ 2 ];
