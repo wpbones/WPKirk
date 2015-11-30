@@ -37,7 +37,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
  */
 class BonesCommandLine {
 
-  const VERSION = '0.1.9';
+  const VERSION = '0.1.12';
 
   //
   public function __construct()
@@ -237,11 +237,14 @@ class BonesCommandLine {
   {
     // TODO check if the first time or if is time to install
 
-    if ( ! isset( $argv[ 0 ] ) || empty( $argv[ 0 ] ) ) {
+    if ( ! isset( $argv[ 1 ] ) || empty( $argv[ 1 ] ) ) {
       $namespace = $this->ask( 'Enter name of your plugin:' );
     }
-    elseif ( isset( $argv[ 0 ] ) && "--help" === $argv[ 0 ] ) {
-      $this->line( "php bones install <plugin name>" );
+    elseif ( isset( $argv[ 1 ] ) && "--help" === $argv[ 1 ] ) {
+      $this->line( "\nUsage:" );
+      $this->info( "  install <plugin name>\n" );
+      $this->line( "Arguments:" );
+      $this->info( "  plugin name\tThe name of plugin" );
       exit(0);
     }
     else {
