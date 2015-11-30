@@ -11,9 +11,9 @@
 */
 
 return [
-  'wpkirk_slug_menu' => [
-    "page_title" => "WPKirk Page title",
-    "menu_title" => "WPKirk Menu title",
+  'wp_kirk_slug_menu' => [
+    "page_title" => "WP Kirk Page title",
+    "menu_title" => "WP Kirk Menu title",
     'capability' => 'read',
     'icon'       => '',
     'items'      => [

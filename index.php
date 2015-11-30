@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Plugin Name: WPKirk
+ * Plugin Name: WP Kirk
  * Plugin URI: http://undolog.com
  * Description: Testing namespace
  * Version: 1.0.0
  * Author: wpXtreme, Inc.
  * Author URI: http://undolog.com
- * Text Domain: wpkirk_slug
+ * Text Domain: wp_kirk_slug
  * Domain Path: localization
  *
  */

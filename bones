@@ -37,7 +37,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
  */
 class BonesCommandLine {
 
-  const VERSION = '0.1.5';
+  const VERSION = '0.1.6';
 
   //
   public function __construct()
@@ -182,7 +182,7 @@ class BonesCommandLine {
     $namespace = str_replace( " ", "", $namespace );
 
     // previous namespace
-    $previousNamespace = file_get_contents( 'namespace' );
+    list( $previousPluginName, $previousNamespace ) = explode( ",", file_get_contents( 'namespace' ) );
 
     // check the same?
     if ( $previousNamespace == $namespace ) {
@@ -191,10 +191,10 @@ class BonesCommandLine {
     }
 
     // previous slug
-    $previousSlug = strtolower( str_replace( [ " ", "-" ], "_", $previousNamespace ) ) . "_slug";
+    $previousSlug = strtolower( str_replace( [ " ", "-" ], "_", $previousPluginName ) ) . "_slug";
 
     // slug
-    $slug = strtolower( str_replace( [ " ", "-" ], "_", $namespace ) ) . "_slug";
+    $slug = strtolower( str_replace( [ " ", "-" ], "_", $pluginName ) ) . "_slug";
 
     // remove all composer
     $files = array_filter( array_map( function ( $e ) {
@@ -219,19 +219,14 @@ class BonesCommandLine {
 
       //
       $content = file_get_contents( $file );
-      $replace = str_replace( $previousNamespace, $namespace, $content );
-      $replace = str_replace( $previousSlug, $slug, $replace );
-      file_put_contents( $file, $replace );
+      $content = str_replace( $previousNamespace, $namespace, $content );
+      $content = str_replace( $previousSlug, $slug, $content );
+      $content = str_replace( $previousPluginName, $pluginName, $content );
+      file_put_contents( $file, $content );
     }
 
     // save new namespace
     file_put_contents( 'namespace', $namespace );
-
-    // Change plugin name
-    $content = file_get_contents( "index.php" );
-    $replace = str_replace( "Plugin Name: $namespace", "Plugin Name: $pluginName", $content );
-    file_put_contents( 'index.php', $replace );
-
 
     // run composer
     `composer dump-autoload --optimize`;
