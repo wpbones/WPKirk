@@ -233,13 +233,18 @@ class BonesCommandLine {
   }
 
   //
-  protected function install()
+  protected function install( $argv )
   {
     // TODO check if the first time or if is time to install
 
     $res = `git clone -b develop https://github.com/gfazioli/WPBones.git vendor/wpbones`;
 
-    $namespace = $this->ask( 'Enter name of your plugin (namespace):' );
+    if ( isset( $argv[ 2 ] ) || empty( $argv[ 2 ] ) ) {
+      $namespace = $this->ask( 'Enter name of your plugin:' );
+    }
+    else {
+      $namespace = $argv[ 2 ];
+    }
 
     $this->setNamespace( $namespace );
 
@@ -262,7 +267,7 @@ class BonesCommandLine {
       }
     }
     elseif ( $this->option( 'install' ) ) {
-      $this->install();
+      $this->install( $argv );
     }
   }
 }
