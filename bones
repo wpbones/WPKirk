@@ -37,7 +37,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
  */
 class BonesCommandLine {
 
-  const VERSION = '0.1.1';
+  const VERSION = '0.1.2';
 
   //
   public function __construct()
@@ -56,7 +56,7 @@ class BonesCommandLine {
   //
   protected function help()
   {
-    $this->info( "\nBones Version" . self::VERSION . "\n" );
+    $this->info( "\nBones Version " . self::VERSION . "\n" );
     $this->info( "Usage:\n" );
     $this->line( "\tcommand [options] [arguments]" );
 
@@ -87,7 +87,7 @@ class BonesCommandLine {
 
     fclose( $handle );
 
-    return $line;
+    return trim( $line, " \n\r" );
   }
 
   //
@@ -192,7 +192,7 @@ class BonesCommandLine {
       }
 
       return false;
-    }, recursiveScan( "*" ) ) );
+    }, $this->recursiveScan( "*" ) ) );
 
     // merge
     $files = array_merge( $files, [
