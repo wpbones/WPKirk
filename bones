@@ -37,7 +37,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
  */
 class BonesCommandLine {
 
-  const VERSION = '0.1.4';
+  const VERSION = '0.1.5';
 
   //
   public function __construct()
@@ -175,6 +175,11 @@ class BonesCommandLine {
   //
   protected function setNamespace( $namespace )
   {
+    // plugin name
+    $pluginName = $namespace;
+
+    // sanitize namespace
+    $namespace = str_replace( " ", "", $namespace );
 
     // previous namespace
     $previousNamespace = file_get_contents( 'namespace' );
@@ -214,19 +219,19 @@ class BonesCommandLine {
 
       //
       $content = file_get_contents( $file );
-
-      //
       $replace = str_replace( $previousNamespace, $namespace, $content );
-
-      //
       $replace = str_replace( $previousSlug, $slug, $replace );
-
-      // save new namespace
       file_put_contents( $file, $replace );
     }
 
     // save new namespace
     file_put_contents( 'namespace', $namespace );
+
+    // Change plugin name
+    $content = file_get_contents( "index.php" );
+    $replace = str_replace( "Plugin Name: $namespace", "Plugin Name: $pluginName", $content );
+    file_put_contents( 'index.php', $replace );
+
 
     // run composer
     `composer dump-autoload --optimize`;
