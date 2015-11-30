@@ -11,7 +11,7 @@
 */
 
 return [
-  'my_kirk_menu_slug' => [
+  'wpkirk_slug_menu' => [
     "page_title" => "WPKirk Page title",
     "menu_title" => "WPKirk Menu title",
     'capability' => 'read',

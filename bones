@@ -37,7 +37,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
  */
 class BonesCommandLine {
 
-  const VERSION = '0.1.3';
+  const VERSION = '0.1.4';
 
   //
   public function __construct()
@@ -185,6 +185,12 @@ class BonesCommandLine {
       exit( 0 );
     }
 
+    // previous slug
+    $previousSlug = strtolower( str_replace( [ " ", "-" ], "_", $previousNamespace ) ) . "_slug";
+
+    // slug
+    $slug = strtolower( str_replace( [ " ", "-" ], "_", $namespace ) ) . "_slug";
+
     // remove all composer
     $files = array_filter( array_map( function ( $e ) {
       if ( false === strpos( $e, "vendor/composer/" ) ) {
@@ -211,6 +217,9 @@ class BonesCommandLine {
 
       //
       $replace = str_replace( $previousNamespace, $namespace, $content );
+
+      //
+      $replace = str_replace( $previousSlug, $slug, $replace );
 
       // save new namespace
       file_put_contents( $file, $replace );

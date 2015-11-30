@@ -7,7 +7,7 @@
  * Version: 1.0.0
  * Author: wpXtreme, Inc.
  * Author URI: http://undolog.com
- * Text Domain: kirk
+ * Text Domain: wpkirk_slug
  * Domain Path: localization
  *
  */
