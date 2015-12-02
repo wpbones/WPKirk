@@ -1,18 +1,20 @@
 /**
- * Javascript sample
+ * Javascript sample.
+ *
+ * You can use this Javascript as start for your project.
  *
  */
 
-(function()
+(function($)
 {
 
   "use strict";
 
-  function openAletrt()
+  function openAlert()
   {
-    alert( "Hi there" );
+    alert( "Hi there, the jQuery version is " + $().jquery );
   }
 
-  openAletrt();
+  openAlert();
 
-})();
+})(jQuery);
