@@ -196,6 +196,12 @@ class BonesCommandLine {
     // slug
     $slug = strtolower( str_replace( [ " ", "-" ], "_", $pluginName ) ) . "_slug";
 
+    // previous css id
+    $previousCssId = strtolower( str_replace( [ " ", "-" ], "-", $previousPluginName ) );
+
+    // current css id
+    $currentCssId = strtolower( str_replace( [ " ", "-" ], "-", $pluginName ) );
+
     // remove all composer
     $files = array_filter( array_map( function ( $e ) {
       if ( false === strpos( $e, "vendor/composer/" ) ) {
@@ -222,6 +228,7 @@ class BonesCommandLine {
       $content = str_replace( $previousNamespace, $namespace, $content );
       $content = str_replace( $previousSlug, $slug, $content );
       $content = str_replace( $previousPluginName, $pluginName, $content );
+      $content = str_replace( $previousCssId, $currentCssId, $content );
       file_put_contents( $file, $content );
     }
 

@@ -9,4 +9,5 @@
 
 <div class="pippo">
   <h1>Hello, I'm a second view</h1>
+  <h2><?php _e( 'You can localize me', 'wp-kirk' ) ?></h2>
 </div>

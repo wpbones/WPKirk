@@ -3,11 +3,11 @@
 /**
  * Plugin Name: WP Kirk
  * Plugin URI: http://undolog.com
- * Description: Testing namespace
+ * Description: WP Kirk, a WP Bones boilperate plugin
  * Version: 1.0.0
- * Author: wpXtreme, Inc.
+ * Author: Giovambattista Fazioli
  * Author URI: http://undolog.com
- * Text Domain: wp_kirk_slug
+ * Text Domain: wp-kirk
  * Domain Path: localization
  *
  */
