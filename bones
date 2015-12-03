@@ -56,6 +56,16 @@ class BonesCommandLine {
   //
   protected function help()
   {
+
+    echo '
+  o       o o--o      o--o
+  |       | |   |     |   |
+  o   o   o O--o      O--o  o-o o-o  o-o o-o
+   \ / \ /  |         |   | | | |  | |-\'  \
+    o   o   o         o--o  o-o o  o o-o o-o
+
+    ';
+
     $this->info( "\nBones Version " . self::VERSION . "\n" );
     $this->info( "Usage:\n" );
     $this->line( "\tcommand [options] [arguments]" );
