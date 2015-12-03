@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP Kirk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-03 12:33+0100\n"
-"PO-Revision-Date: 2015-12-03 12:34+0100\n"
+"PO-Revision-Date: 2015-12-03 13:01+0100\n"
 "Last-Translator: wpXtreme, Inc. <info@wpxtre.me>\n"
 "Language-Team: Giovambattista Fazioli <giovambattista.fazioli@gmail.com>\n"
 "Language: en_US\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: resources/views/dashboard/second.php:12
 msgid "You can localize me"
-msgstr "Localized string"
+msgstr ""
 
 #~ msgid "Description"
 #~ msgstr "Descrizione"
