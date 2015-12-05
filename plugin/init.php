@@ -48,6 +48,6 @@ return [
   |
   */
 
-  'shortcodes' => []
+  'shortcodes' => [ \WPKirk\plugin\Shortcodes\MyShortcodes::class ]
 
 ];

@@ -10,10 +10,13 @@ class MyCustomPostType extends WordPressCustomPostType {
   protected $name   = 'Captain';
   protected $plural = 'Captains';
 
-  //
+  /**
+   * You may override this method in order to register your own actions and filters.
+   *
+   */
   public function boot()
   {
-
+    // You may override this method
   }
 
   /**
