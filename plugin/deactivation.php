@@ -9,3 +9,5 @@
 | Usually here you may enter a flush_rewrite_rules();
 |
 */
+
+flush_rewrite_rules();

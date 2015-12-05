@@ -33,4 +33,10 @@ $plugin = new \WPKirk\WPBones\Foundation\Plugin( realpath( __DIR__ . '/../' ) );
 | from the actual running of the application and sending responses.
 |
 */
+
+/**
+ * Fire when the plugin is loaded
+ */
+do_action( 'wp-kirk_loaded' );
+
 return $plugin;
