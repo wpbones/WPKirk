@@ -48,6 +48,19 @@ return [
   |
   */
 
-  'shortcodes' => [ \WPKirk\plugin\Shortcodes\MyShortcodes::class ]
+  'shortcodes' => [ \WPKirk\plugin\Shortcodes\MyShortcodes::class ],
+
+
+
+  /*
+  |--------------------------------------------------------------------------
+  | Ajax
+  |--------------------------------------------------------------------------
+  |
+  | Here is where you can register your own Ajax actions.
+  |
+  */
+
+  'ajax' => [ \WPKirk\plugin\Ajax\MyAjax::class ],
 
 ];

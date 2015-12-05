@@ -10,4 +10,7 @@
 <div class="pippo">
   <h1>Hello, I'm a second view</h1>
   <h2><?php _e( 'You can localize me', 'wp-kirk' ) ?></h2>
+
+  <button class="button-primary" id="ajax-trusted">Click me for Ajax trusted</button>
+  <button class="button-secondary" id="ajax-logged">Click me for Ajax logged</button>
 </div>
