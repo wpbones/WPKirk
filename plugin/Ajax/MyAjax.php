@@ -6,30 +6,58 @@ use WPKirk\WPBones\Foundation\WordPressAjax;
 
 class MyAjax extends WordPressAjax {
 
+  /**
+   * List of the ajax actions executed by both logged and not logged users.
+   * Here you will used a methods list.
+   *
+   * @var array
+   */
   protected $trusted = [
-    'loggedIn'
+    'trusted'
   ];
 
+  /**
+   * List of the ajax actions executed only by logged in users.
+   * Here you will used a methods list.
+   *
+   * @var array
+   */
   protected $logged = [
-    'notLoggedIn'
+    'logged'
+  ];
+
+  /**
+   * List of the ajax actions executed only by not logged in user, usually from frontend.
+   * Here you will used a methods list.
+   *
+   * @var array
+   */
+  protected $notLogged = [
+    'notLogged'
   ];
 
   //
-  public function loggedIn()
+  public function trusted()
   {
+    $response = "trusted";
 
-    $resposne = "loggedIn";
-
-    wp_send_json( $reponse );
+    wp_send_json( $response );
   }
 
   //
-  public function notLoggedIn()
+  public function logged()
   {
-    $resposne = "notLoggedIn";
+    $response = "logged";
 
+    wp_send_json( $response );
+  }
 
-    wp_send_json( $reponse );
+  //
+  public function notLogged()
+  {
+    $response = "notLogged";
+
+    wp_send_json( $response );
   }
 
 }

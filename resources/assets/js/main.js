@@ -21,7 +21,7 @@
       // notLoggedIn
       $.post(
         ajaxurl,
-        { action : 'notLoggedIn' },
+        { action : 'trusted' },
         function( data )
         {
           alert( data );
@@ -35,7 +35,22 @@
       // loggedin
       $.post(
         ajaxurl,
-        { action : 'loggedIn' },
+        { action : 'logged' },
+        function( data )
+        {
+          alert( data );
+        } );
+
+    } );
+
+    // Ajax
+    $( '#ajax-notLogged' ).on( 'click', function()
+    {
+
+      // loggedin
+      $.post(
+        ajaxurl,
+        { action : 'notLogged' },
         function( data )
         {
           alert( data );
