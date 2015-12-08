@@ -25,7 +25,7 @@ return [
   |
   */
 
-  'custom_post_types' => [ \WPKirk\plugin\CusomPostTypes\MyCustomPostType::class ],
+  'custom_post_types' => [ \WPKirk\plugin\CustomPostTypes\MyCustomPostType::class ],
 
   /*
   |--------------------------------------------------------------------------
@@ -36,7 +36,7 @@ return [
   |
   */
 
-  'custom_taxonomies' => [],
+  'custom_taxonomies' => [ \WPKirk\plugin\CustomTaxonomies\MyCustomTaxonomy::class ],
 
 
   /*

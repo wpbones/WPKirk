@@ -1,12 +1,12 @@
 <?php
 
-namespace WPKirk\plugin\CusomPostTypes;
+namespace WPKirk\plugin\CustomPostTypes;
 
 use WPKirk\WPBones\Foundation\WordPressCustomPostType;
 
 class MyCustomPostType extends WordPressCustomPostType {
 
-  protected $id     = 'wp-kirk';
+  protected $id     = 'wp_kirk_cpt';
   protected $name   = 'Captain';
   protected $plural = 'Captains';
 
