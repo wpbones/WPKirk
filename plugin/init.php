@@ -51,7 +51,6 @@ return [
   'shortcodes' => [ \WPKirk\plugin\Shortcodes\MyShortcodes::class ],
 
 
-
   /*
   |--------------------------------------------------------------------------
   | Ajax
