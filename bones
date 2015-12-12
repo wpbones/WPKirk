@@ -39,13 +39,11 @@ class BonesCommandLine {
 
   const VERSION = '0.1.12';
 
-  //
   public function __construct()
   {
     $this->handle();
   }
 
-  //
   public static function run()
   {
     $instance = new self;
@@ -53,7 +51,16 @@ class BonesCommandLine {
     return $instance;
   }
 
-  //
+
+  /*
+  |--------------------------------------------------------------------------
+  | Internal useful function
+  |--------------------------------------------------------------------------
+  |
+  | Here you will find all internal methods
+  |
+  */
+
   protected function help()
   {
 
@@ -68,7 +75,10 @@ class BonesCommandLine {
 
     $this->info( "\nBones Version " . self::VERSION . "\n" );
     $this->info( "Usage:\n" );
-    $this->line( "\tcommand [options] [arguments]" );
+    $this->line( "  command [options] [arguments]" );
+    $this->info( "\nAvailable commands:" );
+    $this->line( "  install\t\tInstall a new WP Bones plugin" );
+    $this->line( "  migrate:create\tCreate a new Migration" );
 
     echo "\n\n";
   }
@@ -182,6 +192,17 @@ class BonesCommandLine {
     return _rglob( $path, $match, $result );
   }
 
+
+  /*
+  |--------------------------------------------------------------------------
+  | Public task
+  |--------------------------------------------------------------------------
+  |
+  | Here you will find all tasks that a user can run from console.
+  |
+  */
+
+
   //
   protected function setNamespace( $namespace )
   {
@@ -275,6 +296,28 @@ class BonesCommandLine {
   }
 
   //
+  protected function migrateCreate( $tablename )
+  {
+    $filename = sprintf( '%s_create_%s_table.php',
+                         date( 'Y_m_d_His' ),
+                         strtolower( $tablename ) );
+
+    // previous namespace
+    list( $pluginName, $namespace ) = explode( ",", file_get_contents( 'namespace' ) );
+
+    // get the stub
+    $content = file_get_contents( "vendor/wpbones/src/Console/stubs/migrate.stub" );
+    $content = str_replace( '{Namespace}', $namespace, $content );
+    $content = str_replace( '{Tablename}', $tablename, $content );
+
+    file_put_contents( "database/migrations/{$filename}", $content );
+  }
+
+  /**
+   * Run subtask.
+   * Check argv from console and execute a task.
+   *
+   */
   protected function handle()
   {
     $argv = $_SERVER[ 'argv' ];
@@ -285,13 +328,19 @@ class BonesCommandLine {
     if ( empty( $argv ) || ( isset( $argv[ 0 ] ) && "--help" === $argv[ 0 ] ) ) {
       $this->help();
     }
+    // namespace
     elseif ( $this->option( 'namespace' ) ) {
       if ( ! empty( $argv[ 1 ] ) ) {
         $this->setNamespace( $argv[ 1 ] );
       }
     }
+    // installe
     elseif ( $this->option( 'install' ) ) {
       $this->install( $argv );
+    }
+    // migrate:create {table_name}
+    elseif( $this->option( 'migrate:create' ) ) {
+      $this->migrateCreate( $argv[1] );
     }
   }
 }
