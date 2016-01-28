@@ -10,7 +10,9 @@
 |
 */
 
-$plugin = new \WPKirk\WPBones\Foundation\Plugin( realpath( __DIR__ . '/../' ) );
+$plugin = new \WPKirk\WPBones\Foundation\Plugin(
+  realpath( __DIR__ . '/../' )
+);
 
 /*
 |--------------------------------------------------------------------------
