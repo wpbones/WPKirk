@@ -34,7 +34,6 @@ gulp.task( 'scripts', function()
     .pipe( gulp.dest( './public/js' ) );
 } );
 
-
 // Default task
 gulp.task( 'default', function()
 {
