@@ -13,6 +13,6 @@ return [
   |
   */
 
-  'debug' => wpbones_env( "PRIMO_DEBUG", false ),
+  'debug' => wpbones_env( "WPKIRK_DEBUG", false ),
 
 ];
