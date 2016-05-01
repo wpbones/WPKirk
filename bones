@@ -37,7 +37,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
  */
 class BonesCommandLine {
 
-  const VERSION = '0.1.12';
+  const VERSION = '0.1.13';
 
   public function __construct()
   {
@@ -79,6 +79,7 @@ class BonesCommandLine {
     $this->info( "\nAvailable commands:" );
     $this->line( "  install\t\tInstall a new WP Bones plugin" );
     $this->line( "  migrate:create\tCreate a new Migration" );
+    $this->line( "  namespace\t\tSet or change the plugin namespace" );
 
     echo "\n\n";
   }
@@ -202,8 +203,6 @@ class BonesCommandLine {
   |
   */
 
-
-  //
   protected function setNamespace( $namespace )
   {
     // plugin name
@@ -270,7 +269,6 @@ class BonesCommandLine {
     `composer dump-autoload --optimize`;
   }
 
-  //
   protected function install( $argv )
   {
     // TODO check if the first time or if is time to install
@@ -295,7 +293,6 @@ class BonesCommandLine {
 
   }
 
-  //
   protected function migrateCreate( $tablename )
   {
     $filename = sprintf( '%s_create_%s_table.php',
