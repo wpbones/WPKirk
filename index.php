@@ -27,7 +27,6 @@ use WPKirk\WPBones\Foundation\Plugin;
 
 require_once __DIR__ . '/bootstrap/autoload.php';
 
-
 /*
 |--------------------------------------------------------------------------
 | Bootstrap the plugin

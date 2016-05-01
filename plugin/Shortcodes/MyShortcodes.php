@@ -12,7 +12,7 @@ class MyShortcodes extends WordPressShortcodes {
    * @var array
    */
   protected $shortcodes = [
-    'myShortocde'
+    'myShortocode'
   ];
 
 
@@ -24,11 +24,11 @@ class MyShortcodes extends WordPressShortcodes {
    *
    * @return string
    */
-  public function myShortocde( $atts = [ ], $content = null )
+  public function myShortocode( $atts = [ ], $content = null )
   {
     // Default values for shortcode
     $defaults = array(
-      'compuer' => false,
+      'computer' => false,
     );
 
     $atts = shortcode_atts( $defaults, $atts, 'wp_kirk' );

@@ -36,7 +36,6 @@ class MyAjax extends WordPressAjax {
     'notLogged'
   ];
 
-  //
   public function trusted()
   {
     $response = "trusted";
@@ -44,7 +43,6 @@ class MyAjax extends WordPressAjax {
     wp_send_json( $response );
   }
 
-  //
   public function logged()
   {
     $response = "logged";
@@ -52,7 +50,6 @@ class MyAjax extends WordPressAjax {
     wp_send_json( $response );
   }
 
-  //
   public function notLogged()
   {
     $response = "notLogged";

@@ -9,7 +9,7 @@ class DashboardController extends Controller {
   //
   public function firstMenu()
   {
-    return WPKirk()->view( 'dashboard.index' )->with( [ 'kirk' => 'Captain' ] );
+    return WPKirk()->view( 'dashboard.index' )->with( 'kirk', 'Captain' );
   }
 
   //
