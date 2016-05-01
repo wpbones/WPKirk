@@ -25,6 +25,12 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 | We have to load the WordPress environment.
 |
 */
+if ( ! file_exists( __DIR__ . '/../../../wp-load.php' ) ) {
+  echo "\033[38;5;82m" . 'You must be inside "wp-content/plugins/" folders';
+  echo "\033[0m\n";
+  exit;
+}
+
 require __DIR__ . '/../../../wp-load.php';
 
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
