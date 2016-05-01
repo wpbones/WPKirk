@@ -1,6 +1,16 @@
 #!/usr/bin/env php
 <?php
 
+define( 'WPBONES_MINIMAL_PHP_VERSION', "5.5.9" );
+
+if( version_compare( PHP_VERSION, WPBONES_MINIMAL_PHP_VERSION ) < 0 ) {
+  echo "\n\033[33;5;82mWarning!!\n";
+  echo "\n\033[38;5;82m\t" . 'You must run with PHP version ' . WPBONES_MINIMAL_PHP_VERSION . ' or greather';
+  echo "\033[0m\n\n";
+  exit;
+
+}
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -26,8 +36,9 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 |
 */
 if ( ! file_exists( __DIR__ . '/../../../wp-load.php' ) ) {
-  echo "\033[38;5;82m" . 'You must be inside "wp-content/plugins/" folders';
-  echo "\033[0m\n";
+  echo "\n\033[33;5;82mWarning!!\n";
+  echo "\n\033[38;5;82m\t" . 'You must be inside "wp-content/plugins/" folders';
+  echo "\033[0m\n\n";
   exit;
 }
 
