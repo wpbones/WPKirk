@@ -31,7 +31,7 @@ return [
   | Custom Taxonomies
   |--------------------------------------------------------------------------
   |
-  | Here is where you can register the Custom Post Types.
+  | Here is where you can register the Custom Taxonomy Types.
   |
   */
 
