@@ -1,18 +1,64 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Plugin init configuration
+|--------------------------------------------------------------------------
+|
+| Here is where you can register all actions or filters for your plugin.
+| This file is included on `init` action of WordPress.
+| You can use this file to add shortcode, for example.
+|
+*/
+
+// add_action( 'init' , [] );
+
 return [
 
   /*
   |--------------------------------------------------------------------------
-  | Application Debug Mode
+  | Custom Post Types
   |--------------------------------------------------------------------------
   |
-  | When your application is in debug mode, detailed error messages with
-  | stack traces will be shown on every error that occurs within your
-  | application. If disabled, a simple generic error page is shown.
+  | Here is where you can register the Custom Post Types.
   |
   */
 
-  'debug' => wpbones_env( "WPKIRK_DEBUG", false ),
+  'custom_post_types' => [ \WPKirk\plugin\CustomPostTypes\MyCustomPostType::class ],
+
+  /*
+  |--------------------------------------------------------------------------
+  | Custom Taxonomies
+  |--------------------------------------------------------------------------
+  |
+  | Here is where you can register the Custom Post Types.
+  |
+  */
+
+  'custom_taxonomies' => [ \WPKirk\plugin\CustomTaxonomies\MyCustomTaxonomy::class ],
+
+
+  /*
+  |--------------------------------------------------------------------------
+  | Shortcodes
+  |--------------------------------------------------------------------------
+  |
+  | Here is where you can register the Custom Post Types.
+  |
+  */
+
+  'shortcodes' => [ \WPKirk\plugin\Shortcodes\MyShortcodes::class ],
+
+
+  /*
+  |--------------------------------------------------------------------------
+  | Ajax
+  |--------------------------------------------------------------------------
+  |
+  | Here is where you can register your own Ajax actions.
+  |
+  */
+
+  'ajax' => [ \WPKirk\plugin\Ajax\MyAjax::class ],
 
 ];
