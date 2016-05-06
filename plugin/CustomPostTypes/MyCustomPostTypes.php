@@ -2,9 +2,9 @@
 
 namespace WPKirk\plugin\CustomPostTypes;
 
-use WPKirk\WPBones\Foundation\WordPressCustomPostType;
+use WPKirk\WPBones\Foundation\WordPressCustomPostTypeServiceProvider;
 
-class MyCustomPostType extends WordPressCustomPostType {
+class MyCustomPostType extends WordPressCustomPostTypeServiceProvider {
 
   protected $id     = 'wp_kirk_cpt';
   protected $name   = 'Captain';

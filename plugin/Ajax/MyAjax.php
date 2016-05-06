@@ -2,9 +2,9 @@
 
 namespace WPKirk\plugin\Ajax;
 
-use WPKirk\WPBones\Foundation\WordPressAjax;
+use WPKirk\WPBones\Foundation\WordPressAjaxServiceProvider;
 
-class MyAjax extends WordPressAjax {
+class MyAjax extends WordPressAjaxServiceProvider {
 
   /**
    * List of the ajax actions executed by both logged and not logged users.

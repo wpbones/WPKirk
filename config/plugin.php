@@ -35,7 +35,7 @@ return [
   |
   */
 
-  'custom_taxonomies' => [ \WPKirk\plugin\CustomTaxonomies\MyCustomTaxonomy::class ],
+  'custom_taxonomy_types' => [ \WPKirk\plugin\CustomTaxonomyTypes\MyCustomTaxonomy::class ],
 
 
   /*

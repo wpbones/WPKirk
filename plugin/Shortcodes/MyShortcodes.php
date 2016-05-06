@@ -2,9 +2,9 @@
 
 namespace WPKirk\plugin\Shortcodes;
 
-use WPKirk\WPBones\Foundation\WordPressShortcodes;
+use WPKirk\WPBones\Foundation\WordPressShortcodesServiceProvider;
 
-class MyShortcodes extends WordPressShortcodes {
+class MyShortcodes extends WordPressShortcodesServiceProvider {
 
   /**
    * List of registred shortcodes.
@@ -12,7 +12,7 @@ class MyShortcodes extends WordPressShortcodes {
    * @var array
    */
   protected $shortcodes = [
-    'myShortocode'
+    'my-shortcode' => 'myShortcodeMethod'
   ];
 
 
@@ -24,7 +24,7 @@ class MyShortcodes extends WordPressShortcodes {
    *
    * @return string
    */
-  public function myShortocode( $atts = [ ], $content = null )
+  public function myShortcodeMethod( $atts = [ ], $content = null )
   {
     // Default values for shortcode
     $defaults = array(
