@@ -43,7 +43,7 @@ return [
   | Shortcodes
   |--------------------------------------------------------------------------
   |
-  | Here is where you can register the Custom Post Types.
+  | Here is where you can register the Shortcodes.
   |
   */
 
