@@ -38,21 +38,21 @@ class MyAjax extends WordPressAjaxServiceProvider {
 
   public function trusted()
   {
-    $response = "trusted";
+    $response = "You have clicked Ajax Trusted";
 
     wp_send_json( $response );
   }
 
   public function logged()
   {
-    $response = "logged";
+    $response = "You have clicked Ajax Logged";
 
     wp_send_json( $response );
   }
 
   public function notLogged()
   {
-    $response = "notLogged";
+    $response = "You have clicked Ajax notLogged";
 
     wp_send_json( $response );
   }
