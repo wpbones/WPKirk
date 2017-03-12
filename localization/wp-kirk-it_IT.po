@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Kirk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-21 16:56+0100\n"
+"PO-Revision-Date: 2016-11-21 16:56+0100\n"
+"Last-Translator: \n"
+"Language-Team: Giovambattista Fazioli <giovambattista.fazioli@gmail.com>\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_nx:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.8.11\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#~ msgid "You can localize me"
+#~ msgstr "Mi puoi localizzare"
+
+#~ msgid "Description"
+#~ msgstr "Descrizione"
+
+#~ msgid "Placeholders"
+#~ msgstr "Segnaposti"
+
+#~ msgid "Environment"
+#~ msgstr "Ambienti"
+
+#~ msgid "Places"
+#~ msgstr "Posti"
+
+#~ msgid "Status"
+#~ msgstr "Stato"
+
+#~ msgid "Name"
+#~ msgstr "Nome"
+
+#~ msgid "Publish"
+#~ msgstr "Pubblica"
+
+#~ msgid "Trash"
+#~ msgstr "Cestino"
+
+#~ msgid "Edit"
+#~ msgstr "Modifica"
+
+#~ msgid "Restore"
+#~ msgstr "Repristina"
+
+#~ msgid "Delete"
+#~ msgstr "Elimina"
+
+#~ msgid "Icon"
+#~ msgstr "Icona"
+
+#~ msgid "Move to Trash"
+#~ msgstr "Sposta nel cestino"
+
+#~ msgid "Add"
+#~ msgstr "Aggiungi"
+
+#~ msgid "Update"
+#~ msgstr "Aggiorna"

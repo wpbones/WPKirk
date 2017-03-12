@@ -1,0 +1,70 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "2b53b20ea3483303fb7e5cb788dca032",
+    "content-hash": "13616c8a5a0b7166e27e9be78b176f5d",
+    "packages": [
+        {
+            "name": "wpbones/wpbones",
+            "version": "0.8.35",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wpbones/WPBones.git",
+                "reference": "104673c62e39f7f8b91c9dff714237999537d196"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/104673c62e39f7f8b91c9dff714237999537d196",
+                "reference": "104673c62e39f7f8b91c9dff714237999537d196",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WPKirk\\WPBones\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Giovambattista Fazioli",
+                    "email": "giovambattista.fazioli@gmail.com",
+                    "homepage": "http://undolog.com"
+                }
+            ],
+            "description": "WordPress framework for Laravel developers",
+            "homepage": "https://github.com/wpbones/wpbones",
+            "keywords": [
+                "framework",
+                "laravel",
+                "plugins",
+                "themes",
+                "wordpress",
+                "wpbones"
+            ],
+            "time": "2017-03-12 12:29:08"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.5.9"
+    },
+    "platform-dev": []
+}
