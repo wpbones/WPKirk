@@ -1,0 +1,189 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "293afc555e79584c7c20757f07b7d4cf",
+    "content-hash": "b97182a75cf2766b89893df13b9efeee",
+    "packages": [
+        {
+            "name": "wpbones/pure-css-switch",
+            "version": "1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wpbones/pure-css-switch.git",
+                "reference": "69ab35529e08979401f80450c9ca0d51f96ee9e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wpbones/pure-css-switch/zipball/69ab35529e08979401f80450c9ca0d51f96ee9e6",
+                "reference": "69ab35529e08979401f80450c9ca0d51f96ee9e6",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WPKirk\\PureCSSSwitch\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Giovambattista Fazioli",
+                    "email": "giovambattista.fazioli@gmail.com",
+                    "homepage": "http://undolog.com"
+                }
+            ],
+            "description": "Pure CSS Switch Button for WP Bones",
+            "homepage": "https://github.com/wpbones/pure-css-switch",
+            "keywords": [
+                "WP Bones",
+                "css",
+                "less"
+            ],
+            "time": "2017-02-11 11:50:52"
+        },
+        {
+            "name": "wpbones/pure-css-tabs",
+            "version": "1.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wpbones/pure-css-tabs.git",
+                "reference": "c6b6c45bfc77dd3a9481a781d94b71106facfa41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wpbones/pure-css-tabs/zipball/c6b6c45bfc77dd3a9481a781d94b71106facfa41",
+                "reference": "c6b6c45bfc77dd3a9481a781d94b71106facfa41",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WPKirk\\PureCSSTabs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Giovambattista Fazioli",
+                    "email": "giovambattista.fazioli@gmail.com",
+                    "homepage": "http://undolog.com"
+                }
+            ],
+            "description": "Pure CSS tabs for WP Bones",
+            "homepage": "https://github.com/wpbones/pure-css-tabs",
+            "keywords": [
+                "WP Bones",
+                "css",
+                "less"
+            ],
+            "time": "2017-03-11 12:59:59"
+        },
+        {
+            "name": "wpbones/wpbones",
+            "version": "0.8.35",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wpbones/WPBones.git",
+                "reference": "104673c62e39f7f8b91c9dff714237999537d196"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/104673c62e39f7f8b91c9dff714237999537d196",
+                "reference": "104673c62e39f7f8b91c9dff714237999537d196",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WPKirk\\WPBones\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Giovambattista Fazioli",
+                    "email": "giovambattista.fazioli@gmail.com",
+                    "homepage": "http://undolog.com"
+                }
+            ],
+            "description": "WordPress framework for Laravel developers",
+            "homepage": "https://github.com/wpbones/wpbones",
+            "keywords": [
+                "framework",
+                "laravel",
+                "plugins",
+                "themes",
+                "wordpress",
+                "wpbones"
+            ],
+            "time": "2017-03-12 12:29:08"
+        },
+        {
+            "name": "wpbones/wptables",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wpbones/wptables.git",
+                "reference": "a7b4044340f65e1e9ca5505124bf59d51b2d5069"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wpbones/wptables/zipball/a7b4044340f65e1e9ca5505124bf59d51b2d5069",
+                "reference": "a7b4044340f65e1e9ca5505124bf59d51b2d5069",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WPKirk\\WPTables\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Giovambattista Fazioli",
+                    "email": "giovambattista.fazioli@gmail.com",
+                    "homepage": "http://undolog.com"
+                }
+            ],
+            "description": "A fluent implementation of WordPress WP List Table for WP Bones",
+            "homepage": "https://github.com/wpbones/wptables",
+            "keywords": [
+                "WP Bones",
+                "WP Table"
+            ],
+            "time": "2017-01-07 12:12:44"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.5.9"
+    },
+    "platform-dev": []
+}
