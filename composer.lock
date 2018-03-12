@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2b53b20ea3483303fb7e5cb788dca032",
     "content-hash": "13616c8a5a0b7166e27e9be78b176f5d",
     "packages": [
         {
             "name": "wpbones/wpbones",
-            "version": "0.8.35",
+            "version": "0.8.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "104673c62e39f7f8b91c9dff714237999537d196"
+                "reference": "652564a4eed544d41ee5de41ab72c410d29bc06e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/104673c62e39f7f8b91c9dff714237999537d196",
-                "reference": "104673c62e39f7f8b91c9dff714237999537d196",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/652564a4eed544d41ee5de41ab72c410d29bc06e",
+                "reference": "652564a4eed544d41ee5de41ab72c410d29bc06e",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +53,7 @@
                 "wordpress",
                 "wpbones"
             ],
-            "time": "2017-03-12 12:29:08"
+            "time": "2018-03-12T12:28:46+00:00"
         }
     ],
     "packages-dev": [],
