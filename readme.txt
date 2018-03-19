@@ -4,7 +4,7 @@ Donate link: http://undolog.com
 Tags: wordpress
 Requires at least: 4.5.2
 Tested up to: 4.9.4
-Stable tag: 0.8.37
+Stable tag: 0.8.38
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
