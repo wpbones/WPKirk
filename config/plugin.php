@@ -1,17 +1,34 @@
 <?php
 
 return [
-  
-  /*
-  |--------------------------------------------------------------------------
-  | Use minified styles and scripts
-  |--------------------------------------------------------------------------
-  |
-  | If you like gulp to compile and compress your styles and scripts,
-  | the filenames in `public/css` will have `.min` as postfix. If this
-  | setting is TRUE then it will be used the minified version.
-  |
-  */
+
+    /*
+    |--------------------------------------------------------------------------
+    | Logging Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure the log settings for your plugin.
+    |
+    | Available Settings: "single", "daily", "errorlog".
+    |
+    | Set to false or 'none' to stop logging.
+    |
+    */
+
+    'log' => 'errorlog',
+
+    'log_level' => 'debug',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Use minified styles and scripts
+    |--------------------------------------------------------------------------
+    |
+    | If you like gulp to compile and compress your styles and scripts,
+    | the filenames in `public/css` will have `.min` as postfix. If this
+    | setting is TRUE then it will be used the minified version.
+    |
+    */
 
   'minified' => false,
 
