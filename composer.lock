@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "13616c8a5a0b7166e27e9be78b176f5d",
+    "content-hash": "37a5f1414ad84737be10b6cd6171c01a",
     "packages": [
         {
             "name": "wpbones/wpbones",
-            "version": "0.8.38",
+            "version": "0.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "cd86c8058eaab48a1436f975e6f2b9ff8b536f2e"
+                "reference": "81125ed57d3a7907a9606dde252d9f99a54850a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/cd86c8058eaab48a1436f975e6f2b9ff8b536f2e",
-                "reference": "cd86c8058eaab48a1436f975e6f2b9ff8b536f2e",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/81125ed57d3a7907a9606dde252d9f99a54850a3",
+                "reference": "81125ed57d3a7907a9606dde252d9f99a54850a3",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "wordpress",
                 "wpbones"
             ],
-            "time": "2018-03-18T18:43:13+00:00"
+            "time": "2018-05-03T11:13:28+00:00"
         }
     ],
     "packages-dev": [],

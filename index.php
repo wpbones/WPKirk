@@ -4,7 +4,7 @@
  * Plugin Name: WP Kirk
  * Plugin URI: http://undolog.com
  * Description: WP Kirk is a WP Bones boilperate plugin
- * Version: 0.9.0
+ * Version: 0.9.3
  * Author: Giovambattista Fazioli
  * Author URI: http://undolog.com
  * Text Domain: wp-kirk
