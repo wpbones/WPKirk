@@ -3,8 +3,8 @@ Contributors: gfazioli
 Donate link: http://undolog.com
 Tags: wordpress
 Requires at least: 4.5.2
-Tested up to: 4.9.5
-Stable tag: 0.9.6
+Tested up to: 4.9.6
+Stable tag: 0.9.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

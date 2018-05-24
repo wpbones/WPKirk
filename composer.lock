@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "wpbones/wpbones",
-            "version": "0.9.6",
+            "version": "0.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "a147024b695cf0d85cba2f2f48a71ca20866d4d0"
+                "reference": "d2a1389dea15ae3db90397dd52c6cc6ae7cd0f82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/a147024b695cf0d85cba2f2f48a71ca20866d4d0",
-                "reference": "a147024b695cf0d85cba2f2f48a71ca20866d4d0",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/d2a1389dea15ae3db90397dd52c6cc6ae7cd0f82",
+                "reference": "d2a1389dea15ae3db90397dd52c6cc6ae7cd0f82",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "wordpress",
                 "wpbones"
             ],
-            "time": "2018-05-09T15:22:05+00:00"
+            "time": "2018-05-24T15:12:27+00:00"
         }
     ],
     "packages-dev": [],
