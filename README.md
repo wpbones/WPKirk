@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/wpbones/wpbones/v/stable)](https://packagist.org/packages/wpbones/wpbones)
 
-WP Kirk is a boilerplate plugin wiritten by using [WP Bones](https://github.com/wpbones/WPBones) Framework Library.
+WP Kirk is a boilerplate plugin written by using [WP Bones](https://github.com/wpbones/WPBones) Framework Library.
 You may start from here to create a WP Bones WordPress plugin.
 
 As you know, WordPress doesn't support composer. So, I have used a little trick to fix this issue.
