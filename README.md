@@ -43,4 +43,4 @@ After changing of the namespace, you can start to develop you plugin. Your names
 
 ## Documentation
 
-You'll find the [complete docs here](http://wpbones.github.io/WPBones).
+You'll find the [complete docs here](https://github.com/wpbones/WPBones/wiki).
