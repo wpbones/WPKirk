@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37a5f1414ad84737be10b6cd6171c01a",
+    "content-hash": "d6fc053e054a4018e236b5a94bce8dff",
     "packages": [
         {
             "name": "wpbones/wpbones",
-            "version": "0.9.9",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "f2a13608e59c351def97967c0c12d0df53b9dd9e"
+                "reference": "d4f142042f13f95dbbfc99e71071cb3b54a05e9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/f2a13608e59c351def97967c0c12d0df53b9dd9e",
-                "reference": "f2a13608e59c351def97967c0c12d0df53b9dd9e",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/d4f142042f13f95dbbfc99e71071cb3b54a05e9b",
+                "reference": "d4f142042f13f95dbbfc99e71071cb3b54a05e9b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": ">=7.1"
             },
             "type": "library",
             "autoload": {
@@ -53,17 +53,19 @@
                 "wordpress",
                 "wpbones"
             ],
-            "time": "2019-01-04T11:44:22+00:00"
+            "time": "2019-01-08T11:09:54+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "wpbones/wpbones": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5.9"
+        "php": ">=7.1"
     },
     "platform-dev": []
 }

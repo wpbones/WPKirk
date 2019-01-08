@@ -1,7 +1,7 @@
 {
   "name": "WPKirk",
   "type": "wordpress-plugin",
-  "description": "A boilerplate WordPress plugin demo for WPBones library.",
+  "description": "A boilerplate WordPress plugin demo for WP Bones library.",
   "keywords": [ "wordpress" ],
   "homepage": "http://wpbones.wordpress.com",
   "license": "GPL-3.0",
@@ -17,8 +17,8 @@
     "source": "https://github.com/wpbones/WPKirk/"
   },
   "require": {
-    "php": ">=5.5.9",
-    "wpbones/wpbones": "^0.9"
+    "php": ">=7.1",
+    "wpbones/wpbones": "dev-master"
   },
   "autoload": {
     "psr-4": {
@@ -27,5 +27,11 @@
     "files": [
       "functions.php"
     ]
-  }
+  },
+  "scripts": {
+      "post-autoload-dump": [
+        "php -r \"copy('vendor/wpbones/wpbones/src/Console/bin/bones', 'bones');\"",
+        "php bones rename"
+      ]
+    }
 }
