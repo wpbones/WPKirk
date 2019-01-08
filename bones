@@ -244,19 +244,19 @@ class BonesCommandLine
             if (false !== $files) {
                 foreach ($files as $file) {
                     if (is_dir($file)) {
-                        $continue = true; //apply_filters( 'wpdk_rglob_find_dir', true, $file );
+                        $continue = true;
                         if ($continue) {
                             _rglob($file, $match, $result);
                         }
                     } elseif (!empty($match)) {
-                        $continue = true; //apply_filters( 'wpdk_rglob_find_file', true, $file );
+                        $continue = true;
                         if (false == $continue) {
                             break;
                         }
                         $regexp_result = [];
                         $error         = preg_match($match, $file, $regexp_result);
                         if (0 !== $error || false !== $error) {
-                            $regexp_result = true; //apply_filters( 'wpdk_rglob_matched', $regexp_result, $file, $match );
+                            $regexp_result = true;
                             if (!empty($regexp_result)) {
                                 $result[] = $regexp_result[0];
                             }
@@ -346,7 +346,7 @@ class BonesCommandLine
         // change namespace
         foreach ($files as $file) {
 
-            $this->line("Loading and process " . $file . "...");
+            $this->line("Loading and process {$file}...");
 
             $content = file_get_contents($file);
             $content = str_replace($previousNamespace, $namespace, $content);
