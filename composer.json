@@ -29,7 +29,7 @@
     ]
   },
   "scripts": {
-      "pre-autoload-dump": [
+      "post-autoload-dump": [
         "php -r \"copy('vendor/wpbones/wpbones/src/Console/bin/bones', 'bones');\"",
         "php bones rename"
       ]
