@@ -400,13 +400,7 @@ class BonesCommandLine
             $name = $argv[1];
         }
 
-        // update composer module
-        $res = `composer update`;
-
-        // copy bones
-        //$res = rename('vendor/wpbones/wpbones/src/Console/bin/bones', 'bones');
-
-        //$this->rename($name);
+        $this->update();
 
     }
 
@@ -420,7 +414,7 @@ class BonesCommandLine
         $res = `composer update`;
 
         // rename as is it and execute composer
-        //$this->rename();
+        $this->rename();
     }
 
     protected function deploy($path)
@@ -443,8 +437,6 @@ class BonesCommandLine
 
             // files and folders to skip
             $this->skipWhenDeploy = [
-                '/.',
-                '/..',
                 '/node_modules',
                 '/.git',
                 '/.gitignore',
@@ -478,15 +470,14 @@ class BonesCommandLine
 
             $this->xcopy(__DIR__, $path);
 
+            /**
+             * Fires when the console deploy is completed.
+             *
+             * @param mixed  $bones This bones command instance.
+             * @param string $path  The deployed path.
+             */
+            do_action('wpbones_console_deployed', $this, $path);
         }
-
-        /**
-         * Fires when the console deploy is completed.
-         *
-         * @param mixed  $bones This bones command instance.
-         * @param string $path  The deployed path.
-         */
-        do_action('wpbones_console_deployed', $this, $path);
     }
 
     protected function optimize()
