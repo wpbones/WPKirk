@@ -3,8 +3,10 @@
  *
  */
 
-var gulp      = require( 'gulp' ),
-    less      = require( 'gulp-less' ),
+const { src, dest, series, watch } = require('gulp');
+
+
+var less      = require( 'gulp-less' ),
     minifycss = require( 'gulp-minify-css' ),
     uglify    = require( 'gulp-uglify' ),
     rename    = require( 'gulp-rename' ),
@@ -12,41 +14,37 @@ var gulp      = require( 'gulp' ),
 
 
 // LESS
-gulp.task( 'less', function()
+function bones__less()
 {
-  return gulp.src( './resources/assets/less/**/*.less' )
+  return src( './resources/assets/less/**/*.less' )
     .pipe( less( {
       paths : [ path.join( __dirname, 'less', 'includes' ) ]
     } ) )
-    .pipe( gulp.dest( './public/css' ) )
+    .pipe( dest( './public/css' ) )
     .pipe( rename( { suffix : '.min' } ) )
     .pipe( minifycss() )
-    .pipe( gulp.dest( './public/css' ) )
-} );
+    .pipe( dest( './public/css' ) )
+}
 
 // Script
-gulp.task( 'scripts', function()
+function bones__script()
 {
-  return gulp.src( './resources/assets/js/**/*.js' )
-    .pipe( gulp.dest( './public/js' ) )
+  return src( './resources/assets/js/**/*.js' )
+    .pipe( dest( './public/js' ) )
     .pipe( rename( { suffix : '.min' } ) )
     .pipe( uglify() )
-    .pipe( gulp.dest( './public/js' ) );
-} );
-
-// Default task
-gulp.task( 'default', function()
-{
-  // place code for your default task here
-  gulp.start( 'less', 'scripts' );
-} );
+    .pipe( dest( './public/js' ) );
+}
 
 // Watch
-gulp.task( 'watch', function()
+function bones__watch()
 {
 
   // Watch .less files
-  gulp.watch( './resources/assets/less/**/*.less', [ 'less' ] );
-  gulp.watch( './resources/assets/js/**/*.js', [ 'scripts' ] );
+  watch( './resources/assets/less/**/*.less', bones__less );
+  watch( './resources/assets/js/**/*.js', bones__script );
 
-} );
+}
+
+exports.default = series(bones__watch);
+exports.production = series(bones__less, bones__script);

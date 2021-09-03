@@ -1,23 +1,21 @@
 {
-  "name": "WPKirk",
+  "name": "wpbones/wpkirk",
   "type": "wordpress-plugin",
   "description": "A boilerplate WordPress plugin demo for WP Bones library.",
-  "keywords": [ "wordpress" ],
+  "keywords": ["wordpress"],
   "homepage": "http://wpbones.wordpress.com",
   "license": "GPL-3.0",
-  "authors": [
-    {
-      "name": "Giovambattista Fazioli",
-      "email": "giovambattista.fazioli@gmail.com",
-      "homepage": "http://undolog.com"
-    }
-  ],
+  "authors": [{
+    "name": "Giovambattista Fazioli",
+    "email": "giovambattista.fazioli@gmail.com",
+    "homepage": "http://undolog.com"
+  }],
   "support": {
     "issues": "https://github.com/wpbones/WPKirk/issues",
     "source": "https://github.com/wpbones/WPKirk/"
   },
   "require": {
-    "php": ">=7.1",
+    "php": ">=7.2",
     "wpbones/wpbones": "dev-master"
   },
   "autoload": {
@@ -29,9 +27,9 @@
     ]
   },
   "scripts": {
-      "post-autoload-dump": [
-        "php -r \"copy('vendor/wpbones/wpbones/src/Console/bin/bones', 'bones');\"",
-        "php bones rename"
-      ]
-    }
+    "post-autoload-dump": [
+      "php -r \"copy('vendor/wpbones/wpbones/src/Console/bin/bones', 'bones');\"",
+      "php bones rename"
+    ]
+  }
 }
