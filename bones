@@ -19,7 +19,7 @@ class BonesCommandLine
     /**
      * WP Bones version
      */
-    const VERSION = '0.11.0';
+    const VERSION = '0.11.2';
 
     /**
      * Plugin name.
@@ -169,7 +169,7 @@ class BonesCommandLine
     }
 
     /**
-     * This is a special bootstrap in order to avoid the WordPress and kernel envirnment
+     * This is a special bootstrap in order to avoid the WordPress and kernel environment
      * when we have to rename the plugin and vendor structure.
      *
      */
@@ -518,6 +518,12 @@ class BonesCommandLine
         }
 
         if (!empty($path)) {
+
+            // first of all delete previous path
+            $this->info("🕐 Delete folder {$path}");
+            $this->deleteDirectory($path);
+            $this->info("\033[1A👍");
+
             // run yarn production
             $this->info('🕐 Build for production');
             shell_exec('gulp production');
