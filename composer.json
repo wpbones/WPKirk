@@ -15,7 +15,7 @@
     "source": "https://github.com/wpbones/WPKirk/"
   },
   "require": {
-    "php": ">=7.2",
+    "php": ">=7.3",
     "wpbones/wpbones": "dev-master"
   },
   "autoload": {

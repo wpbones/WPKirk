@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Create The Plugin
@@ -10,21 +14,9 @@
 |
 */
 if (class_exists('\WPKirk\WPBones\Foundation\Plugin')) {
-
     $plugin = new \WPKirk\WPBones\Foundation\Plugin(
         realpath(__DIR__ . '/../')
     );
-
-    /*
-    |--------------------------------------------------------------------------
-    | Actions and filters
-    |--------------------------------------------------------------------------
-    |
-    | Feel free to insert your actions and filters.
-    |
-    */
-
-//add_action( 'init', function() { } );
 
     /*
     |--------------------------------------------------------------------------
