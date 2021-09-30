@@ -306,9 +306,9 @@ namespace Bones\SemVer {
                 throw new InvalidVersionException('Invalid semantic version string provided');
             }
 
-            $this->major = (int) $matches['major'];
-            $this->minor = (int) $matches['minor'];
-            $this->patch = (int) $matches['patch'];
+            $this->major = (int)$matches['major'];
+            $this->minor = (int)$matches['minor'];
+            $this->patch = (int)$matches['patch'];
             $this->preRelease = $matches['pre_release'] ?? null;
             $this->build = $matches['build'] ?? null;
 
@@ -399,7 +399,7 @@ namespace Bones\SemVer {
          */
         public function prefix(string $prefix = 'v'): string
         {
-            return $prefix . (string) $this;
+            return $prefix . (string)$this;
         }
     }
 }
@@ -446,7 +446,7 @@ namespace Bones {
         /**
          * WP Bones version
          */
-        const VERSION = '1.0.3';
+        const VERSION = '1.0.5';
 
         /**
          * Used for additional kernel command.
@@ -612,11 +612,11 @@ namespace Bones {
             }
 
             /*
-            |--------------------------------------------------------------------------
-            | Load this plugin env
-            |--------------------------------------------------------------------------
-            |
-            */
+             |--------------------------------------------------------------------------
+             | Load this plugin env
+             |--------------------------------------------------------------------------
+             |
+             */
 
             if (file_exists(__DIR__ . '/bootstrap/plugin.php')) {
                 $plugin = require_once __DIR__ . '/bootstrap/plugin.php';
@@ -629,7 +629,7 @@ namespace Bones {
          */
         protected function loadKernel()
         {
-            $kernelClass        = "{$this->namespace}\\Console\\Kernel";
+            $kernelClass = "{$this->namespace}\\Console\\Kernel";
             $WPBoneskernelClass = "{$this->namespace}\\WPBones\\Foundation\\Console\\Kernel";
 
             if (class_exists($WPBoneskernelClass) && class_exists($kernelClass)) {
@@ -743,7 +743,7 @@ namespace Bones {
         /**
          * Let's roll
          *
-         * @return \BonesCommandLine
+         * @return \Bones\BonesCommandLine
          */
         public static function run()
         {
@@ -753,13 +753,13 @@ namespace Bones {
         }
 
         /*
-        |--------------------------------------------------------------------------
-        | Internal useful function
-        |--------------------------------------------------------------------------
-        |
-        | Here you will find all internal methods
-        |
-        */
+         |--------------------------------------------------------------------------
+         | Internal useful function
+         |--------------------------------------------------------------------------
+         |
+         | Here you will find all internal methods
+         |
+         */
 
         /**
          * Display the full help.
@@ -856,7 +856,7 @@ namespace Bones {
             echo "\n\e[38;5;33m$str" . (empty($default) ? "" : " (default: {$default})") . "\e[0m ";
 
             $handle = fopen("php://stdin", "r");
-            $line   = fgets($handle);
+            $line = fgets($handle);
 
             fclose($handle);
 
@@ -894,6 +894,8 @@ namespace Bones {
              * @param array  &$result Optional. Result array. Empty form first call
              *
              * @return array
+             *
+             * @suppress PHP0405
              */
             function _rglob($path, $match = '', &$result = [])
             {
@@ -913,9 +915,8 @@ namespace Bones {
                                 break;
                             }
                             $regexp_result = [];
-                            $error         = preg_match($match, $file, $regexp_result);
+                            $error = preg_match($match, $file, $regexp_result);
                             if (0 !== $error || false !== $error) {
-                                $regexp_result = true;
                                 if (!empty($regexp_result)) {
                                     $result[] = $regexp_result[0];
                                 }
@@ -935,13 +936,13 @@ namespace Bones {
         }
 
         /*
-        |--------------------------------------------------------------------------
-        | Public task
-        |--------------------------------------------------------------------------
-        |
-        | Here you will find all tasks that a user can run from console.
-        |
-        */
+         |--------------------------------------------------------------------------
+         | Public task
+         |--------------------------------------------------------------------------
+         |
+         | Here you will find all tasks that a user can run from console.
+         |
+         */
 
         /**
          * Return a kebalized version of the string
@@ -990,7 +991,6 @@ namespace Bones {
          */
         protected function rename($args)
         {
-
             if ($this->isHelp()) {
                 $this->info('Usage:');
                 $this->line(' php bones rename [options] <Plugin Name> <Namespace>');
@@ -1033,7 +1033,7 @@ namespace Bones {
             }
 
             // sanitize the namespace
-            $namespace =  str_replace(" ", "", ucwords($namespace));
+            $namespace = str_replace(" ", "", ucwords($namespace));
 
             $this->info("\nThe new plugin name and namespace will be '{$plugin_name}', '{$namespace}'");
 
@@ -1050,8 +1050,8 @@ namespace Bones {
 
                 // exclude node_modules and bones executable
                 if (
-                    false !== strpos($e, "node_modules") ||
-                    false !== strpos($e, "vendor/wpbones/wpbones/src/Console/bin/bones")
+                false !== strpos($e, "node_modules") ||
+                false !== strpos($e, "vendor/wpbones/wpbones/src/Console/bin/bones")
                 ) {
                     return false;
                 }
@@ -1474,7 +1474,6 @@ namespace Bones {
          */
         protected function createMigrate($tablename)
         {
-
             if ($this->isHelp($tablename)) {
                 $this->info('Use php bones migrate:make <Tablename>');
 
@@ -1520,8 +1519,8 @@ namespace Bones {
 
             $slug = str_replace("-", "_", $this->sanitize($pluginName));
 
-            $id     = $this->ask("Enter a ID:", $slug);
-            $name   = $this->ask("Enter the name:");
+            $id = $this->ask("Enter a ID:", $slug);
+            $name = $this->ask("Enter the name:");
             $plural = $this->ask("Enter the plural name:");
 
             if (empty($id)) {
@@ -1554,7 +1553,6 @@ namespace Bones {
          */
         protected function createCustomTaxonomyType($className)
         {
-
             if ($this->isHelp($className)) {
                 $this->info('Use php bones make:ctt <ClassName>');
 
@@ -1568,8 +1566,8 @@ namespace Bones {
 
             $slug = $this->getPluginId();
 
-            $id     = $this->ask("Enter a ID:", $slug);
-            $name   = $this->ask("Enter the name:");
+            $id = $this->ask("Enter a ID:", $slug);
+            $name = $this->ask("Enter the name:");
             $plural = $this->ask("Enter the plural name:");
 
             $this->line('The object type below refers to the id of your previous Custom Post Type');
@@ -1607,7 +1605,6 @@ namespace Bones {
          */
         protected function createController($className)
         {
-
             if ($this->isHelp($className)) {
                 $this->info('Use php bones make:controller <ClassName>');
 
@@ -1620,9 +1617,9 @@ namespace Bones {
             // get additional path
             $path = $namespacePath = '';
             if (false !== strpos($className, '/')) {
-                $parts         = explode('/', $className);
-                $className     = array_pop($parts);
-                $path          = implode('/', $parts) . '/';
+                $parts = explode('/', $className);
+                $className = array_pop($parts);
+                $path = implode('/', $parts) . '/';
                 $namespacePath = '\\' . implode('\\', $parts);
             }
 
@@ -1654,7 +1651,6 @@ namespace Bones {
          */
         protected function createCommand($className)
         {
-
             if ($this->isHelp($className)) {
                 $this->info('Use php bones make:console <ClassName>');
 
@@ -1667,10 +1663,10 @@ namespace Bones {
             [$pluginName, $namespace] = $this->getPluginNameAndNamespace();
 
             $signature = str_replace("-", "", $this->sanitize($pluginName));
-            $command   = str_replace("-", "", $this->sanitize($className));
+            $command = str_replace("-", "", $this->sanitize($className));
 
             $signature = $this->ask("Enter a signature:", $signature);
-            $command   = $this->ask("Enter the command:", $command);
+            $command = $this->ask("Enter the command:", $command);
 
             // get the stub
             $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/command.stub");
@@ -1708,7 +1704,6 @@ namespace Bones {
          */
         protected function createShortcode($className)
         {
-
             if ($this->isHelp($className)) {
                 $this->info('Use php bones make:shortcode <ClassName>');
 
@@ -1743,7 +1738,6 @@ namespace Bones {
          */
         protected function createProvider($className)
         {
-
             if ($this->isHelp($className)) {
                 $this->info('Use php bones make:provider <ClassName>');
 
@@ -1776,7 +1770,6 @@ namespace Bones {
          */
         protected function createWidget($className)
         {
-
             if ($this->isHelp($className)) {
                 $this->info('Use php bones make:widget <ClassName>');
 
@@ -1825,7 +1818,6 @@ namespace Bones {
          */
         protected function createAjax($className)
         {
-
             if ($this->isHelp($className)) {
                 $this->info('Use php bones make:ajax <ClassName>');
 
@@ -1860,7 +1852,6 @@ namespace Bones {
          */
         protected function createModel($className)
         {
-
             if ($this->isHelp($className)) {
                 $this->info('Use php bones make:model <ClassName>');
 
@@ -1873,9 +1864,9 @@ namespace Bones {
             // get additional path
             $path = $namespacePath = '';
             if (false !== strpos($className, '/')) {
-                $parts         = explode('/', $className);
-                $className     = array_pop($parts);
-                $path          = implode('/', $parts) . '/';
+                $parts = explode('/', $className);
+                $className = array_pop($parts);
+                $path = implode('/', $parts) . '/';
                 $namespacePath = '\\' . implode('\\', $parts);
             }
 
