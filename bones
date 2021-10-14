@@ -414,7 +414,17 @@ namespace Bones\SemVer {
 */
 
 namespace Bones {
+
+    /**
+     * The minimum PHP version required to run Bones.
+     */
     define('WPBONES_MINIMAL_PHP_VERSION', "7.3");
+
+    /**
+     * The WP Bones command line version.
+     */
+    define('WPBONES_COMMAND_LINE_VERSION', "1.1.1");
+    
 
     use Bones\SemVer\Version;
 
@@ -446,7 +456,7 @@ namespace Bones {
         /**
          * WP Bones version
          */
-        const VERSION = '1.0.5';
+        const VERSION = WPBONES_COMMAND_LINE_VERSION;
 
         /**
          * Used for additional kernel command.
@@ -573,6 +583,32 @@ namespace Bones {
         }
 
         /**
+         * Return the content of a stub file.
+         *
+         * @param string $file_name The stub file name without extension
+         * @return string
+         */
+        public function getStubContent($filename)
+        {
+            return file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/{$filename}.stub");
+        }
+
+        /**
+         * Return the content of a stub file with all replacements.
+         *
+         * @param string $filename The stub file name without extension
+         * @param array $search The search array
+         *
+         * @return string
+         */
+        public function prepareStub($filename, $replacements = [])
+        {
+            $stub = $this->getStubContent($filename);
+
+            return str_replace(array_keys($replacements), array_values($replacements), $stub);
+        }
+
+        /**
          * Load WordPress core and all environment.
          *
          */
@@ -683,7 +719,7 @@ namespace Bones {
             // strip the command name
             array_shift($params);
 
-            return $index ? ($params[$index] ?? null) : $params;
+            return !is_null($index) ? ($params[$index] ?? null) : $params;
         }
 
         /**
@@ -794,6 +830,7 @@ namespace Bones {
             $this->line(" migrate:create          Create a new Migration");
             $this->info("make");
             $this->line(" make:ajax               Create a new Ajax service provider class");
+            $this->line(" make:api                Create a new API controller class");
             $this->line(" make:controller         Create a new controller class");
             $this->line(" make:console            Create a new Bones command");
             $this->line(" make:cpt                Create a new Custom Post Type service provider class");
@@ -802,6 +839,7 @@ namespace Bones {
             $this->line(" make:provider           Create a new service provider class");
             $this->line(" make:widget             Create a new Widget service provider class");
             $this->line(" make:model              Create a new database model class");
+            $this->line(" make:eloquent-model     Create a new Eloquent database model class");
 
             if ($this->kernel && $this->kernel->hasCommands()) {
                 $this->info("Extensions");
@@ -1489,10 +1527,12 @@ namespace Bones {
             // current plugin name and namespace
             $namespace = $this->getNamespace();
 
-            // get the stub
-            $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/migrate.stub");
-            $content = str_replace('{Namespace}', $namespace, $content);
-            $content = str_replace('{Tablename}', $tablename, $content);
+
+            // stubbing
+            $content = $this->prepareStub('migrate', [
+                '{Namespace}' => $namespace,
+                '{Tablename}' => $tablename,
+            ]);
 
             file_put_contents("database/migrations/{$filename}", $content);
 
@@ -1527,13 +1567,14 @@ namespace Bones {
                 $id = $slug;
             }
 
-            // get the stub
-            $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/cpt.stub");
-            $content = str_replace('{Namespace}', $namespace, $content);
-            $content = str_replace('{ClassName}', $className, $content);
-            $content = str_replace('{ID}', $id, $content);
-            $content = str_replace('{Name}', $name, $content);
-            $content = str_replace('{Plural}', $plural, $content);
+            // stubbing
+            $content = $this->prepareStub('cpt', [
+                '{Namespace}' => $namespace,
+                '{ClassName}' => $className,
+                '{ID}' => $id,
+                '{Name}' => $name,
+                '{Plural}' => $plural,
+            ]);
 
             if (!is_dir('plugin/CustomPostTypes')) {
                 mkdir("plugin/CustomPostTypes", 0777, true);
@@ -1578,14 +1619,15 @@ namespace Bones {
                 $id = $slug;
             }
 
-            // get the stub
-            $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/ctt.stub");
-            $content = str_replace('{Namespace}', $namespace, $content);
-            $content = str_replace('{ClassName}', $className, $content);
-            $content = str_replace('{ID}', $id, $content);
-            $content = str_replace('{Name}', $name, $content);
-            $content = str_replace('{Plural}', $plural, $content);
-            $content = str_replace('{ObjectType}', $objectType, $content);
+            // stubbing
+            $content = $this->prepareStub('ctt', [
+                '{Namespace}' => $namespace,
+                '{ClassName}' => $className,
+                '{ID}' => $id,
+                '{Name}' => $name,
+                '{Plural}' => $plural,
+                '{ObjectType}' => $objectType,
+            ]);
 
             if (!is_dir('plugin/CustomTaxonomyTypes')) {
                 mkdir("plugin/CustomTaxonomyTypes", 0777, true);
@@ -1623,10 +1665,11 @@ namespace Bones {
                 $namespacePath = '\\' . implode('\\', $parts);
             }
 
-            // get the stub
-            $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/controller.stub");
-            $content = str_replace('{Namespace}', $namespace, $content);
-            $content = str_replace('{ClassName}', $className, $content);
+            // stubbing
+            $content = $this->prepareStub('controller', [
+                '{Namespace}' => $namespace,
+                '{ClassName}' => $className,
+            ]);
 
             if (!empty($path)) {
                 $content = str_replace('{Path}', $namespacePath, $content);
@@ -1668,12 +1711,13 @@ namespace Bones {
             $signature = $this->ask("Enter a signature:", $signature);
             $command = $this->ask("Enter the command:", $command);
 
-            // get the stub
-            $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/command.stub");
-            $content = str_replace('{Namespace}', $namespace, $content);
-            $content = str_replace('{ClassName}', $className, $content);
-            $content = str_replace('{Signature}', $signature, $content);
-            $content = str_replace('{CommandName}', $command, $content);
+            // stubbing
+            $content = $this->prepareStub('command', [
+                '{Namespace}' => $namespace,
+                '{ClassName}' => $className,
+                '{Signature}' => $signature,
+                '{CommandName}' => $command,
+            ]);
 
             if (!is_dir('plugin/Console/Commands')) {
                 mkdir("plugin/Console/Commands", 0777, true);
@@ -1687,10 +1731,13 @@ namespace Bones {
             if (file_exists('plugin/Console/Kernel.php')) {
                 $this->info("Remember to add {$className} in the plugin/Console/Commands/Kernel.php property array \$commands");
             } else {
-                // get the stub
-                $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/kernel.stub");
-                $content = str_replace('{Namespace}', $namespace, $content);
-                $content = str_replace('{ClassName}', $className, $content);
+
+                // stubbing
+                $content = $this->prepareStub('kernel', [
+                    '{Namespace}' => $namespace,
+                    '{ClassName}' => $className,
+                 ]);
+
                 file_put_contents("plugin/Console/Kernel.php", $content);
 
                 $this->line(" Created plugin/Console/Kernel.php");
@@ -1715,10 +1762,11 @@ namespace Bones {
             // current plugin name and namespace
             $namespace = $this->getNamespace();
 
-            // get the stub
-            $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/shortcode.stub");
-            $content = str_replace('{Namespace}', $namespace, $content);
-            $content = str_replace('{ClassName}', $className, $content);
+            // stubbing
+            $content = $this->prepareStub('shortcode', [
+                '{Namespace}' => $namespace,
+                '{ClassName}' => $className,
+            ]);
 
             if (!is_dir('plugin/Shortcodes')) {
                 mkdir("plugin/Shortcodes", 0777, true);
@@ -1749,10 +1797,11 @@ namespace Bones {
             // current plugin name and namespace
             $namespace = $this->getNamespace();
 
-            // get the stub
-            $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/provider.stub");
-            $content = str_replace('{Namespace}', $namespace, $content);
-            $content = str_replace('{ClassName}', $className, $content);
+            // stubbing
+            $content = $this->prepareStub('provider', [
+                '{Namespace}' => $namespace,
+                '{ClassName}' => $className,
+            ]);
 
             if (!is_dir('plugin/Providers')) {
                 mkdir("plugin/Providers", 0777, true);
@@ -1783,12 +1832,13 @@ namespace Bones {
 
             $slug = $this->getPluginId();
 
-            // get the stub
-            $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/widget.stub");
-            $content = str_replace('{Namespace}', $namespace, $content);
-            $content = str_replace('{ClassName}', $className, $content);
-            $content = str_replace('{PluginName}', $pluginName, $content);
-            $content = str_replace('{Slug}', $slug, $content);
+            // stubbing
+            $content = $this->prepareStub('widget', [
+                '{Namespace}' => $namespace,
+                '{ClassName}' => $className,
+                '{PluginName}' => $pluginName,
+                '{Slug}' => $slug,
+            ]);
 
             if (!is_dir('plugin/Widgets')) {
                 mkdir("plugin/Widgets", 0777, true);
@@ -1827,10 +1877,11 @@ namespace Bones {
             // current plugin name and namespace
             $namespace = $this->getNamespace();
 
-            // get the stub
-            $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/ajax.stub");
-            $content = str_replace('{Namespace}', $namespace, $content);
-            $content = str_replace('{ClassName}', $className, $content);
+            // stubbing
+            $content = $this->prepareStub('ajax', [
+                '{Namespace}' => $namespace,
+                '{ClassName}' => $className,
+            ]);
 
             if (!is_dir('plugin/Ajax')) {
                 mkdir("plugin/Ajax", 0777, true);
@@ -1870,14 +1921,11 @@ namespace Bones {
                 $namespacePath = '\\' . implode('\\', $parts);
             }
 
-            // create the table
-            $table = strtolower($className) . 's';
-
-            // get the stub
-            $content = file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/model.stub");
-            $content = str_replace('{Namespace}', $namespace, $content);
-            $content = str_replace('{ClassName}', $className, $content);
-            $content = str_replace('{Table}', $table, $content);
+            // stubbing
+            $content = $this->prepareStub('model', [
+                '{Namespace}' => $namespace,
+                '{ClassName}' => $className,
+            ]);
 
             if (!empty($path)) {
                 $content = str_replace('{Path}', $namespacePath, $content);
@@ -1891,6 +1939,104 @@ namespace Bones {
             file_put_contents("plugin/Http/Controllers/{$path}{$filename}", $content);
 
             $this->line(" Created plugin/Http/Controllers/{$path}{$filename}");
+
+            $this->optimize();
+        }
+
+        /**
+         * Create a Eloquent database Model
+         *
+         * @param string $className The class name
+         */
+        protected function createEloquentModel($className)
+        {
+            if ($this->isHelp($className)) {
+                $this->info('Use php bones make:eloquent-model <ClassName>');
+
+                return;
+            }
+
+            // current plugin name and namespace
+            $namespace = $this->getNamespace();
+
+            // get additional path
+            $path = $namespacePath = '';
+            if (false !== strpos($className, '/')) {
+                $parts = explode('/', $className);
+                $className = array_pop($parts);
+                $path = implode('/', $parts) . '/';
+                $namespacePath = '\\' . implode('\\', $parts);
+            }
+
+            // create the table
+            $table = strtolower($className);
+
+            // stubbing
+            $content = $this->prepareStub('eloquent-model', [
+                '{Namespace}' => $namespace,
+                '{ClassName}' => $className,
+                '{Table}' => $table,
+            ]);
+
+            if (!empty($path)) {
+                $content = str_replace('{Path}', $namespacePath, $content);
+                mkdir("plugin/Http/Controllers/{$path}", 0777, true);
+            } else {
+                $content = str_replace('{Path}', '', $content);
+            }
+
+            $filename = sprintf('%s.php', $className);
+
+            file_put_contents("plugin/Http/Controllers/{$path}{$filename}", $content);
+
+            $this->line(" Created plugin/Http/Controllers/{$path}{$filename}");
+
+            $this->optimize();
+        }
+
+        /**
+         * Create a API Controller
+         *
+         * @param string $className The class name
+         */
+        protected function createAPIController($className)
+        {
+            if ($this->isHelp($className)) {
+                $this->info('Use php bones make:api <ClassName>');
+
+                return;
+            }
+
+            // current plugin name and namespace
+            $namespace = $this->getNamespace();
+
+            // get additional path
+            $path = $namespacePath = '';
+            if (false !== strpos($className, '/')) {
+                $parts = explode('/', $className);
+                $className = array_pop($parts);
+                $path = implode('/', $parts) . '/';
+                $namespacePath = '\\' . implode('\\', $parts);
+            }
+
+            // stubbing
+            $content = $this->prepareStub('api', [
+                '{Namespace}' => $namespace,
+                '{ClassName}' => $className,
+            ]);
+
+            if (!empty($path)) {
+                $content = str_replace('{Path}', $namespacePath, $content);
+                mkdir("plugin/API/{$path}", 0777, true);
+            } else {
+                $content = str_replace('{Path}', '', $content);
+            }
+
+            $filename = sprintf('%s.php', $className);
+
+            file_put_contents("plugin/API/{$path}{$filename}", $content);
+
+            $this->line(" Created plugin/API/{$path}{$filename}");
 
             $this->optimize();
         }
@@ -1960,7 +2106,17 @@ namespace Bones {
             // make:model {className}
             elseif ($this->isCommand('make:model')) {
                 $this->createModel($this->commandParams(0));
-            } else {
+            }
+            // make:eloquent-model {className}
+            elseif ($this->isCommand('make:eloquent-model')) {
+                $this->createEloquentModel($this->commandParams(0));
+            }
+            // make:api {className}
+            elseif ($this->isCommand('make:api')) {
+                $this->createAPIController($this->commandParams(0));
+            }
+            // else...
+            else {
                 $extended = false;
 
                 if ($this->kernel) {
