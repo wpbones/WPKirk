@@ -1,24 +1,22 @@
 var path = require("path")
 
 module.exports = {
-  entry: "./resources/assets/jsx/app.jsx",
+  entry: "./resources/assets/tsx/app.tsx",
   output: {
     path: path.join(__dirname, "/public/js")
   },
   resolve: {
     alias: {
-      components: path.resolve(__dirname, "resources/assets/jsx/components")
+      components: path.resolve(__dirname, "resources/assets/tsx/components")
     },
-    extensions: ['.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.json'],
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        use: 'ts-loader',
       },
       {
         test: /\.less$/,
