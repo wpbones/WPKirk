@@ -423,9 +423,8 @@ namespace Bones {
     /**
      * The WP Bones command line version.
      */
-    define('WPBONES_COMMAND_LINE_VERSION', "1.1.5");
+    define('WPBONES_COMMAND_LINE_VERSION', "1.1.7");
     
-
     use Bones\SemVer\Version;
 
     if (!function_exists('semver')) {
@@ -755,13 +754,32 @@ namespace Bones {
          */
         protected function isHelp($str = null)
         {
-            $params = $this->commandParams();
-
             if (!is_null($str)) {
                 return (empty($str) || $str === '--help');
             }
 
-            return (!empty($params[0]) && $params[0] === '--help');
+            $param = $this->commandParams()[0];
+
+            return (!empty($param) && $param === '--help');
+        }
+
+        /**
+         * Commodity function to check if ClassName has been requested.
+         *
+         * @param string $className Optional. Command to check.
+         *
+         * @return string | exit
+         */
+        protected function askClassNameIfEmpty($className = "")
+        {
+            if (empty($className)) {
+                $className = $this->ask('ClassName:');
+                if (empty($className)) {
+                    $this->error('ClassName is required');
+                    exit(0);
+                }
+            }
+            return $className;
         }
 
         /**
@@ -1587,6 +1605,9 @@ namespace Bones {
                 return;
             }
 
+            // ask className if empty
+            $className = $this->askClassNameIfEmpty($className);
+
             $filename = sprintf('%s.php', $className);
 
             // current plugin name and namespace
@@ -1634,6 +1655,9 @@ namespace Bones {
 
                 return;
             }
+
+            // ask className if empty
+            $className = $this->askClassNameIfEmpty($className);
 
             $filename = sprintf('%s.php', $className);
 
@@ -1684,9 +1708,14 @@ namespace Bones {
         {
             if ($this->isHelp($className)) {
                 $this->info('Use php bones make:controller <ClassName>');
+                $this->line('Or');
+                $this->info('Use php bones make:controller <Folder>/<ClassName>');
 
                 return;
             }
+
+            // ask className if empty
+            $className = $this->askClassNameIfEmpty($className);
 
             // current plugin name and namespace
             $namespace = $this->getNamespace();
@@ -1734,6 +1763,9 @@ namespace Bones {
 
                 return;
             }
+
+            // ask className if empty
+            $className = $this->askClassNameIfEmpty($className);
 
             $filename = sprintf('%s.php', $className);
 
@@ -1792,6 +1824,9 @@ namespace Bones {
                 return;
             }
 
+            // ask className if empty
+            $className = $this->askClassNameIfEmpty($className);
+
             $filename = sprintf('%s.php', $className);
 
             // current plugin name and namespace
@@ -1827,6 +1862,9 @@ namespace Bones {
                 return;
             }
 
+            // ask className if empty
+            $className = $this->askClassNameIfEmpty($className);
+
             $filename = sprintf('%s.php', $className);
 
             // current plugin name and namespace
@@ -1859,6 +1897,9 @@ namespace Bones {
 
                 return;
             }
+
+            // ask className if empty
+            $className = $this->askClassNameIfEmpty($className);
 
             $filename = sprintf('%s.php', $className);
 
@@ -1909,6 +1950,9 @@ namespace Bones {
                 return;
             }
 
+            // ask className if empty
+            $className = $this->askClassNameIfEmpty($className);
+
             // current plugin name and namespace
             $namespace = $this->getNamespace();
 
@@ -1943,6 +1987,9 @@ namespace Bones {
 
                 return;
             }
+
+            // ask className if empty
+            $className = $this->askClassNameIfEmpty($className);
 
             // current plugin name and namespace
             $namespace = $this->getNamespace();
@@ -1990,6 +2037,9 @@ namespace Bones {
 
                 return;
             }
+
+            // ask className if empty
+            $className = $this->askClassNameIfEmpty($className);
 
             // current plugin name and namespace
             $namespace = $this->getNamespace();
@@ -2041,6 +2091,9 @@ namespace Bones {
 
                 return;
             }
+
+            // ask className if empty
+            $className = $this->askClassNameIfEmpty($className);
 
             // current plugin name and namespace
             $namespace = $this->getNamespace();
