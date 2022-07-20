@@ -4,60 +4,60 @@ use WPKirk\WPBones\Routing\API\Route;
 
 // very simple example
 Route::get('/example', function () {
-    return 'Hello World!';
+  return 'Hello World!';
 });
 
 // json response
 Route::get('/example_json', function () {
-    wp_send_json(["tag" => "v1.0.0"]);
+  wp_send_json(["tag" => "v1.0.0"]);
 });
 
 // right way to use a simple response
 Route::get('/example_response', function () {
-    return Route::response(["tag" => "v1.0.0"]);
+  return Route::response(["tag" => "v1.0.0"]);
 });
 
 // very simple example with args
-Route::get('/example_args', function (\WP_REST_Request $request) {
-    $value = var_export($request, true);
+Route::get('/example_args', function (WP_REST_Request $request) {
+  $value = var_export($request, true);
 
-    /**
-     *   // You can access parameters via direct array access on the object:
-     *   $param = $request['some_param'];
-     *
-     *   // Or via the helper method:
-     *   $param = $request->get_param( 'some_param' );
-     *
-     *   // You can get the combined, merged set of parameters:
-     *   $parameters = $request->get_params();
-     *
-     *   // The individual sets of parameters are also available, if needed:
-     *   $parameters = $request->get_url_params();
-     *   $parameters = $request->get_query_params();
-     *   $parameters = $request->get_body_params();
-     *   $parameters = $request->get_json_params();
-     *   $parameters = $request->get_default_params();
-     *
-     *   // Uploads aren't merged in, but can be accessed separately:
-     *   $parameters = $request->get_file_params();
-     */
+  /**
+   *   // You can access parameters via direct array access on the object:
+   *   $param = $request['some_param'];
+   *
+   *   // Or via the helper method:
+   *   $param = $request->get_param( 'some_param' );
+   *
+   *   // You can get the combined, merged set of parameters:
+   *   $parameters = $request->get_params();
+   *
+   *   // The individual sets of parameters are also available, if needed:
+   *   $parameters = $request->get_url_params();
+   *   $parameters = $request->get_query_params();
+   *   $parameters = $request->get_body_params();
+   *   $parameters = $request->get_json_params();
+   *   $parameters = $request->get_default_params();
+   *
+   *   // Uploads aren't merged in, but can be accessed separately:
+   *   $parameters = $request->get_file_params();
+   */
 
-    return Route::response(
-        [
-            "request" => $value,
-            "ROUTE" => $request->get_route(),
-            ]
-    );
+  return Route::response(
+    [
+      "request" => $value,
+      "ROUTE"   => $request->get_route(),
+    ]
+  );
 });
 
-// invalide example
+// invalid example
 Route::get('/invalid', function () {
-    return new \WP_Error('no_author', 'Invalid author', [ 'status' => 404 ]);
+  return new WP_Error('no_author', 'Invalid author', ['status' => 404]);
 });
 
 // right way to use an error response
 Route::get('/error', function () {
-    return Route::responseError('no_author', 'Invalid author', [ 'status' => 404 ]);
+  return Route::responseError('no_author', 'Invalid author', ['status' => 404]);
 });
 
 // may use the same route for different methods
@@ -75,7 +75,7 @@ Route::get('/error', '\WPKirk\API\WPKirkV1Controller@error');
 Route::get('/controller_args', '\WPKirk\API\WPKirkV1Controller@controller_args');
 
 Route::get('/protected', function () {
-    return 'Hello World!';
+  return 'Hello World!';
 }, ['permission_callback' => function () {
-    return false;
+  return false;
 }]);
