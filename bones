@@ -16,6 +16,7 @@ namespace Bones\SemVer\Exceptions {
 
   class InvalidVersionException extends Exception
   {
+
   }
 }
 
@@ -199,19 +200,19 @@ namespace Bones\SemVer {
     use Incrementable;
 
     /** @var int Major release number */
-    protected $major;
+    protected int $major;
 
     /** @var int Minor release number */
-    protected $minor;
+    protected int $minor;
 
     /** @var int Patch release number */
-    protected $patch;
+    protected int $patch;
 
     /** @var string|null Pre-release value */
-    protected $preRelease;
+    protected ?string $preRelease;
 
     /** @var string|null Build release value */
-    protected $build;
+    protected ?string $build;
 
     /**
      * Class constructor, runs on object creation.
@@ -418,12 +419,12 @@ namespace Bones {
   /**
    * The minimum PHP version required to run Bones.
    */
-  define('WPBONES_MINIMAL_PHP_VERSION', "7.3");
+  define('WPBONES_MINIMAL_PHP_VERSION', "7.4");
 
   /**
    * The WP Bones command line version.
    */
-  define('WPBONES_COMMAND_LINE_VERSION', "1.1.7");
+  define('WPBONES_COMMAND_LINE_VERSION', "1.1.8");
 
   use Bones\SemVer\Version;
   use Exception;
@@ -442,7 +443,7 @@ namespace Bones {
 
   if (version_compare(PHP_VERSION, WPBONES_MINIMAL_PHP_VERSION) < 0) {
     echo "\n\033[33;5;82mWarning!!\n";
-    echo "\n\033[38;5;82m\t" . 'You must run with PHP version ' . WPBONES_MINIMAL_PHP_VERSION . ' or greater';
+    echo "\n\033[38;5;82m\t" . 'You must run with PHP version ' . WPBONES_MINIMAL_PHP_VERSION . ' or greather';
     echo "\033[0m\n\n";
     exit;
   }
@@ -466,11 +467,11 @@ namespace Bones {
     protected $kernel = null;
 
     /**
-     * List of files and folders to skip during the deploy.
+     * List of files and folders to skip during the deployment.
      *
      * @var array
      */
-    protected $skipWhenDeploy = [];
+    protected array $skipWhenDeploy = [];
 
     /**
      * Base folder during the deploy.
