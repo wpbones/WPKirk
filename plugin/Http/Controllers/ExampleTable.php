@@ -7,9 +7,14 @@ use WPKirk\WPTables\Html\WPTable;
 class ExampleTable extends WPTable
 {
 
-  protected $title = 'List of Discos';
+  protected string $title = 'List of Discos';
 
-  public function getColumnsAttribute()
+  /**
+   * Description
+   *
+   * @return string[]
+   */
+  public function getColumnsAttribute(): array
   {
     return [
       'id'          => 'Name',
@@ -17,15 +22,15 @@ class ExampleTable extends WPTable
     ];
   }
 
-  public function getItems( $args = [] )
+  public function getItems(array $args = []): array
   {
 
     $fake = [];
 
-    for( $i = 0; $i < 20; $i++ ) {
+    for ($i = 0; $i < 20; $i++) {
       $fake[] = [
-        'id' => "Disco {$i}",
-        'description' => 'Some description...'
+        'id'          => "Disco {$i}",
+        'description' => 'Some description...',
       ];
     }
 

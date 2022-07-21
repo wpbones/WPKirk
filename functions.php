@@ -9,9 +9,9 @@
 |
 */
 
-if (! function_exists('myGlobalFunction')) {
-    function myGlobalFunction()
-    {
-        //
-    }
+if (!function_exists('myGlobalFunction')) {
+  function myGlobalFunction(): void
+  {
+    //
+  }
 }
