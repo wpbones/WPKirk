@@ -16,7 +16,6 @@ namespace Bones\SemVer\Exceptions {
 
   class InvalidVersionException extends Exception
   {
-
   }
 }
 
@@ -200,19 +199,19 @@ namespace Bones\SemVer {
     use Incrementable;
 
     /** @var int Major release number */
-    protected int $major;
+    protected $major;
 
     /** @var int Minor release number */
-    protected int $minor;
+    protected $minor;
 
     /** @var int Patch release number */
-    protected int $patch;
+    protected $patch;
 
     /** @var string|null Pre-release value */
-    protected ?string $preRelease;
+    protected $preRelease;
 
     /** @var string|null Build release value */
-    protected ?string $build;
+    protected $build;
 
     /**
      * Class constructor, runs on object creation.
@@ -424,7 +423,7 @@ namespace Bones {
   /**
    * The WP Bones command line version.
    */
-  define('WPBONES_COMMAND_LINE_VERSION', "1.1.8");
+  define('WPBONES_COMMAND_LINE_VERSION', "1.2.0");
 
   use Bones\SemVer\Version;
   use Exception;
@@ -471,10 +470,10 @@ namespace Bones {
      *
      * @var array
      */
-    protected array $skipWhenDeploy = [];
+    protected $skipWhenDeploy = [];
 
     /**
-     * Base folder during the deploy.
+     * Base folder during the deployment.
      *
      * @var string
      */
@@ -575,7 +574,7 @@ namespace Bones {
         | Composer provides a convenient, automatically generated class loader
         | for our application. We just need to utilize it! We'll require it
         | into the script here so that we do not have to worry about the
-        | loading of any our classes "manually". Feels great to relax.
+        | loading of any classes "manually". Feels great to relax.
         |
         */
 
@@ -596,7 +595,7 @@ namespace Bones {
          */
 
         if (file_exists(__DIR__ . '/bootstrap/plugin.php')) {
-          $plugin = require_once __DIR__ . '/bootstrap/plugin.php';
+          require_once __DIR__ . '/bootstrap/plugin.php';
         }
       } catch (Exception $e) {
         echo "\n\033[33;5;82mWarning!!\n";
@@ -614,10 +613,10 @@ namespace Bones {
       $namespace = $this->getNamespace();
 
       $kernelClass        = "{$namespace}\\Console\\Kernel";
-      $WPBoneskernelClass = "{$namespace}\\WPBones\\Foundation\\Console\\Kernel";
+      $WPBonesKernelClass = "{$namespace}\\WPBones\\Foundation\\Console\\Kernel";
 
       try {
-        if (class_exists($WPBoneskernelClass) && class_exists($kernelClass)) {
+        if (class_exists($WPBonesKernelClass) && class_exists($kernelClass)) {
           $this->kernel = new $kernelClass;
         }
       } catch (Exception $e) {
@@ -631,7 +630,7 @@ namespace Bones {
      *
      * @return string
      */
-    public function getNamespace()
+    public function getNamespace(): string
     {
       [$null, $namespace] = $this->getPluginNameAndNamespace();
 
@@ -643,7 +642,7 @@ namespace Bones {
      *
      * @return array
      */
-    public function getPluginNameAndNamespace()
+    public function getPluginNameAndNamespace(): array
     {
       return explode(",", file_get_contents('namespace'));
     }
@@ -654,7 +653,7 @@ namespace Bones {
      * @param string $command Bones command to check.
      * @return bool
      */
-    protected function isCommand($command)
+    protected function isCommand($command): bool
     {
       $arguments = $this->arguments();
 
@@ -740,7 +739,7 @@ namespace Bones {
      *
      * @return string
      */
-    public function getPluginName()
+    public function getPluginName(): string
     {
       [$plugin_name] = $this->getPluginNameAndNamespace();
 
@@ -756,7 +755,7 @@ namespace Bones {
      * For example, if the plugin name is 'My WP Plugin'
      *
      * My WP Plugin          Name of plugin
-     * MyWPPlugin            Namespace, see [PSR-4 autoloading standard](http://www.php-fig.org/psr/psr-4/)
+     * MyWPPlugin            Namespace, see [PSR-4 autoload standard](http://www.php-fig.org/psr/psr-4/)
      * my_wp_plugin_slug     Plugin slug
      * my_wp_plugin_vars     Plugin vars used for CPT, taxonomy, etc.
      * my-wp-plugin          Internal id used for css, js and less files
@@ -796,7 +795,7 @@ namespace Bones {
       } // force namespace as WPKirk after a composer update
       elseif (!empty($args[0]) && $args[0] === '--update') {
         [$search_plugin_name, $search_namespace] = $this->getDefaultPlaginNameAndNamespace();
-      } // new plugin name, the namespace will be create from plugin name
+      } // new plugin name, the namespace will be created from plugin name
       elseif (!empty($args[0]) && empty($args[1])) {
         [$plugin_name, $null] = $args;
         $namespace    = $plugin_name;
@@ -892,7 +891,7 @@ namespace Bones {
      *
      * @return bool
      */
-    protected function isHelp($str = null)
+    protected function isHelp($str = null): bool
     {
       if (!is_null($str)) {
         return (empty($str) || $str === '--help');
@@ -909,7 +908,7 @@ namespace Bones {
      * @param int $index Optional. Index of param.
      *                   If NULL will be returned the whole array.
      *
-     * @return array
+     * @return array|string
      */
     protected function commandParams($index = null)
     {
@@ -927,7 +926,7 @@ namespace Bones {
      * @param string $str     The question to ask
      * @param string $default The default value
      */
-    protected function ask($str, $default = '')
+    protected function ask($str, $default = ''): string
     {
       echo "\n\e[38;5;33m$str" . (empty($default) ? "" : " (default: {$default})") . "\e[0m ";
 
@@ -944,7 +943,7 @@ namespace Bones {
     /**
      * Return the defaulr plugin name and namespace.
      */
-    protected function getDefaultPlaginNameAndNamespace()
+    protected function getDefaultPlaginNameAndNamespace(): array
     {
       return ['WP Kirk', 'WPKirk'];
     }
@@ -965,7 +964,7 @@ namespace Bones {
      * @since 1.0.0.b4
      *
      */
-    protected function recursiveScan($path, $match = '')
+    protected function recursiveScan($path, $match = ''): array
     {
       /**
        * Return an array with all matched files from root folder.
@@ -981,7 +980,7 @@ namespace Bones {
        *
        * @suppress PHP0405
        */
-      function _rglob($path, $match = '', &$result = [])
+      function _rglob($path, $match = '', &$result = []): array
       {
         $path = rtrim($path, '/\\') . '/';
 
@@ -994,10 +993,6 @@ namespace Bones {
                 _rglob($file, $match, $result);
               }
             } elseif (!empty($match)) {
-              $continue = true;
-              if (false == $continue) {
-                break;
-              }
               $regexp_result = [];
               $error         = preg_match($match, $file, $regexp_result);
               if (0 !== $error || false !== $error) {
@@ -1022,7 +1017,7 @@ namespace Bones {
     /**
      * Return the plugin slug.
      */
-    public function getPluginSlug($str = null)
+    public function getPluginSlug($str = null): string
     {
       $str = $this->getSnakeCasePluginName($str);
 
@@ -1032,9 +1027,10 @@ namespace Bones {
     /**
      * Return the snake case plugin name.
      *
+     * @param string $str
      * @return string
      */
-    public function getSnakeCasePluginName($str = null)
+    public function getSnakeCasePluginName($str = null): string
     {
       $str = $this->getSanitizePluginName($str);
 
@@ -1044,9 +1040,10 @@ namespace Bones {
     /**
      * Return the sanitized plugin name.
      *
+     * @param string $str
      * @return string
      */
-    public function getSanitizePluginName($str = null)
+    public function getSanitizePluginName($str = null): string
     {
       if (is_null($str)) {
         $str = $this->getPluginName();
@@ -1066,8 +1063,10 @@ namespace Bones {
 
     /**
      * Return a kebalized version of the string
+     *
+     * @param string $title
      */
-    protected function sanitize($title)
+    protected function sanitize($title): string
     {
       $title = strip_tags($title);
       // Preserve escaped octets.
@@ -1085,15 +1084,17 @@ namespace Bones {
       $title = preg_replace('/[^%a-z0-9 _-]/', '', $title);
       $title = preg_replace('/\s+/', '-', $title);
       $title = preg_replace('|-+|', '-', $title);
-      $title = trim($title, '-');
 
-      return $title;
+      return trim($title, '-');
     }
 
     /**
      * Return the plugin vars.
+     *
+     * @param string $str
+     * @return string
      */
-    public function getPluginVars($str = null)
+    public function getPluginVars($str = null): string
     {
       $str = $this->getSnakeCasePluginName($str);
 
@@ -1102,11 +1103,13 @@ namespace Bones {
 
     /**
      * Return the plugin id used for css, js, less and files.
-     * Currently it's the sanitized plugin name.
+     * Currently, it's the sanitized plugin name.
+     *
+     * @param string|null $str
      *
      * @return string
      */
-    public function getPluginId($str = null)
+    public function getPluginId(string $str = null): string
     {
       return $this->getSanitizePluginName($str);
     }
@@ -1221,9 +1224,9 @@ namespace Bones {
      */
 
     /**
-     * Create a deploy version of the plugin
+     * Create a deployment version of the plugin
      *
-     * @param string $path The path to the deploy version of the plugin
+     * @param string $path The path to the deployment version of the plugin
      */
     protected function deploy($path)
     {
@@ -1242,12 +1245,12 @@ namespace Bones {
       }
 
       if (!empty($path)) {
-        // alternative method to customize the deploy
+        // alternative method to customize the deployment
         @include 'deploy.php';
 
         do_action('wpbones_console_deploy_start', $this, $path);
 
-        // first of all delete previous path
+        // first delete previous path
         $this->info("🕐 Delete folder {$path}");
         $this->deleteDirectory($path);
         $this->info("\033[1A👍");
@@ -1290,7 +1293,7 @@ namespace Bones {
         ];
 
         /**
-         * Filter the list of files and folders to skip during the deploy.
+         * Filter the list of files and folders to skip during the deployment.
          *
          * @param array $array The files and folders are relative to the root of plugin.
          */
@@ -1339,9 +1342,11 @@ namespace Bones {
      *
      * @param string $source      The source path
      * @param string $dest        The target path
-     * @param number $permissions The permissions to set
+     * @param int    $permissions The permissions to set
+     *
+     * @return bool
      */
-    protected function xcopy($source, $dest, $permissions = 0755)
+    protected function xcopy($source, $dest, $permissions = 0755): bool
     {
       // Check for symlinks
       if (is_link($source)) {
@@ -1379,11 +1384,13 @@ namespace Bones {
     }
 
     /**
-     * Used to skip some files and folders during the deploy
+     * Used to skip some files and folders during the deployment
      *
      * @param string $value The file or folder to skip
+     *
+     * @return bool
      */
-    protected function skip($value)
+    protected function skip($value): bool
     {
       $single = str_replace($this->rootDeploy, '', $value);
 
@@ -1477,7 +1484,7 @@ namespace Bones {
       $lines = explode("\n", $index_php_content);
       foreach ($lines as $line) {
 
-        // get the plugin version for Wordpress comments
+        // get the plugin version for WordPress comments
         if (preg_match('/^[ \t\/*#@]*Version:\s*(.*)$/i', $line, $matches)) {
 
           /**
@@ -1542,7 +1549,7 @@ namespace Bones {
 
         file_put_contents('readme.txt', $new_readme_txt_content);
 
-        // We're goinf to change the "* Version: x.y.z" with "* Version: $version"
+        // We're going to change the "* Version: x.y.z" with "* Version: $version"
         $new_version_string_for_index_php = str_replace($version_number_from_index_php, $version, $version_string_from_index_php);
 
         // We're going to change the whole "index.php" file
@@ -1550,7 +1557,9 @@ namespace Bones {
 
         file_put_contents('index.php', $new_index_php_content);
 
-        return $this->line("\nVersion updated to {$version}");
+        $this->line("\nVersion updated to {$version}");
+
+        return;
       }
 
       $this->line("\nVersion is already {$version}");
@@ -1571,7 +1580,7 @@ namespace Bones {
     /**
      * Create a migrate file
      *
-     * @param string $table The table name
+     * @param string $tablename
      */
     protected function createMigrate($tablename)
     {
@@ -1606,11 +1615,10 @@ namespace Bones {
      * Return the content of a stub file with all replacements.
      *
      * @param string $filename The stub file name without extension
-     * @param array  $search   The search array
-     *
+     * @param array  $replacements
      * @return string
      */
-    public function prepareStub($filename, $replacements = [])
+    public function prepareStub($filename, $replacements = []): string
     {
       $stub = $this->getStubContent($filename);
 
@@ -1620,10 +1628,10 @@ namespace Bones {
     /**
      * Return the content of a stub file.
      *
-     * @param string $file_name The stub file name without extension
+     * @param $filename
      * @return string
      */
-    public function getStubContent($filename)
+    public function getStubContent($filename): string
     {
       return file_get_contents("vendor/wpbones/wpbones/src/Console/stubs/{$filename}.stub");
     }
@@ -1685,9 +1693,9 @@ namespace Bones {
      *
      * @param string $className Optional. Command to check.
      *
-     * @return string | exit
+     * @return string
      */
-    protected function askClassNameIfEmpty($className = "")
+    protected function askClassNameIfEmpty($className = ""): string
     {
       if (empty($className)) {
         $className = $this->ask('ClassName:');
@@ -2136,7 +2144,7 @@ namespace Bones {
     }
 
     /**
-     * Create a API Controller
+     * Create an API Controller
      *
      * @param string $className The class name
      */
@@ -2190,11 +2198,9 @@ namespace Bones {
      *
      * @return \Bones\BonesCommandLine
      */
-    public static function run()
+    public static function run(): BonesCommandLine
     {
-      $instance = new self;
-
-      return $instance;
+      return new self;
     }
   }
 

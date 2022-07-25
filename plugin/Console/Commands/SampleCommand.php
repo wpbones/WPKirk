@@ -7,9 +7,9 @@ use WPKirk\WPBones\Console\Command;
 class SampleCommand extends Command
 {
 
-  protected string $signature = 'wpkirk:sample {--name= : Display your name}';
+  protected $signature = 'wpkirk:sample {--name= : Display your name}';
 
-  protected string $description = 'Example of bones command';
+  protected $description = 'Example of bones command';
 
   /**
    * Description

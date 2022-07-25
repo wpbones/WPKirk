@@ -2,22 +2,28 @@
 
 use WPKirk\WPBones\Database\Seeder;
 
-class ProdcutSeeder extends Seeder
+class WPMyPluginProductsSeeder extends Seeder
 {
-    protected $tablename = 'products';
+  /**
+   * Usually, you should use the model name as the table name.
+   * It will be converted to lowercase and with the WordPress prefix.
+   *
+   * @var string The table name.
+   */
+  protected $tablename = "WPMyPluginProducts";
 
-    // Run the database seeds just once
-    protected $runOnce = true;
+  // Run the database seeds just once
+  protected $runOnce = true;
 
-    public function run()
-    {
-        $this->insert(
-            "(name) VALUES 
+  public function run()
+  {
+    $this->insert(
+      "(name) VALUES 
             ('iMac'),
             ('iPod'),
             ('iPhone'),
             ('iPad')
             "
-        );
-    }
+    );
+  }
 }

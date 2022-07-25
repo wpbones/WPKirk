@@ -7,7 +7,7 @@ use WPKirk\WPTables\Html\WPTable;
 class ExampleTable extends WPTable
 {
 
-  protected string $title = 'List of Discos';
+  protected $title = 'List of Discos';
 
   /**
    * Description
@@ -22,7 +22,7 @@ class ExampleTable extends WPTable
     ];
   }
 
-  public function getItems(array $args = []): array
+  public function getItems($args = []): array
   {
 
     $fake = [];

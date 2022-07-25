@@ -8,19 +8,19 @@ class SearchTable extends WPTable
 {
 
   // check the boot() method
-  protected string $title = 'List of Cakes';
+  protected $title = 'List of Cakes';
 
-  protected bool $searchBox = true;
+  protected $searchBox = true;
 
   public function boot()
   {
-    // here you can everide the properties
+    // here you can override the properties
     $this->title = 'My amazing list of Cakes';
 
     $this->name = 'cakes';
   }
 
-  public function getColumnsAttribute()
+  public function getColumnsAttribute(): array
   {
     return [
       'id'          => 'Name',
@@ -29,7 +29,7 @@ class SearchTable extends WPTable
     ];
   }
 
-  public function getItems(array $args = [])
+  public function getItems(array $args = []): array
   {
 
     $fakes = [];
@@ -106,7 +106,7 @@ class SearchTable extends WPTable
     ];
   }
 
-  public function getViewCountCream()
+  public function getViewCountCream(): int
   {
     $count = 0;
 
@@ -119,14 +119,14 @@ class SearchTable extends WPTable
     return $count;
   }
 
-  public function getViewQueryArgCream()
+  public function getViewQueryArgCream(): array
   {
     return [
       'ingredients' => 'cream',
     ];
   }
 
-  public function getBulkActionsForView(string $view)
+  public function getBulkActionsForView(string $view): array
   {
     return [
       'delete'              => __('Delete'),

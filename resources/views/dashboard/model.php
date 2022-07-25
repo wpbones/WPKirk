@@ -8,7 +8,7 @@
 -->
 <?php
 
-use WPKirk\Http\Controllers\Products;
+use WPKirk\Http\Controllers\WPMyPluginProducts;
 
 ?>
 
@@ -26,16 +26,18 @@ use WPKirk\Http\Controllers\Products;
   <div class="wp-kirk-toc-content">
 
     <p>In your Plugin you may use the Database Model class instead of the <a target="_blank"
-        href="https://github.com/wpbones/WPBones/wiki/query-builder">Query Builder</a>.</p>
+                                                                             href="https://github.com/wpbones/WPBones/wiki/query-builder">Query
+        Builder</a>.</p>
     <p>To use the Model convenction you need to extend the Model class:</p>
 
-    <pre><code class="hljs" style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span>
+    <pre><code class="hljs"
+               style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span>
 
 <span class="hljs-keyword">namespace</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>;
 
 <span class="hljs-keyword">use</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">WPBones</span>\<span class="hljs-title">Database</span>\<span class="hljs-title">Model</span>;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Products</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WPMyPluginProducts</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
 </span>{
 }</code></pre>
 
@@ -48,13 +50,14 @@ use WPKirk\Http\Controllers\Products;
     <p>If your model's corresponding database table does not fit this convention, you may manually specify the model's
       table name by defining a <code>table</code> property on the model:</p>
 
-    <pre><code class="hljs" style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span>
+    <pre><code class="hljs"
+               style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span>
 
 <span class="hljs-keyword">namespace</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>;
 
 <span class="hljs-keyword">use</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">WPBones</span>\<span class="hljs-title">Database</span>\<span class="hljs-title">Model</span>;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Products</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WPMyPluginProducts</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
 </span>{
 
     <span class="hljs-comment">/**
@@ -68,13 +71,15 @@ use WPKirk\Http\Controllers\Products;
 
     <h2>Example</h2>
 
-    <pre><code class="hljs" style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span> Products::all()</code></pre>
+    <pre><code class="hljs"
+               style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span> WPMyPluginProducts::all()</code></pre>
 
     <pre><code class="hljs"><details><?php
-    echo Products::all()->dump();
-  ?></details></code></pre>
+          echo WPMyPluginProducts::all()->dump();
+          ?></details></code></pre>
 
-    <p>You can find more <a target="_blank" href="https://github.com/wpbones/WPBones/wiki/model">example
+    <p>You can find more <a target="_blank"
+                            href="https://github.com/wpbones/WPBones/wiki/model">example
         here</a></>
 
   </div>

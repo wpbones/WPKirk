@@ -3,32 +3,25 @@
 namespace WPKirk\Http\Controllers;
 
 use Illuminate\Database\Eloquent\Model;
+use WPKirk\WPBones\Database\DB;
 
 class EloquentUser extends Model
 {
-  /**
-   * The table associated with the model.
-   *
-   * @var string
-   */
-  protected string $table = 'users';
-
+  
   /**
    * The primary key for the model.
    *
    * @var string
    */
-  protected string $primaryKey = 'ID';
+  protected $primaryKey = 'ID';
 
   /**
    * Get the table associated with the model.
    *
    * @return string
    */
-  public function getTable()
+  public function getTable(): string
   {
-    global $wpdb;
-
-    return $wpdb->prefix . preg_replace('/[[:<:]]' . $wpdb->prefix . '/', '', parent::getTable(), 1);
+    return DB::getTableName('Users');
   }
 }

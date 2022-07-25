@@ -3,6 +3,7 @@
 namespace WPKirk\Http\Controllers;
 
 use Illuminate\Database\Eloquent\Model;
+use WPKirk\WPBones\Database\DB;
 
 class EloquentProduct extends Model
 {
@@ -11,13 +12,8 @@ class EloquentProduct extends Model
    *
    * @var boolean
    */
-  public bool $timestamps = false;
-  /**
-   * The table associated with the model.
-   *
-   * @var string
-   */
-  protected string $table = 'products';
+  public $timestamps = false;
+
 
   /**
    * Get the table associated with the model.
@@ -26,8 +22,6 @@ class EloquentProduct extends Model
    */
   public function getTable(): string
   {
-    global $wpdb;
-
-    return $wpdb->prefix . preg_replace('/[[:<:]]' . $wpdb->prefix . '/', '', parent::getTable(), 1);
+    return DB::getTableName('WPMyPluginProducts');
   }
 }

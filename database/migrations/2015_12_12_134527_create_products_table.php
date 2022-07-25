@@ -2,11 +2,20 @@
 
 use WPKirk\WPBones\Database\Migrations\Migration;
 
-class Products extends Migration
+class WPMyPluginProductsMigration extends Migration
 {
-    public function up()
-    {
-        $this->create("CREATE TABLE {$this->tablename} (
+  /**
+   * Usually, you should use the model name as the table name.
+   * It will be converted to lowercase and with the WordPress prefix.
+   *
+   * @var string The table name.
+   */
+  protected $tablename = "WPMyPluginProducts";
+
+
+  public function up()
+  {
+    $this->create("CREATE TABLE {$this->tablename} (
               id bigint(20) unsigned NOT NULL auto_increment,
               user_id bigint(20) unsigned NOT NULL default '0',
               name varchar(20) NOT NULL default '',
@@ -19,5 +28,5 @@ class Products extends Migration
               PRIMARY KEY  (id),
               KEY user_id (user_id)
          ) {$this->charsetCollate};");
-    }
+  }
 }
