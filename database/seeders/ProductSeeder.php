@@ -1,14 +1,10 @@
 <?php
 
-use WPKirk\WPBones\Database\Seeder;
 use WPKirk\Models\MyPluginProducts;
+use WPKirk\WPBones\Database\Seeder;
 
-
-
-return new class extends Seeder 
-{
+return new class extends Seeder {
   /**
-   * Usually, you should use the model name as the table name.
    * It will be converted to lowercase and with the WordPress prefix.
    *
    * @var string The table name.
@@ -21,13 +17,24 @@ return new class extends Seeder
   public function run()
   {
 
+    // insert by using the model class
     MyPluginProducts::insert([
-      ['name' => 'iMac', 'price' => '100000'],
-      ['name' => 'iPhone', 'price' => '20000'],
-      ['name' => 'iPad', 'price' => '30000'],
-      ['name' => 'iPod', 'price' => '10000']        
-    ]
+        ['name' => 'iMac', 'price' => '100000'],
+        ['name' => 'iPhone', 'price' => '20000'],
+        ['name' => 'iPad', 'price' => '30000'],
+        ['name' => 'iPod', 'price' => '10000'],
+      ]
     );
+
+    // insert by using the Seeder class
+    // $this->insert(
+    //   "(name) VALUES 
+    //         ('iMac'),
+    //         ('iPod'),
+    //         ('iPhone'),
+    //         ('iPad')
+    //         "
+    // );
 
   }
 };
