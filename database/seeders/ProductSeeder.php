@@ -1,8 +1,11 @@
 <?php
 
 use WPKirk\WPBones\Database\Seeder;
+use WPKirk\Models\MyPluginProducts;
 
-class WPMyPluginProductsSeeder extends Seeder
+
+
+return new class extends Seeder 
 {
   /**
    * Usually, you should use the model name as the table name.
@@ -10,20 +13,21 @@ class WPMyPluginProductsSeeder extends Seeder
    *
    * @var string The table name.
    */
-  protected $tablename = "WPMyPluginProducts";
+  protected $tablename = "my_plugin_products";
 
   // Run the database seeds just once
   protected $runOnce = true;
 
   public function run()
   {
-    $this->insert(
-      "(name) VALUES 
-            ('iMac'),
-            ('iPod'),
-            ('iPhone'),
-            ('iPad')
-            "
+
+    MyPluginProducts::insert([
+      ['name' => 'iMac', 'price' => '100000'],
+      ['name' => 'iPhone', 'price' => '20000'],
+      ['name' => 'iPad', 'price' => '30000'],
+      ['name' => 'iPod', 'price' => '10000']        
+    ]
     );
+
   }
-}
+};

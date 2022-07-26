@@ -57,5 +57,4 @@ class MyAjax extends ServiceProvider
 
     wp_send_json($response);
   }
-
 }

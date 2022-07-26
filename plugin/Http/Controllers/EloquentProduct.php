@@ -22,6 +22,6 @@ class EloquentProduct extends Model
    */
   public function getTable(): string
   {
-    return DB::getTableName('WPMyPluginProducts');
+    return DB::getTableName('MyPluginProducts');
   }
 }

@@ -423,7 +423,7 @@ namespace Bones {
   /**
    * The WP Bones command line version.
    */
-  define('WPBONES_COMMAND_LINE_VERSION', "1.2.0");
+  define('WPBONES_COMMAND_LINE_VERSION', "1.2.1");
 
   use Bones\SemVer\Version;
   use Exception;
@@ -897,7 +897,7 @@ namespace Bones {
         return (empty($str) || $str === '--help');
       }
 
-      $param = $this->commandParams()[0];
+      $param = $this->commandParams()[0]??null;
 
       return (!empty($param) && $param === '--help');
     }

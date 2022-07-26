@@ -8,7 +8,7 @@
 -->
 <?php
 
-use WPKirk\Http\Controllers\WPMyPluginProducts;
+use WPKirk\Models\MyPluginProducts;
 
 ?>
 
@@ -33,11 +33,11 @@ use WPKirk\Http\Controllers\WPMyPluginProducts;
     <pre><code class="hljs"
                style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span>
 
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>;
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">Models</span>;
 
 <span class="hljs-keyword">use</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">WPBones</span>\<span class="hljs-title">Database</span>\<span class="hljs-title">Model</span>;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WPMyPluginProducts</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPluginProducts</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
 </span>{
 }</code></pre>
 
@@ -53,29 +53,30 @@ use WPKirk\Http\Controllers\WPMyPluginProducts;
     <pre><code class="hljs"
                style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span>
 
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>;
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Models</span>;
 
 <span class="hljs-keyword">use</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">WPBones</span>\<span class="hljs-title">Database</span>\<span class="hljs-title">Model</span>;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WPMyPluginProducts</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPluginProducts</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
 </span>{
 
     <span class="hljs-comment">/**
      * The table associated with the model.
+     * You may omit this property if you want to use the class name.
      *
      * <span class="hljs-doctag">@var</span> string
      */</span>
-    <span class="hljs-keyword">protected</span> $table = <span class="hljs-string">'user_products’;
+    <span class="hljs-keyword">protected</span> $table = <span class="hljs-string">'my_plugin_products’;
 
 }</span></code></pre>
 
     <h2>Example</h2>
 
     <pre><code class="hljs"
-               style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span> WPMyPluginProducts::all()</code></pre>
+               style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span> MyPluginProducts::all()</code></pre>
 
     <pre><code class="hljs"><details><?php
-          echo WPMyPluginProducts::all()->dump();
+          echo MyPluginProducts::all()->dump();
           ?></details></code></pre>
 
     <p>You can find more <a target="_blank"
