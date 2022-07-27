@@ -29,7 +29,7 @@ class SearchTable extends WPTable
     ];
   }
 
-  public function getItems(array $args = []): array
+  public function getItems($args = [])
   {
 
     $fakes = [];
@@ -126,7 +126,7 @@ class SearchTable extends WPTable
     ];
   }
 
-  public function getBulkActionsForView(string $view): array
+  public function getBulkActionsForView($view)
   {
     return [
       'delete'              => __('Delete'),
