@@ -6,7 +6,7 @@
 const { src, dest, series, watch } = require('gulp');
 
 
-var less      = require( 'gulp-less' ),
+const less      = require( 'gulp-less' ),
     minifycss = require( 'gulp-minify-css' ),
     uglify    = require( 'gulp-uglify' ),
     rename    = require( 'gulp-rename' ),
