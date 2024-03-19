@@ -2,17 +2,17 @@
 Contributors: gfazioli
 Donate link: http://undolog.com
 Tags: wordpress
-Requires at least: 5.6
-Tested up to: 5.8
-Stable tag: 1.0.0
+Requires at least: 6.2
+Tested up to: 6.4.3
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WP Kirk boilerplate plugin.
+WP Bones template plugin.
 
 == Description ==
 
-WP Kirk boilerplate plugin
+WP Bones template plugin
 
 == Installation ==
 
@@ -26,7 +26,7 @@ This section describes how to install the plugin and get it working.
 
 = What is WP Bones framework ? =
 
-See detail to  ([WP Bones](http://wpbones.github.io/WPBones)).
+See detail to  ([WP Bones](https://wpbones.vercel.app/)).
 
 == Screenshots ==
 
