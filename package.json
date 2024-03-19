@@ -1,12 +1,12 @@
 {
-  "name": "wobones/wp-kirk",
+  "name": "wpbones/wpkirk",
   "version": "1.3.0",
   "scripts": {
     "compress-js": "for file in resources/assets/js/*.js; do uglifyjs $file -c -m -o public/js/$(basename $file .js).min.js; done",
     "watch-js": "chokidar 'resources/assets/js/*.js' -c 'npm run compress-js'",
     "build:js": "npm run compress-js && echo 'Javascript Compression completed.'",
-    "compile-less": "for file in resources/assets/less/*.less; do filename=$(basename \"$file\"); filename_without_extension=\"${filename%.*}\"; lessc \"$file\" \"resources/assets/css/$filename_without_extension.css\"; done",
-    "minify-css": "cleancss -b --batch-suffix=.min -O2 -d -o public/css/ resources/assets/css/*.css",
+    "compile-less": "for file in resources/assets/less/*.less; do filename=$(basename \"$file\"); filename_without_extension=\"${filename%.*}\"; lessc \"$file\" \"resources/assets/vendor/css/$filename_without_extension.css\"; done",
+    "minify-css": "cleancss -b --batch-suffix=.min -O2 -d -o public/css/ resources/assets/vendor/css/*.css",
     "watch-less": "chokidar 'resources/assets/less/*.less' -c 'npm run compile-less && npm run minify-css'",
     "build:less": "npm run compile-less && npm run minify-css && echo 'Production build completed.'",
     "watch": "npm run watch-js & npm run watch-less",

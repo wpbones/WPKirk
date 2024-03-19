@@ -22,11 +22,13 @@ $ sudo apt-get update && sudo apt-get install nodejs && sudo apt-get install npm
 $ sudo apt-get install nodejs-legacy
 ```
 
-### Gulp
+### Package
 
-You will find a `package.json` with a few package such as `gulp`. Feel free to add your own.
+In the `package.json` there are the tools used to compile the assets. You can install them by running:
 
-    $ npm install
+```sh
+$ npm install
+```
 
 ## I love Laravel
 
