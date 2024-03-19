@@ -5,12 +5,13 @@
  *
  */
 
+
 (function ($) {
 
   "use strict";
 
   function openAlert() {
-    alert("Hi there, the jQuery version is " + $().jquery);
+    alert("Hi there, and Hello World!\n The jQuery version is " + $().jquery);
 
     // Ajax
     $('#ajax-trusted').on('click', function () {
@@ -36,6 +37,7 @@
         });
 
     });
+
 
     // Action executed only by not logged in user, usually from frontend.
     $('#ajax-notLogged').on('click', function () {

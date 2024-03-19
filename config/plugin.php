@@ -28,6 +28,8 @@ return [
   | the filenames in `public/css` will have `.min` as postfix. If this
   | setting is TRUE then it will be used the minified version.
   |
+  | @deprecated
+  |
   */
 
   'minified' => false,
