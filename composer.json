@@ -25,7 +25,8 @@
   },
   "autoload": {
     "psr-4": {
-      "WPKirk\\": "plugin/"
+      "WPKirk\\": "plugin/",
+      "WPKirk\\YourPackage\\": "YourPackage/src/"
     },
     "files": [
       "functions.php"

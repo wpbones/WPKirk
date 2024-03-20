@@ -10,7 +10,7 @@
 <div class="wp-kirk wrap">
   <h1>Hello, I'm a the second Custom Page without menu</h1>
 
-  <pre><code class="hljs" style="background:#282C34;border-radius:8px">Current Method <?php echo ! isset($method) ? : strtoupper($method) ?>
+  <pre><code class="hljs" style="background:#282C34;border-radius:8px">Current Method <?php echo esc_attr( ! isset($method) ? : strtoupper($method)) ?>
   </code></pre>
 
   <pre><code class="hljs" style="background:#282C34;border-radius:8px"><span class="xml">  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>

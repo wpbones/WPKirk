@@ -1,3 +1,9 @@
+<?php
+if (!defined('ABSPATH')) {
+  exit();
+}
+?>
+
 <!--
 |
 | In $plugin you'll find an instance of Plugin class.
@@ -94,7 +100,7 @@ Route::request([<span class="hljs-string">'get'</span>, <span class="hljs-string
 });</code></pre>
 
     <p>You will find further information and details in the <a target="_blank"
-        href="https://github.com/wpbones/WPBones/wiki/restapi">Official Wiki docs</a></p>
+        href="https://wpbones.vercel.app/docs/ServicesProvider/rest-api">Official WP Bones docs</a></p>
 
 
   </div>

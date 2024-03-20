@@ -5,51 +5,6 @@
 WP Kirk is a template plugin written by using [WP Bones](https://wpbones.vercel.app/) Framework Library.
 You may start from here to create a WP Bones WordPress plugin.
 
-As you know, WordPress doesn't support composer. So, I have used a little trick to fix this issue.
-
-## Requirement
-
-### Composer
-
-```sh
-$ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-```
-
-### Nodes
-
-```sh
-$ sudo apt-get update && sudo apt-get install nodejs && sudo apt-get install npm
-$ sudo apt-get install nodejs-legacy
-```
-
-### Package
-
-In the `package.json` there are the tools used to compile the assets. You can install them by running:
-
-```sh
-$ npm install
-```
-
-## I love Laravel
-
-First to all, this framework and the boilerplate plugin are inspired to [Laravel](http://laravel.com/) framework. Also, you will find a `bones` php shell executable like Laravel `artisan`.
-After cloning the repo, you can:
-
-Display help
-
-```sh
-$ php bones
-```
-
-Change namespace
-
-```sh
-$ php bones namespace MyPluginName
-```
-
-The last command is very important. You can change the namespace in anytime. However, I suggest you to make this only the first time, when the plugin is inactive.
-After changing of the namespace, you can start to develop you plugin. Your namespace will be `MyPluginName`.
-
 ## Documentation
 
 You'll find the [complete docs here](https://wpbones.vercel.app/docs).

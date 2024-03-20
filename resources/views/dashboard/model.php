@@ -26,7 +26,7 @@ use WPKirk\Models\MyPluginProducts;
   <div class="wp-kirk-toc-content">
 
     <p>In your Plugin you may use the Database Model class instead of the <a target="_blank"
-                                                                             href="https://github.com/wpbones/WPBones/wiki/query-builder">Query
+                                                                             href="https://wpbones.vercel.app/docs/DatabaseORM/query-builder">Query
         Builder</a>.</p>
     <p>To use the Model convenction you need to extend the Model class:</p>
 
@@ -80,7 +80,7 @@ use WPKirk\Models\MyPluginProducts;
           ?></details></code></pre>
 
     <p>You can find more <a target="_blank"
-                            href="https://github.com/wpbones/WPBones/wiki/model">example
+                            href="https://wpbones.vercel.app/docs/DatabaseORM/model">example
         here</a></>
 
   </div>

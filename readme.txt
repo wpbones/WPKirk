@@ -1,7 +1,7 @@
 === WP Kirk ===
 Contributors: gfazioli
 Donate link: http://undolog.com
-Tags: wordpress
+Tags: template, wpbones
 Requires at least: 6.2
 Tested up to: 6.4.3
 Stable tag: 1.3.0

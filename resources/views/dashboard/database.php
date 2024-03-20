@@ -43,13 +43,13 @@ use WPKirk\WPBones\Database\DB;
   <span class="hljs-keyword">echo</span> $user-&gt;user_login;
 }</code></pre>
 
-    <pre><code class="hljs"><?php
+    <pre><code class="hljs"><ul><?php
     foreach (DB::table('users')->get() as $user) {
-        echo $user->user_login;
+        echo "<li>{$user->user_login}</li>";
     }
-  ?></code></pre>
+  ?></ul></code></pre>
 
-    <p>You can find more <a target="_blank" href="https://github.com/wpbones/WPBones/wiki/query-builder">example
+    <p>You can find more <a target="_blank" href="https://wpbones.vercel.app/docs/DatabaseORM/query-builder">example
         here</a></>
 
   </div>

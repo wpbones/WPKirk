@@ -18,7 +18,7 @@
     </p>
     <p>
       You'll find the complete list and the documentation of all packages in the <a
-        href="https://github.com/wpbones/WPBones/wiki/Official-packages">official package repository</a>.
+        href="https://wpbones.vercel.app/docs/Packages/official-packages">official package repository</a>.
     </p>
 
     <hr />
