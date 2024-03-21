@@ -4,7 +4,8 @@
   "description": "[![Latest Stable Version](https://poser.pugx.org/wpbones/wpbones/v/stable)](https://packagist.org/packages/wpbones/wpbones)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp watch",
+    "build": "gulp build"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-typescript": "^2.12.2",
     "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
     "sass": "^1.72.0"
   }
 }

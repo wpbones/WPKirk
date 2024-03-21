@@ -5,6 +5,7 @@ const typescript = require('gulp-typescript');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
+const watch = require('gulp-watch');
 
 // Task for minifying CSS files
 gulp.task('minify-css', function () {
@@ -52,5 +53,15 @@ gulp.task('react', function () {
         .pipe(gulp.dest('public/js'));
 });
 
+// Task for watching changes in CSS and JavaScript files
+gulp.task('watch', function () {
+    gulp.watch('resources/assets/css/**/*.css', gulp.series('minify-css'));
+    gulp.watch('resources/assets/css/**/*.scss', gulp.series('sass'));
+    gulp.watch('resources/assets/css/**/*.less', gulp.series('less'));
+    gulp.watch('resources/assets/js/**/*.ts', gulp.series('typescript'));
+    gulp.watch('resources/assets/js/**/*.jsx', gulp.series('react'));
+    gulp.watch('resources/assets/js/**/*.js', gulp.series('minify-js'));
+});
+
 // Default task to run all tasks
-gulp.task('default', gulp.parallel('sass', 'less', 'typescript', 'react', 'minify-css', 'minify-js'));
+gulp.task('build', gulp.parallel('sass', 'less', 'typescript', 'react', 'minify-css', 'minify-js'));
