@@ -23,7 +23,7 @@
     "wpbones/pure-css-switch": "~1.0",
     "wpbones/wptables": "~1.0",
     "wpbones/useragent": "^1.0",
-    "illuminate/database": "^6.20"
+    "illuminate/database": "~11.0"
   },
   "autoload": {
     "psr-4": {
