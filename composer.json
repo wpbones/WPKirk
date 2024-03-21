@@ -1,15 +1,17 @@
 {
   "name": "wpbones/wpkirk",
   "type": "wordpress-plugin",
-  "description": "A boilerplate WordPress plugin demo for WP Bones framework.",
+  "description": "A WP Bones template WordPress plugin",
   "keywords": ["wordpress"],
   "homepage": "http://wpbones.wordpress.com",
   "license": "GPL-3.0",
-  "authors": [{
-    "name": "Giovambattista Fazioli",
-    "email": "giovambattista.fazioli@gmail.com",
-    "homepage": "http://undolog.com"
-  }],
+  "authors": [
+    {
+      "name": "Giovambattista Fazioli",
+      "email": "giovambattista.fazioli@gmail.com",
+      "homepage": "http://undolog.com"
+    }
+  ],
   "support": {
     "issues": "https://github.com/wpbones/WPKirk/issues",
     "source": "https://github.com/wpbones/WPKirk/"
@@ -28,9 +30,7 @@
       "WPKirk\\": "plugin/",
       "WPKirk\\YourPackage\\": "YourPackage/src/"
     },
-    "files": [
-      "functions.php"
-    ]
+    "files": ["functions.php"]
   },
   "scripts": {
     "post-autoload-dump": [

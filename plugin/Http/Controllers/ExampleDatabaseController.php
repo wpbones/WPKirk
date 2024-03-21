@@ -9,6 +9,8 @@ class ExampleDatabaseController extends Controller
 
         return WPKirk()
             ->view('dashboard.database')
+            ->withAdminStyles('prism')
+            ->withAdminScripts('prism')
             ->withAdminStyles('wp-kirk-common');
     }
 }

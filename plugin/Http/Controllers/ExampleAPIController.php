@@ -8,6 +8,8 @@ class ExampleAPIController extends Controller
     {
         return WPKirk()
             ->view('dashboard.api')
+            ->withAdminStyles('prism')
+            ->withAdminScripts('prism')
             ->withAdminStyles('wp-kirk-common');
     }
 }

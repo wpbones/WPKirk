@@ -16,12 +16,11 @@
 
   <p>Below an example of how to post some data to the same page</p>
 
-  <pre><code class="hljs" style="background:#282C34;border-radius:8px">Current Method <?php echo ! isset($method) ? : strtoupper($method) ?>
-  </code></pre>
+  <pre><code class="language-php">Current Method <?php echo ! isset($method) ? : strtoupper($method) ?></code></pre>
 
-  <pre><code class="hljs" style="background:#282C34;border-radius:8px">  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button-hero button-primary"</span>&gt;</span>Post Here<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre>
+  <pre><code class="language-html">&lt;form method=&quot;post&quot;&gt;
+  &lt;button class=&quot;button button-hero button-primary&quot;&gt;Post Here&lt;/button&gt;
+&lt;/form&gt;</code></pre>
 
   <form method="post">
     <button class="button button-hero button-primary">Post Here</button>
@@ -33,10 +32,9 @@
 
   <p>Below, how to send a post message to a different custom page</p>
 
-  <pre><code class="hljs" style="background:#282C34;border-radius:8px"><span class="xml">  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>
-    <span class="hljs-attr">action</span>=<span class="hljs-string">"</span></span></span><span class="php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span> $plugin-&gt;getPageUrl(<span class="hljs-string">'second_custom_page'</span>) <span class="hljs-meta">?&gt;</span></span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button-hero button-primary"</span>&gt;</span>Test Post<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span></code></pre>
+  <pre><code class="language-html">&lt;form method=&quot;post&quot; action=&quot;&lt;?php echo $plugin-&gt;getPageUrl('second_custom_page') ?&gt;&quot;&gt;
+    &lt;button class=&quot;button button-hero button-primary&quot;&gt;Test Post&lt;/button&gt;
+&lt;/form&gt;</code></pre>
 
   <form method="post"
     action="<?php echo $plugin->getPageUrl('second_custom_page') ?>">
@@ -49,8 +47,7 @@
 
   <p>You may also use the <code>pages</code> folder to create your own pages.</p>
 
-  <pre><code class="hljs" style="background:#282C34;border-radius:8px"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button-hero button-primary"</span>
-   <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span> $plugin-&gt;getPageUrl(<span class="hljs-string">'custom_page'</span>) <span class="hljs-meta">?&gt;</span></span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>Load custom page<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span></code></pre>
+  <pre><code class="language-html">&lt;a class=&quot;button button-hero button-primary&quot; href=&quot;&lt;?php echo $plugin-&gt;getPageUrl('custom_page') ?&gt;&quot;&gt;Load custom page&lt;/a&gt;</code></pre>
 
   <p><a class="button button-hero button-primary"
       href="<?php echo $plugin->getPageUrl('custom_page') ?>">Load

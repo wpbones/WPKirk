@@ -28,56 +28,49 @@ use WPKirk\Models\MyPluginProducts;
     <p>In your Plugin you may use the Database Model class instead of the <a target="_blank"
                                                                              href="https://wpbones.vercel.app/docs/DatabaseORM/query-builder">Query
         Builder</a>.</p>
-    <p>To use the Model convenction you need to extend the Model class:</p>
+    <p>To use the Model convection you need to extend the Model class:</p>
 
-    <pre><code class="hljs"
-               style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span>
+    <pre><code class="language-php">&lt;?php
+namespace WPKirk\Models;
 
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">Models</span>;
+use WPKirk\WPBones\Database\Model;
 
-<span class="hljs-keyword">use</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">WPBones</span>\<span class="hljs-title">Database</span>\<span class="hljs-title">Model</span>;
+class MyPluginProducts extends Model
+{
+}
+</code></pre>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPluginProducts</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
-</span>{
-}</code></pre>
-
-    <p>We don't support the automatic plurar naming of the table at the moment. Anyway, the default table name will be
-      the "snake case" of the class name. For example, the class <code>Users</code> will be associated with the table
-      <code>users</code>. The class <code>UsersLogged</code> will be associated with the table
-      <code>users_logged</code>.
+    <p>We don't support the automatic plural naming of the table at the moment. Anyway, the default table name will be
+      the "snake case" of the class name. For example, the class <code class="language-php inline">Users</code> will be associated with the table
+      <code class="language-php inline">users</code>. The class <code class="language-php inline">UsersLogged</code> will be associated with the table
+      <code class="language-php inline">users_logged</code>.
     </p>
 
     <p>If your model's corresponding database table does not fit this convention, you may manually specify the model's
-      table name by defining a <code>table</code> property on the model:</p>
+      table name by defining a <code class="language-php inline">table</code> property on the model:</p>
 
-    <pre><code class="hljs"
-               style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span>
+    <pre><code class="language-php">&lt;?php
+namespace WPKirk\Models;
 
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Models</span>;
+use WPKirk\WPBones\Database\Model;
 
-<span class="hljs-keyword">use</span> <span class="hljs-title">WPKirk</span>\<span class="hljs-title">WPBones</span>\<span class="hljs-title">Database</span>\<span class="hljs-title">Model</span>;
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPluginProducts</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span>
-</span>{
-
-    <span class="hljs-comment">/**
-     * The table associated with the model.
-     * You may omit this property if you want to use the class name.
-     *
-     * <span class="hljs-doctag">@var</span> string
-     */</span>
-    <span class="hljs-keyword">protected</span> $table = <span class="hljs-string">'my_plugin_products’;
-
-}</span></code></pre>
+class MyPluginProducts extends Model
+{
+  protected $table = 'my_plugin_products';
+}</code></pre>
 
     <h2>Example</h2>
 
-    <pre><code class="hljs"
-               style="background:#282C34;border-radius:8px"><span class="hljs-meta">&lt;?php</span> MyPluginProducts::all()</code></pre>
+    <pre><code class="language-php">&lt;?php MyPluginProducts::all()</code></pre>
 
-    <pre><code class="hljs"><details><?php
-          echo MyPluginProducts::all()->dump();
-          ?></details></code></pre>
+
+
+    <pre><code class="language-json">
+  <?php
+  echo MyPluginProducts::all()->dump();
+  ?>
+  </code></pre>
+
 
     <p>You can find more <a target="_blank"
                             href="https://wpbones.vercel.app/docs/DatabaseORM/model">example

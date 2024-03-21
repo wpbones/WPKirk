@@ -8,6 +8,8 @@ class ExampleModelController extends Controller
     {
         return WPKirk()
             ->view('dashboard.model')
+            ->withAdminStyles('prism')
+            ->withAdminScripts('prism')
             ->withAdminStyles('wp-kirk-common');
     }
 }
