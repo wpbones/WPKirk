@@ -51,39 +51,38 @@
 
   <pre><code class="language-php">const { render, useState } = wp.element;
 
-const WordPressButton = ({ children, primary, ...others }) => {
-    return &lt;button className={`button ${primary ? 'button-primary' : ''}`} {...others}>{children}&lt;/button>;
-}
+const WordPressButton = ({ children, primary, ...others }) =&gt; {
+  return (
+    &lt;button className={`button ${primary ? "button-primary" : ""}`} {...others}>
+      {children}
+    &lt;/button>
+  );
+};
 
 const FlexContainer = ({ children, justifyContent, alignItems, gap }) =&gt; {
-    return &lt;div style={{ display: 'flex', justifyContent, alignItems, gap }}>{children}&lt;/div>;
-}
+  return &lt;div style={{ display: "flex", justifyContent: "alignItems", gap }}>{children}&lt;/div>;
+};
 
 const MyComponent = () =&gt; {
+  const [count, setCount] = useState(0);
 
-    const [count, setCount] = useState(0);
+  return (
+    &lt;div>
+      &lt;h2&gt;Hello, React World!&lt;/h2>
+      &lt;p&gt;
+        This is a simple React component rendered in a WordPress plugin. It is a counter that increments every time you
+        click the button.
+      &lt;/p>
 
-    return &lt;div>
-        &lt;h2>
-            Hello, React World!
-        &lt;/h2>
-        &lt;p>
-            This is a simple React component rendered in a WordPress plugin. It is a counter that increments every time you click the button.
-        &lt;/p>
+      &lt;FlexContainer gap={14} alignItems="center">
+        &lt;WordPressButton onClick={() => setCount(count + 1)}>Click me&lt;/WordPressButton>
+        &lt;span>{count}&lt;/span>
+      &lt;/FlexContainer>
+    &lt;/div>
+  );
+};
 
-        &lt;FlexContainer gap={14}  alignItems="center">
-            &lt;WordPressButton onClick={() => setCount(count + 1)}>
-                Click me
-            &lt;/WordPressButton>
-            &lt;span>
-                {count}
-            &lt;/span>
-        &lt;/FlexContainer>
-
-    &lt;/div>;
-}
-    
-render(&lt;MyComponent />, document.getElementById('react-test'));</code></pre>
+render(&lt;MyComponent />, document.getElementById("react-test"));</code></pre>
 
 
 <h3>Step 4 - compile</h3>
