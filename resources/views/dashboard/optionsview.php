@@ -18,10 +18,10 @@
 
   <pre><code class="language-json"><?php echo $plugin->options; ?></code></pre>
 
-  <?php if (isset($feedback)) : ?>
+  <?php if (isset($feedback)): ?>
   <div id="message" class="updated notice is-dismissible">
     <p>
-      <?php echo $feedback ?>
+      <?php echo $feedback; ?>
     </p>
   </div>
   <?php endif; ?>
@@ -38,14 +38,14 @@
   &lt;div&gt;
     &lt;label for="General/option_1"&gt;General.option_1&lt;/label&gt;
     &lt;input type="hidden" name="General/option_1" value="false" /&gt;
-    &lt;input type="checkbox" name="General/option_1" id="General/option_1" &lt;?php 
+    &lt;input type="checkbox" name="General/option_1" id="General/option_1" &lt;?php
     checked('true', $plugin->options->get('General.option_1')) ?&gt;
     value="true"/&gt;
   &lt;/div&gt;
   &lt;div&gt;
     &lt;label for="General/option_2"&gt;General.option_2&lt;/label&gt;
     &lt;input type="hidden" name="General/option_2" value="false" /&gt;
-    &lt;input type="checkbox" name="General/option_2" id="General/option_2" &lt;?php 
+    &lt;input type="checkbox" name="General/option_2" id="General/option_2" &lt;?php
     checked('true', $plugin->options->get('General.option_2')) ?&gt;
     value="true"/&gt;
   &lt;/div&gt;
@@ -64,7 +64,7 @@ sub_option_of_3"
 &lt;/form&gt;
 </code></pre>
 
-  
+
   <form action="" method="post">
 
     <?php wp_nonce_field('Options'); ?>
@@ -72,28 +72,36 @@ sub_option_of_3"
     <div>
       <label for="General/option_1">General.option_1</label>
       <input type="hidden" name="General/option_1" value="false" />
-      <input type="checkbox" name="General/option_1" id="General/option_1" <?php checked('true', $plugin->options->get('General.option_1')) ?>
+      <input type="checkbox" name="General/option_1" id="General/option_1" <?php checked(
+        'true',
+        $plugin->options->get('General.option_1')
+      ); ?>
       value="true"/>
     </div>
 
     <div>
       <label for="General/option_2">General.option_2</label>
       <input type="hidden" name="General/option_2" value="false" />
-      <input type="checkbox" name="General/option_2" id="General/option_2" <?php checked('true', $plugin->options->get('General.option_2')) ?>
+      <input type="checkbox" name="General/option_2" id="General/option_2" <?php checked(
+        'true',
+        $plugin->options->get('General.option_2')
+      ); ?>
       value="true"/>
     </div>
 
     <div>
       <label for="Special/Name">Special.Name</label>
       <input type="text" name="Special/Name" id="Special/Name"
-        value="<?php echo $plugin->options->get('Special.Name') ?>" />
+        value="<?php echo $plugin->options->get('Special.Name'); ?>" />
 
     </div>
 
     <div>
       <label for="General/option_3/sub_option_of_3">General/option_3/sub_option_of_3</label>
       <input type="text" name="General/option_3/sub_option_of_3" id="General/option_3/sub_option_of_3"
-        value="<?php echo $plugin->options->get('General.option_3.sub_option_of_3') ?>" />
+        value="<?php echo $plugin->options->get(
+          'General.option_3.sub_option_of_3'
+        ); ?>" />
 
     </div>
 

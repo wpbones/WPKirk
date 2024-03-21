@@ -6,11 +6,7 @@
  | return PluginClassName()->view( 'dashboard.index', [ 'var' => 'value' ] );
  |
 -->
-<?php
-
-use WPKirk\WPBones\Database\DB;
-
-?>
+<?php use WPKirk\WPBones\Database\DB; ?>
 
 <div class="wp-kirk wrap wp-kirk-sample">
 
@@ -30,9 +26,9 @@ use WPKirk\WPBones\Database\DB;
 
     <pre><code class="language-php">DB::table('users')->all()</code></pre>
 
-    <pre><code class="language-json"><?php
-    echo DB::table('users')->all()->dump();
-  ?></code></pre>
+    <pre><code class="language-json"><?php echo DB::table('users')
+      ->all()
+      ->dump(); ?></code></pre>
 
     <a name="example"></a>
     <h2>Example</h2>
@@ -41,11 +37,12 @@ use WPKirk\WPBones\Database\DB;
   echo "{$user->user_login}\n";
 }</code></pre>
 
-    <pre><code class="language-"><?php
-    foreach (DB::table('users')->get() as $user) {
-        echo "{$user->user_login}\n";
-    }
-  ?></code></pre>
+    <pre><code class="language-"><?php foreach (
+      DB::table('users')->get()
+      as $user
+    ) {
+      echo "{$user->user_login}\n";
+    } ?></code></pre>
 
     <p>You can find more <a target="_blank" href="https://wpbones.vercel.app/docs/DatabaseORM/query-builder">example
         here</a></>

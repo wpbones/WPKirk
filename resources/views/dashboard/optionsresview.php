@@ -11,7 +11,7 @@
 
   <h1>Options Resource View</h1>
 
-  <h3>Current Method <?php echo ! isset($method) ? : $method ?></h3>
+  <h3>Current Method <?php echo !isset($method) ?: $method; ?></h3>
 
   <form action="" method="post">
 

@@ -4,13 +4,13 @@ namespace WPKirk\CustomTaxonomyTypes;
 
 use WPKirk\WPBones\Foundation\WordPressCustomTaxonomyTypeServiceProvider as ServiceProvider;
 
-class MyCustomTaxonomy extends ServiceProvider {
+class MyCustomTaxonomy extends ServiceProvider
+{
+  protected $id = 'wp_kirk_tax';
 
-	protected $id='wp_kirk_tax';
+  protected $name = 'Ship';
 
-	protected $name='Ship';
+  protected $plural = 'Ships';
 
-	protected $plural='Ships';
-
-	protected $objectType='wp_kirk_cpt';
+  protected $objectType = 'wp_kirk_cpt';
 }

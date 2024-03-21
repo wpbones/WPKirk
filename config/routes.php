@@ -11,20 +11,19 @@
 */
 
 return [
-
   'first_custom_page' => [
-    'title'      => 'Title of page',
+    'title' => 'Title of page',
     'capability' => 'read',
-    'route'      => [
+    'route' => [
       'get' => 'Dashboard\DashboardController@customPage',
       'post' => 'Dashboard\DashboardController@customPage',
-    ]
+    ],
   ],
   'second_custom_page' => [
-    'title'      => 'Second',
+    'title' => 'Second',
     'capability' => 'read',
-    'route'      => [
+    'route' => [
       'post' => 'Dashboard\DashboardController@secondCustomPage',
-    ]
+    ],
   ],
 ];

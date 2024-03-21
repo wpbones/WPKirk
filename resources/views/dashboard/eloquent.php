@@ -7,10 +7,8 @@
  |
 -->
 <?php
-
 use WPKirk\Http\Controllers\EloquentProduct as Product;
 use WPKirk\Http\Controllers\EloquentUser as User;
-
 ?>
 
 <div class="wp-kirk wrap wp-kirk-sample">
@@ -39,9 +37,7 @@ use WPKirk\Http\Controllers\EloquentUser as User;
   <details>
   <summary>Output</summary>
     <pre><code class="language-json">
-  <?php
-  var_dump(User::all());
-  ?>
+  <?php var_dump(User::all()); ?>
   </code></pre>
   </details>
 
@@ -54,7 +50,9 @@ use WPKirk\Http\Controllers\EloquentUser as User;
 
   var_dump(User::find(1)->user_email);</code></pre>
 
-<pre><code class="language-json"><?php var_dump(User::find(1)->user_email); ?></code></pre>
+<pre><code class="language-json"><?php var_dump(
+  User::find(1)->user_email
+); ?></code></pre>
 
   <h2>Custom Table</h2>
 
@@ -68,9 +66,7 @@ use WPKirk\Http\Controllers\EloquentUser as User;
   <details>
   <summary>Output</summary>
     <pre><code class="language-json">
-  <?php
-  var_dump(Product::find([3,4]));
-  ?>
+  <?php var_dump(Product::find([3, 4])); ?>
   </code></pre>
   </details>
 
@@ -81,7 +77,9 @@ use WPKirk\Http\Controllers\EloquentUser as User;
 
   var_dump(Product::find(3)->name);</code></pre>
 
-  <pre><code class="language-json"><?php var_dump(Product::find(3)->name)?></code></pre>
+  <pre><code class="language-json"><?php var_dump(
+    Product::find(3)->name
+  ); ?></code></pre>
 
   <h2>Loop into</h2>
 
@@ -93,7 +91,9 @@ use WPKirk\Http\Controllers\EloquentUser as User;
   });</code></pre>
 
 
-  <pre><code class="language-json"><?php Product::all()->each(function ($e) { var_dump($e->id); }) ?></code></pre>
+  <pre><code class="language-json"><?php Product::all()->each(function ($e) {
+    var_dump($e->id);
+  }); ?></code></pre>
 
   <p>For further documentation on using the various database facilities this library provides, consult the <a
       target="_blank" href="https://laravel.com/docs/5.8/eloquent">Laravel framework documentation</a></p>

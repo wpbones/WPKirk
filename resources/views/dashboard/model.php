@@ -6,11 +6,7 @@
  | return PluginClassName()->view( 'dashboard.index', [ 'var' => 'value' ] );
  |
 -->
-<?php
-
-use WPKirk\Models\MyPluginProducts;
-
-?>
+<?php use WPKirk\Models\MyPluginProducts; ?>
 
 <div class="wp-kirk wrap wp-kirk-sample">
 
@@ -66,9 +62,7 @@ class MyPluginProducts extends Model
 
 
     <pre><code class="language-json">
-  <?php
-  echo MyPluginProducts::all()->dump();
-  ?>
+  <?php echo MyPluginProducts::all()->dump(); ?>
   </code></pre>
 
 

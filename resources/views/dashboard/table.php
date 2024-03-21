@@ -1,10 +1,9 @@
-<?php if ( ! defined( 'ABSPATH' ) ) {
-  exit;
+<?php if (!defined('ABSPATH')) {
+  exit();
 } ?>
 
 <div class="wrap">
 
-  <?php echo $table ?>
+  <?php echo $table; ?>
 
 </div>
-

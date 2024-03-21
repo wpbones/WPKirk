@@ -10,20 +10,19 @@
 */
 
 return [
-
   // embedded wp-json-server
-  'wp'     => [
+  'wp' => [
     'require_authentication' => false, // will affect all routes.
   ],
 
   // your custom rest api
   'custom' => [
-    'path'    => '/api',
+    'path' => '/api',
     'enabled' => true,
   ],
 
   // authentication
-  'auth'   => [
+  'auth' => [
     // embed basic authentication handler
     'basic' => true,
   ],

@@ -1,8 +1,7 @@
 <?php
 if (!defined('ABSPATH')) {
   exit();
-}
-?>
+} ?>
 
 <!--
 |
@@ -39,7 +38,7 @@ if (!defined('ABSPATH')) {
       create</p>
 
       <pre><code class="language-sh">/api/vendor/v1</code></pre>
- 
+
 
     <a name="routing"></a>
     <h2>Routing</h2>

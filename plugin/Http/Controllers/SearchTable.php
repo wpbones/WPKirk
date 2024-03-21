@@ -6,7 +6,6 @@ use WPKirk\WPTables\Html\WPTable;
 
 class SearchTable extends WPTable
 {
-
   // check the boot() method
   protected $title = 'List of Cakes';
 
@@ -23,7 +22,7 @@ class SearchTable extends WPTable
   public function getColumnsAttribute(): array
   {
     return [
-      'id'          => 'Name',
+      'id' => 'Name',
       'description' => 'Description',
       'ingredients' => 'Ingredients',
     ];
@@ -31,22 +30,15 @@ class SearchTable extends WPTable
 
   public function getItems($args = [])
   {
-
     $fakes = [];
 
-    $ingredients = [
-      'Cream',
-      'Vodka',
-      'Choccolate',
-      'Milk',
-    ];
+    $ingredients = ['Cream', 'Vodka', 'Choccolate', 'Milk'];
 
     for ($i = 0; $i < 10; $i++) {
-
       shuffle($ingredients);
 
       $fakes[] = [
-        'id'          => "Cake {$i}",
+        'id' => "Cake {$i}",
         'description' => 'Some description...',
         'ingredients' => $ingredients[0],
       ];
@@ -55,7 +47,6 @@ class SearchTable extends WPTable
     $currentView = $this->getCurrentView();
 
     if ($currentView !== 'all') {
-
       $filtered = [];
 
       foreach ($fakes as $fake) {
@@ -82,7 +73,6 @@ class SearchTable extends WPTable
     }
 
     return $fakes;
-
   }
 
   public function getCurrentView()
@@ -129,8 +119,8 @@ class SearchTable extends WPTable
   public function getBulkActionsForView($view)
   {
     return [
-      'delete'              => __('Delete'),
-      'keep_on_trash'       => __('Keep Trash'),
+      'delete' => __('Delete'),
+      'keep_on_trash' => __('Keep Trash'),
       'fill_withChoccolate' => __('Choccolate'),
     ];
   }
@@ -139,8 +129,8 @@ class SearchTable extends WPTable
   {
     // TODO: delete items
 
-    $this->successMessage = "Done, deleted " . implode(',', $items);
+    $this->successMessage = 'Done, deleted ' . implode(',', $items);
 
-    $this->warningMessage = "Calm! This is a demo";
+    $this->warningMessage = 'Calm! This is a demo';
   }
 }

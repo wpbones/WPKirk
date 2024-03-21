@@ -2,13 +2,12 @@
 
 use WPKirk\WPBones\Database\Migrations\Migration;
 
-return new class extends Migration 
-{
-
+return new class extends Migration {
   public function up()
   {
-    $this->create("my_plugin_products",
-      "( 
+    $this->create(
+      'my_plugin_products',
+      "(
          id bigint(20) unsigned NOT NULL auto_increment,
          user_id bigint(20) unsigned NOT NULL default '0',
          name varchar(20) NOT NULL default '',
@@ -20,6 +19,7 @@ return new class extends Migration
          `foo-bar` varchar(20) NOT NULL default '2',
          PRIMARY KEY  (id),
          KEY user_id (user_id)
-         ) {$this->charsetCollate};");
+         ) {$this->charsetCollate};"
+    );
   }
 };

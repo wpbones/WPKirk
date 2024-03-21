@@ -6,7 +6,6 @@ use WPKirk\WPBones\Support\Widget;
 
 class MyWidget extends Widget
 {
-
   /**
    * Base ID for the widget, lower case, if left empty a portion of the widget's class name will be used. Has to be
    * unique.
@@ -41,13 +40,13 @@ class MyWidget extends Widget
    * @var array
    */
   public $control_options = [
-    'width'  => 400,
+    'width' => 400,
     'height' => 350,
   ];
 
   public function update($new_instance, $old_instance)
   {
-    $old_instance['title'] = ($new_instance['title']);
+    $old_instance['title'] = $new_instance['title'];
 
     return $old_instance;
   }
@@ -56,8 +55,9 @@ class MyWidget extends Widget
   {
     $instance = array_merge($this->defaults(), $instance);
 
-    return WPKirk()->view('widgets.form')
-                   ->with(['instance' => $instance, 'widget' => $this]);
+    return WPKirk()
+      ->view('widgets.form')
+      ->with(['instance' => $instance, 'widget' => $this]);
   }
 
   /**
@@ -72,8 +72,9 @@ class MyWidget extends Widget
 
   public function viewWidget($args, $instance)
   {
-    return WPKirk()->view('widgets.index')
-                   ->with(['args' => $args, 'instance' => $instance])
-                   ->withStyles('wp-kirk-widget');
+    return WPKirk()
+      ->view('widgets.index')
+      ->with(['args' => $args, 'instance' => $instance])
+      ->withStyles('wp-kirk-widget');
   }
 }

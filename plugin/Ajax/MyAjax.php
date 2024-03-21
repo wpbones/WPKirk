@@ -6,16 +6,13 @@ use WPKirk\WPBones\Foundation\WordPressAjaxServiceProvider as ServiceProvider;
 
 class MyAjax extends ServiceProvider
 {
-
   /**
    * List of the ajax actions executed by both logged and not logged users.
    * Here you will use a methods list.
    *
    * @var array
    */
-  protected $trusted = [
-    'trusted',
-  ];
+  protected $trusted = ['trusted'];
 
   /**
    * List of the ajax actions executed only by logged-in users.
@@ -23,9 +20,7 @@ class MyAjax extends ServiceProvider
    *
    * @var array
    */
-  protected $logged = [
-    'logged',
-  ];
+  protected $logged = ['logged'];
 
   /**
    * List of the ajax actions executed only by not logged-in user, usually from frontend.
@@ -33,27 +28,25 @@ class MyAjax extends ServiceProvider
    *
    * @var array
    */
-  protected $notLogged = [
-    'notLogged',
-  ];
+  protected $notLogged = ['notLogged'];
 
   public function trusted()
   {
-    $response = "You have clicked Ajax Trusted";
+    $response = 'You have clicked Ajax Trusted';
 
     wp_send_json($response);
   }
 
   public function logged()
   {
-    $response = "You have clicked Ajax Logged";
+    $response = 'You have clicked Ajax Logged';
 
     wp_send_json($response);
   }
 
   public function notLogged()
   {
-    $response = "You have clicked Ajax notLogged";
+    $response = 'You have clicked Ajax notLogged';
 
     wp_send_json($response);
   }

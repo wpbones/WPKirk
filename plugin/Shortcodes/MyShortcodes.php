@@ -6,17 +6,15 @@ use WPKirk\WPBones\Foundation\WordPressShortcodesServiceProvider as ServiceProvi
 
 class MyShortcodes extends ServiceProvider
 {
-
   /**
    * List of registred shortcodes. {shortcode}/method
    *
    * @var array
    */
   protected $shortcodes = [
-    'my-shortcode'        => 'myShortcodeMethod',
+    'my-shortcode' => 'myShortcodeMethod',
     'wpbones_is_category' => 'wpBonesIsCategory',
   ];
-
 
   /**
    * Example of shortcode.
@@ -26,40 +24,45 @@ class MyShortcodes extends ServiceProvider
    *
    * @return string
    */
-  public function myShortcodeMethod( $atts = [], $content = null )
+  public function myShortcodeMethod($atts = [], $content = null)
   {
     // Default values for shortcode
     $defaults = [
       'computer' => false,
     ];
 
-    $atts = shortcode_atts( $defaults, $atts, 'wp_kirk' );
+    $atts = shortcode_atts($defaults, $atts, 'wp_kirk');
 
     return 'Computer, engage';
   }
 
-  public function wpBonesIsCategory( $atts = [], $content = null )
+  public function wpBonesIsCategory($atts = [], $content = null)
   {
     global $post;
 
     $defaults = [
       'post_type' => false,
-      'taxonomy'  => false,
-      'category'  => false,
+      'taxonomy' => false,
+      'category' => false,
     ];
 
-    $atts = shortcode_atts( $defaults, $atts, 'wpBonesIsCategory' );
+    $atts = shortcode_atts($defaults, $atts, 'wpBonesIsCategory');
 
-    if ( empty( $atts[ 'post_type' ] ) || empty( $atts[ 'taxonomy' ] ) || empty( $atts[ 'category' ] ) ) {
+    if (
+      empty($atts['post_type']) ||
+      empty($atts['taxonomy']) ||
+      empty($atts['category'])
+    ) {
       return $content;
     }
 
-    if ( $post->post_type === $atts[ 'post_type' ] && has_term( $atts[ 'category' ], $atts[ 'taxonomy' ] ) ) {
+    if (
+      $post->post_type === $atts['post_type'] &&
+      has_term($atts['category'], $atts['taxonomy'])
+    ) {
       return $content;
     }
 
-    return "";
+    return '';
   }
-
 }
-

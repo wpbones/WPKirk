@@ -9,8 +9,8 @@
 
 <div class="wp-kirk wrap wp-kirk-sample">
 
-  <h1>Hello, I'm the first <?php echo $plugin->Name ?> view</h1>
-  <h2>PHP Version <?php echo phpversion() ?>
+  <h1>Hello, I'm the first <?php echo $plugin->Name; ?> view</h1>
+  <h2>PHP Version <?php echo phpversion(); ?>
   </h2>
 
   <div class="wp-kirk-toc clearfix">
@@ -27,7 +27,7 @@
     <a name="passing-data"></a>
     <h2>Passing data to view</h2>
 
-    <p>You may get variable from the controller. For example, the variable <code class="language- inline">kirk</code>is <?php echo $kirk ?>
+    <p>You may get variable from the controller. For example, the variable <code class="language- inline">kirk</code>is <?php echo $kirk; ?>
     </p>
 
     <hr />
@@ -39,7 +39,9 @@
 
     <p>It will return</p>
 
-    <pre><code class="language-"><?php echo $plugin->config('custom.sample') ?></code></pre>
+    <pre><code class="language-"><?php echo $plugin->config(
+      'custom.sample'
+    ); ?></code></pre>
 
     <hr />
     <a name="plugin-information"></a>
@@ -47,13 +49,13 @@
     <p>You may get the plugin information by using</p>
 
 
-    <pre><code class="language-php">&lt;?php echo $plugin-&gt;Author ?&gt; // <?php echo $plugin->Author ?></code></pre>
+    <pre><code class="language-php">&lt;?php echo $plugin-&gt;Author ?&gt; // <?php echo $plugin->Author; ?></code></pre>
 
-    <pre><code class="language-php">&lt;?php echo $plugin-&gt;Description ?&gt; // <?php echo $plugin->Description ?></code></pre>
+    <pre><code class="language-php">&lt;?php echo $plugin-&gt;Description ?&gt; // <?php echo $plugin->Description; ?></code></pre>
 
-    <pre><code class="language-php">&lt;?php echo $plugin-&gt;Version ?&gt; // <?php echo $plugin->Version ?></code></pre>
+    <pre><code class="language-php">&lt;?php echo $plugin-&gt;Version ?&gt; // <?php echo $plugin->Version; ?></code></pre>
 
-    <pre><code class="language-php">&lt;?php echo $plugin-&gt;TextDomain ?&gt; // <?php echo $plugin->TextDomain ?></code></pre>
+    <pre><code class="language-php">&lt;?php echo $plugin-&gt;TextDomain ?&gt; // <?php echo $plugin->TextDomain; ?></code></pre>
 
     <hr />
     <a name="custom-pages"></a>
@@ -102,10 +104,12 @@ return [
 
     <p>You can get the custom page URL by using</p>
 
-    <pre><code class="language-php">&lt;?php echo $plugin-&gt;getPageUrl( 'custom_page' ) ?&gt; // <?php echo $plugin->getPageUrl('custom_page') ?></code></pre>
+    <pre><code class="language-php">&lt;?php echo $plugin-&gt;getPageUrl( 'custom_page' ) ?&gt; // <?php echo $plugin->getPageUrl(
+      'custom_page'
+    ); ?></code></pre>
 
     <p><a
-        href="<?php echo $plugin->getPageUrl('first_custom_page') ?>">Custom
+        href="<?php echo $plugin->getPageUrl('first_custom_page'); ?>">Custom
         Page</a></p>
 
   </div>

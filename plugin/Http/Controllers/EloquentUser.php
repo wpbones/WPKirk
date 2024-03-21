@@ -7,7 +7,6 @@ use WPKirk\WPBones\Database\DB;
 
 class EloquentUser extends Model
 {
-  
   /**
    * The primary key for the model.
    *

@@ -5,10 +5,7 @@
   "license": "MIT",
   "type": "library",
   "description": "Your package description",
-  "keywords": [
-    "WP Table",
-    "WP Bones"
-  ],
+  "keywords": ["WP Table", "WP Bones"],
   "authors": [
     {
       "name": "Giovambattista Fazioli",

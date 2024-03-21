@@ -6,7 +6,7 @@ class CustomPage extends Page
 {
   public function title(): string
   {
-    return "Hello, Custom Page!";
+    return 'Hello, Custom Page!';
   }
 
   public function render()

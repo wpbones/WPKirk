@@ -33,8 +33,8 @@ class CustomPage extends Page
     }
 }</code></pre>
 
-  <form method="post" 
-    action="<?php echo $plugin->getPageUrl('first_custom_page') ?>">
+  <form method="post"
+    action="<?php echo $plugin->getPageUrl('first_custom_page'); ?>">
     <button class="button button-hero button-primary">Back</button>
   </form>
 </div>
