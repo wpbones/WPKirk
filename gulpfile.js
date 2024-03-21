@@ -48,7 +48,19 @@ gulp.task('typescript', function () {
 // Task for compiling React JSX
 gulp.task('react', function () {
     return gulp.src('resources/assets/js/*.jsx')
-        .pipe(babel())
+        .pipe(babel({
+            presets: ['@babel/preset-env', '@babel/preset-react']
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('public/js'));
+});
+
+// Task for compiling React TSX
+gulp.task('react-tsx', function () {
+    return gulp.src('resources/assets/js/*.tsx')
+        .pipe(babel({
+            presets: ['@babel/preset-env', '@babel/preset-react']
+        }))
         .pipe(uglify())
         .pipe(gulp.dest('public/js'));
 });
@@ -60,8 +72,9 @@ gulp.task('watch', function () {
     gulp.watch('resources/assets/css/**/*.less', gulp.series('less'));
     gulp.watch('resources/assets/js/**/*.ts', gulp.series('typescript'));
     gulp.watch('resources/assets/js/**/*.jsx', gulp.series('react'));
+    gulp.watch('resources/assets/js/**/*.tsx', gulp.series('react-tsx'));
     gulp.watch('resources/assets/js/**/*.js', gulp.series('minify-js'));
 });
 
 // Default task to run all tasks
-gulp.task('build', gulp.parallel('sass', 'less', 'typescript', 'react', 'minify-css', 'minify-js'));
+gulp.task('build', gulp.parallel('minify-css', 'sass', 'less', 'minify-js', 'typescript', 'react', 'react-tsx',));

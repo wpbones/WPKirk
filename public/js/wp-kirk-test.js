@@ -1,0 +1,1 @@
+var testAlert=function(){alert("Hello, World!")};

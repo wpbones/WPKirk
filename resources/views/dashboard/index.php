@@ -10,9 +10,7 @@
 <div class="wp-kirk wrap wp-kirk-sample">
 
   <h1>Hello, I'm the first <?php echo $plugin->Name; ?> view</h1>
-  <h2>PHP Version <?php echo phpversion(); ?>
-  </h2>
-
+  
   <div class="wp-kirk-toc clearfix">
     <ul>
       <li><a href="#passing-data">Passing data to view</a></li>
@@ -21,8 +19,10 @@
       <li><a href="#custom-pages">Custom Pages</a></li>
     </ul>
   </div>
-
+  
   <div class="wp-kirk-toc-content">
+    <h2>PHP Version <?php echo phpversion(); ?></h2>
+
     <hr />
     <a name="passing-data"></a>
     <h2>Passing data to view</h2>

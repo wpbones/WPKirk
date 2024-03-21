@@ -28,6 +28,16 @@ class DashboardController extends Controller
       ->with('kirk', 'Captain');
   }
 
+  public function assets()
+  {
+    return WPKirk()
+      ->view('dashboard.assets')
+      ->withAdminStyles('wp-kirk-common')
+      ->withAdminStyles('prism')
+      ->withAdminScripts('prism')
+      ->withAdminScripts('wp-react-component', ['wp-element']);
+  }
+
   public function secondMenu()
   {
     return WPKirk()

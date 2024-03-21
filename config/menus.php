@@ -23,6 +23,12 @@ return [
         ],
       ],
       [
+        "menu_title" => "Assets",
+        'route'      => [
+          'get' => 'Dashboard\DashboardController@assets',
+        ],
+      ],
+      [
         "menu_title" => "Ajax Example",
         'route'      => [
           'get' => 'Dashboard\DashboardController@secondMenu',
