@@ -20,21 +20,6 @@ return [
 
   /*
   |--------------------------------------------------------------------------
-  | Use minified styles and scripts
-  |--------------------------------------------------------------------------
-  |
-  | If you like gulp to compile and compress your styles and scripts,
-  | the filenames in `public/css` will have `.min` as postfix. If this
-  | setting is TRUE then it will be used the minified version.
-  |
-  | @deprecated
-  |
-  */
-
-  'minified' => false,
-
-  /*
-  |--------------------------------------------------------------------------
   | Screen options
   |--------------------------------------------------------------------------
   |

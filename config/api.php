@@ -10,7 +10,7 @@
 */
 
 return [
-  // embedded wp-json-server
+  // embed wp-json-server
   'wp' => [
     'require_authentication' => false, // will affect all routes.
   ],
