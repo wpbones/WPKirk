@@ -10,7 +10,7 @@
 <div class="wp-kirk wrap wp-kirk-sample">
 
   <h1>Hello, I'm the first <?php echo $plugin->Name; ?> view</h1>
-  
+
   <div class="wp-kirk-toc clearfix">
     <ul>
       <li><a href="#passing-data">Passing data to view</a></li>
@@ -19,15 +19,21 @@
       <li><a href="#custom-pages">Custom Pages</a></li>
     </ul>
   </div>
-  
+
   <div class="wp-kirk-toc-content">
-    <h2>PHP Version <?php echo phpversion(); ?></h2>
+    <h2>Welcome to the WP Bones template WordPress plugin</h2>
+    <p>This is a simple template plugin for WordPress. It is based on the WP Bones framework.</p>
+    <p>It is a  plugin that shows most of the features of the WP Bones framework. It is a good starting point for creating your own plugin.</p>
+
+    <hr />
+
+    <h3>PHP Version <?php echo phpversion(); ?></h3>
 
     <hr />
     <a name="passing-data"></a>
     <h2>Passing data to view</h2>
 
-    <p>You may get variable from the controller. For example, the variable <code class="language- inline">kirk</code>is <?php echo $kirk; ?>
+    <p>You may get variable from the controller. For example, the variable <code class="language- inline">kirk</code> is <?php echo $kirk; ?>
     </p>
 
     <hr />
@@ -39,9 +45,7 @@
 
     <p>It will return</p>
 
-    <pre><code class="language-"><?php echo $plugin->config(
-      'custom.sample'
-    ); ?></code></pre>
+    <pre><code class="language-"><?php echo $plugin->config("custom.sample"); ?></code></pre>
 
     <hr />
     <a name="plugin-information"></a>
@@ -105,11 +109,11 @@ return [
     <p>You can get the custom page URL by using</p>
 
     <pre><code class="language-php">&lt;?php echo $plugin-&gt;getPageUrl( 'custom_page' ) ?&gt; // <?php echo $plugin->getPageUrl(
-      'custom_page'
+      "custom_page"
     ); ?></code></pre>
 
     <p><a
-        href="<?php echo $plugin->getPageUrl('first_custom_page'); ?>">Custom
+        href="<?php echo $plugin->getPageUrl("first_custom_page"); ?>">Custom
         Page</a></p>
 
   </div>
