@@ -1,3 +1,5 @@
 node_modules/
 resources/assets/vendor/
 vendor/
+
+.php-cs-fixer.cache
