@@ -40,7 +40,7 @@
     <p>As you can see you'll be able to get the options by using the <strong>dot</strong> notation</p>
 
     <pre><code class="language-php">echo $plugin->options->get( 'General.option_2'); // <?php echo $plugin->options->get(
-      'General.option_2'
+        'General.option_2'
     ); ?></code></pre>
 
     <h3>Get option by an array</h3>
@@ -49,8 +49,8 @@
     <pre><code class="language-php">echo $plugin->options['General'];</code></pre>
 
     <pre><code class="language-php"><?php echo var_export(
-      $plugin->options['General'],
-      true
+        $plugin->options['General'],
+        true
     ); ?></code></pre>
 
     <p>as well as</p>
@@ -58,14 +58,14 @@
     <pre><code class="language-php">echo $plugin->options->get( 'General.option_3');</code></pre>
 
     <pre><code class="language-php"><?php echo var_export(
-      $plugin->options->get('General.option_3')
+        $plugin->options->get('General.option_3')
     ); ?></code></pre>
 
     <h3>Get option</h3>
     <p>You may also avoid to use the <code class="language-php inline">get()</code> method, instead of use</p>
 
     <pre><code class="language-php">echo $plugin->options->get( 'General.option_3.sub_option_of_3'); // <?php echo $plugin->options->get(
-      'General.option_3.sub_option_of_3'
+        'General.option_3.sub_option_of_3'
     ); ?></code></pre>
 
     <p>you may use</p>
@@ -77,8 +77,8 @@
     <p>Of course, you'll be able to define any default value if the branch/key doesn't exists</p>
 
     <pre><code class="language-php">echo $plugin->options->get( 'General.doNotExists', 'default' ); // <?php echo $plugin->options->get(
-      'General.doNotExists',
-      'default'
+        'General.doNotExists',
+        'default'
     ); ?></code></pre>
 
     <!-- Update -->
@@ -93,8 +93,8 @@
     <pre><code class="language-json"><?php echo $plugin->options; ?></code></pre>
 
     <?php $plugin->options->set(
-      'General.option_3.sub_option_of_3',
-      'FooBar'
+        'General.option_3.sub_option_of_3',
+        'FooBar'
     ); ?>
 
     <pre><code class="language-php">$plugin->options->set( 'General.option_3.sub_option_of_3', 'FooBar' );</code></pre>
@@ -102,7 +102,7 @@
     <pre><code class="language-json"><?php echo $plugin->options; ?></code></pre>
 
     <h3>Change with mixed value</h3>
-    <p>Of course, you may also change the type of the stored key. Below, we're goinf to use and <code>Array</code>
+    <p>Of course, you may also change the type of the stored key. Below, we're going to use and <code>Array</code>
       instead of the previous <code>string</code></p>
 
     <?php $plugin->options->set('Special.Name', ['John', 'Good']); ?>

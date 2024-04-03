@@ -1,8 +1,6 @@
 {
-  "name": "wpkirk",
+  "name": "@wpbones/wpkirk",
   "version": "1.0.0",
-  "description": "[![Latest Stable Version](https://poser.pugx.org/wpbones/wpbones/v/stable)](https://packagist.org/packages/wpbones/wpbones)",
-  "main": "index.js",
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp build"
