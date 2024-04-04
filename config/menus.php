@@ -113,6 +113,12 @@ return [
           'get' => 'ExampleEloquentController@index',
         ],
       ],
+      [
+        "menu_title" => "Blade",
+        'route'      => [
+          'get' => 'ExampleBladeController@index',
+        ],
+      ],
     ],
   ],
 ];

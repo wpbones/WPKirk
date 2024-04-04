@@ -1,6 +1,6 @@
 <?php
 if (!defined('ABSPATH')) {
-  exit();
+    exit();
 } ?>
 
 <!--
@@ -52,12 +52,11 @@ if (!defined('ABSPATH')) {
     <p>Let's see a simple implementation of <code class="language- inline">route.php</code></p>
 
     <pre><code class="language-php">&lt;?php
+    use WPKirk\WPBones\Routing\API\Route;
 
-use WPKirk\WPBones\Routing\API\Route;
-
-Route::get('/example', function () {
-    return 'Hello World!';
-});</code></pre>
+    Route::get('/example', function () {
+        return 'Hello World!';
+    });</code></pre>
 
 
     <p>You can try the API <code class="language- inline">/wp-json/wpkirk/v1/example</code> <a target="_blank"
@@ -73,12 +72,11 @@ Route::get('/example', function () {
     <p>Let's see a simple implementation of <code class="language- inline">route.php</code> using the <code class="language- inline">post</code> method</p>
 
     <pre><code class="language-php">&lt;?php
+    use WPKirk\WPBones\Routing\API\Route;
 
-use WPKirk\WPBones\Routing\API\Route;
-
-Route::post('/example', function () {
-    return 'Hello World!';
-});</code></pre>
+    Route::post('/example', function () {
+        return 'Hello World!';
+    });</code></pre>
 
 
 
@@ -88,32 +86,28 @@ Route::post('/example', function () {
     <p>Let's see a simple implementation of <code class="language- inline">route.php</code> using the <code class="language- inline">::request()</code> method</p>
 
     <pre><code class="language-php">&lt;?php
+    use WPKirk\WPBones\Routing\API\Route;
 
-use WPKirk\WPBones\Routing\API\Route;
+    Route::request('get', '/get_request', function () {
+        return 'Hello World!';
+    });
 
-Route::request('get', '/get_request', function () {
-    return 'Hello World!';
-});
+    // HTTP verb is case insensitive
+    Route::request('GET', '/get_request', function () {
+        return 'Hello World!';
+    });
 
-// HTTP verb is case insensitive
-Route::request('GET', '/get_request', function () {
-    return 'Hello World!';
-});
+    // you may use both strings and arrays
+    Route::request(['get'], '/get_request', function () {
+        return 'Hello World!';
+    });
 
-// you may use both strings and arrays
-Route::request(['get'], '/get_request', function () {
-    return 'Hello World!';
-});
-
-// you may use multiple HTTP verbs
-Route::request(['get', 'POST'], '/multiple', function () {
-    return 'Hello World!';
-});</code></pre>
+    // you may use multiple HTTP verbs
+    Route::request(['get', 'POST'], '/multiple', function () {
+        return 'Hello World!';
+    });</code></pre>
 
     <p>You will find further information and details in the <a target="_blank"
         href="https://wpbones.vercel.app/docs/ServicesProvider/rest-api">Official WP Bones docs</a></p>
-
-
   </div>
-
 </div>
