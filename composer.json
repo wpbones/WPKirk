@@ -2,9 +2,11 @@
   "name": "wpbones/wpkirk",
   "type": "wordpress-plugin",
   "description": "A WP Bones template WordPress plugin",
-  "keywords": ["wordpress"],
+  "keywords": [
+    "wordpress"
+  ],
   "homepage": "http://wpbones.wordpress.com",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-only",
   "authors": [
     {
       "name": "Giovambattista Fazioli",
@@ -30,7 +32,9 @@
       "WPKirk\\": "plugin/",
       "WPKirk\\YourPackage\\": "YourPackage/src/"
     },
-    "files": ["functions.php"]
+    "files": [
+      "functions.php"
+    ]
   },
   "scripts": {
     "post-autoload-dump": [
