@@ -41,16 +41,23 @@ fi
 
 # Update the version in the main files
 # index.php
-sed -i "s/Version: [0-9.]\+/Version: $new_version/g" index.php
+sed -i '' -e "s/\* Version: .*/* Version: $version/g" index.php
 
 # package.json
-sed -i "s/\"version\": \"[0-9.]\+\"/\"version\": \"$new_version\"/g" package.json
+sed -i '' -e "s/\"version\": \".*\"/\"version\": \"$version\"/" package.json
 
 # readme.txt
-sed -i "s/Stable tag: [0-9.]\+/Stable tag: $new_version/g" readme.txt
+sed -i '' -e "s/Stable tag: .*/Stable tag: $version/g" readme.txt
 
 # bones
-sed -i "s/define('WPBONES_COMMAND_LINE_VERSION', '[0-9.]\+/define('WPBONES_COMMAND_LINE_VERSION', '$new_version/g" bones
+sed -i '' -e "s/define('WPBONES_COMMAND_LINE_VERSION', '.*');/define('WPBONES_COMMAND_LINE_VERSION', '$version');/g" bones
 
 # copy the bones command in vendor/wpbones/wpbones/src/Console/bin/bones
 cp bones vendor/wpbones/wpbones/src/Console/bin/bones
+
+# Ask if we have to sync the vendor/wpbones/wpbones/ folder with ../WPBones folder
+read -p "Do you want to sync the vendor/wpbones/wpbones/ folder with ../WPBones folder? (y/n): " sync
+
+if [ "$sync" == "y" ]; then
+    cp -r vendor/wpbones/wpbones/* ../WPBones/
+fi
