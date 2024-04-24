@@ -38,12 +38,29 @@ class DashboardController extends Controller
       ->withAdminScripts('wp-react-component', ['wp-element']);
   }
 
-  public function secondMenu()
+  public function react()
   {
     return WPKirk()
-      ->view('dashboard.second')
+      ->view('dashboard.react-app')
       ->withAdminStyles('wp-kirk-common')
-      ->withAdminScripts('wp-kirk-main');
+      ->withAdminStyles('prism')
+      ->withAdminScripts('prism')
+      ->withAdminAppsScripts('app', ['wp-element']);
+  }
+
+  public function react_settings()
+  {
+    return WPKirk()
+      ->view('dashboard.react-app')
+      ->withAdminAppsScripts('app', ['wp-element'])
+      ->withLocalizeScripts('app', 'ReactApp', [
+        'tab' => 'settings',
+      ]);
+  }
+
+  public function secondMenu()
+  {
+    return WPKirk()->view('dashboard.second')->withAdminStyles('wp-kirk-common')->withAdminScripts('wp-kirk-main');
   }
 
   public function optionsMenu()
@@ -93,9 +110,7 @@ class DashboardController extends Controller
 
     PureCSSSwitchProvider::enqueueStyles();
 
-    return WPKirk()
-      ->view('dashboard.package')
-      ->withAdminStyles('wp-kirk-common');
+    return WPKirk()->view('dashboard.package')->withAdminStyles('wp-kirk-common');
   }
 
   public function saveOptions()

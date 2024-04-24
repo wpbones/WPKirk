@@ -12,110 +12,121 @@
 
 return [
   'wp_kirk_slug_menu' => [
-    "menu_title" => "WP Kirk Menu title",
+    'menu_title' => 'WP Kirk Menu title',
     'capability' => 'read',
-    'icon'       => 'dashicons-lightbulb',
-    'items'      => [
+    'icon' => 'dashicons-lightbulb',
+    'items' => [
       [
-        "menu_title" => "Main View",
-        'route'      => [
+        'menu_title' => 'Main View',
+        'route' => [
           'get' => 'Dashboard\DashboardController@firstMenu',
         ],
       ],
       [
-        "menu_title" => "Assets",
-        'route'      => [
+        'menu_title' => 'Assets',
+        'route' => [
           'get' => 'Dashboard\DashboardController@assets',
         ],
       ],
       [
-        "menu_title" => "Ajax Example",
-        'route'      => [
+        'menu_title' => 'React Application',
+        'route' => [
+          'get' => 'Dashboard\DashboardController@react',
+        ],
+      ],
+      [
+        'menu_title' => 'Application Settings',
+        'route' => [
+          'get' => 'Dashboard\DashboardController@react_settings',
+        ],
+      ],
+      [
+        'menu_title' => 'Ajax Example',
+        'route' => [
           'get' => 'Dashboard\DashboardController@secondMenu',
         ],
       ],
       'options_submenu' => [
-        "menu_title" => "Options",
-        'route'      => [
+        'menu_title' => 'Options',
+        'route' => [
           'get' => 'Dashboard\DashboardController@optionsMenu',
         ],
-
       ],
       [
-        "menu_title" => "Options View",
-        'route'      => [
-          'get'  => 'Dashboard\DashboardController@optionsView',
+        'menu_title' => 'Options View',
+        'route' => [
+          'get' => 'Dashboard\DashboardController@optionsView',
           'post' => 'Dashboard\DashboardController@saveOptions',
         ],
       ],
       [
-        "menu_title" => "Options View Resource",
-        'route'      => [
-          'load'     => 'Dashboard\DashboardResourceController@load',
+        'menu_title' => 'Options View Resource',
+        'route' => [
+          'load' => 'Dashboard\DashboardResourceController@load',
           'resource' => 'Dashboard\DashboardResourceController',
         ],
       ],
       [
-        "menu_title" => "Html Tags",
-        'route'      => [
+        'menu_title' => 'Html Tags',
+        'route' => [
           'get' => 'Dashboard\DashboardController@html',
         ],
       ],
       [
-        "menu_title" => "Official Packages",
-        'route'      => [
-          'get'  => 'Dashboard\DashboardController@package',
+        'menu_title' => 'Official Packages',
+        'route' => [
+          'get' => 'Dashboard\DashboardController@package',
           'post' => 'Dashboard\DashboardController@packagePost',
         ],
       ],
       [
-        "menu_title" => "Tables Example #1",
-        'route'      => [
+        'menu_title' => 'Tables Example #1',
+        'route' => [
           'load' => 'ExampleTableController@load',
-          'get'  => 'ExampleTableController@index',
+          'get' => 'ExampleTableController@index',
         ],
       ],
       [
-        "menu_title" => "Tables Example #2",
-        'route'      => [
+        'menu_title' => 'Tables Example #2',
+        'route' => [
           'load' => 'ExampleTableController@loadFluentExample',
-          'get'  => 'ExampleTableController@indexFluentExample',
+          'get' => 'ExampleTableController@indexFluentExample',
         ],
       ],
       [
-        "menu_title" => "Tables Example #3",
-        'route'      => [
+        'menu_title' => 'Tables Example #3',
+        'route' => [
           'load' => 'ExampleTableController@loadSearchExample',
-          'get'  => 'ExampleTableController@indexSearchExample',
+          'get' => 'ExampleTableController@indexSearchExample',
         ],
       ],
       [
-        "menu_title" => "API",
-        'route'      => [
+        'menu_title' => 'API',
+        'route' => [
           'get' => 'ExampleAPIController@index',
         ],
       ],
       [
-        "menu_title" => "Database",
-        'route'      => [
+        'menu_title' => 'Database',
+        'route' => [
           'get' => 'ExampleDatabaseController@index',
         ],
       ],
       [
-        "menu_title" => "Model",
-        'route'      => [
+        'menu_title' => 'Model',
+        'route' => [
           'get' => 'ExampleModelController@index',
         ],
       ],
       [
-        "menu_title" => "Eloquent ORM",
-        'route'      => [
+        'menu_title' => 'Eloquent ORM',
+        'route' => [
           'get' => 'ExampleEloquentController@index',
         ],
       ],
       [
-        "menu_title" => "Blade",
-        'route'      => [
+        'menu_title' => 'Blade',
+        'route' => [
           'get' => 'ExampleBladeController@index',
         ],
       ],

@@ -2,14 +2,14 @@ const { render, useState } = wp.element;
 
 const WordPressButton = ({ children, primary, ...others }) => {
   return (
-    <button className={`button ${primary ? "button-primary" : ""}`} {...others}>
+    <button className={`button ${primary ? 'button-primary' : ''}`} {...others}>
       {children}
     </button>
   );
 };
 
 const FlexContainer = ({ children, justifyContent, alignItems, gap }) => {
-  return <div style={{ display: "flex", justifyContent, alignItems, gap }}>{children}</div>;
+  return <div style={{ display: 'flex', justifyContent, alignItems, gap }}>{children}</div>;
 };
 
 const MyComponent = () => {
@@ -31,4 +31,4 @@ const MyComponent = () => {
   );
 };
 
-render(<MyComponent />, document.getElementById("react-test"));
+render(<MyComponent />, document.getElementById('react-test'));
