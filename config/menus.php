@@ -25,19 +25,19 @@ return [
       [
         'menu_title' => 'Assets',
         'route' => [
-          'get' => 'Dashboard\DashboardController@assets',
+          'get' => 'AssetsController@index',
         ],
       ],
       [
         'menu_title' => 'React Application',
         'route' => [
-          'get' => 'Dashboard\DashboardController@react',
+          'get' => 'ReactApplicationController@index',
         ],
       ],
       [
         'menu_title' => 'Application Settings',
         'route' => [
-          'get' => 'Dashboard\DashboardController@react_settings',
+          'get' => 'ReactApplicationController@reactSettings',
         ],
       ],
       [

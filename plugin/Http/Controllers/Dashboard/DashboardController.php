@@ -28,36 +28,6 @@ class DashboardController extends Controller
       ->with('kirk', 'Captain');
   }
 
-  public function assets()
-  {
-    return WPKirk()
-      ->view('dashboard.assets')
-      ->withAdminStyles('wp-kirk-common')
-      ->withAdminStyles('prism')
-      ->withAdminScripts('prism')
-      ->withAdminScripts('wp-react-component', ['wp-element']);
-  }
-
-  public function react()
-  {
-    return WPKirk()
-      ->view('dashboard.react-app')
-      ->withAdminStyles('wp-kirk-common')
-      ->withAdminStyles('prism')
-      ->withAdminScripts('prism')
-      ->withAdminAppsScripts('app', ['wp-element']);
-  }
-
-  public function react_settings()
-  {
-    return WPKirk()
-      ->view('dashboard.react-app')
-      ->withAdminAppsScripts('app', ['wp-element'])
-      ->withLocalizeScripts('app', 'ReactApp', [
-        'tab' => 'settings',
-      ]);
-  }
-
   public function secondMenu()
   {
     return WPKirk()->view('dashboard.second')->withAdminStyles('wp-kirk-common')->withAdminScripts('wp-kirk-main');
