@@ -1,14 +1,14 @@
 {
   "name": "@wpbones/wpkirk",
-  "version": "1.3.4",
+  "version": "1.4.0",
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp build",
     "build:apps": "wp-scripts build resources/assets/apps/app --output-path=public/apps/",
     "start:apps": "wp-scripts start resources/assets/apps/app --output-path=public/apps/"
   },
-  "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0",
+  "author": "Giovambattista Fazioli <jonfazioli@gmail.com>",
   "devDependencies": {
     "@babel/core": "^7.24.3",
     "@babel/preset-env": "^7.24.3",
