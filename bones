@@ -1566,12 +1566,14 @@ namespace Bones {
         $this->info("  version [plugin version]\n");
         $this->line('Arguments:');
         $this->info(
-          "  [plugin version]\tThe version of plugin. Examples: '1', '2.0', 'v1', 'v1.2',  '1.2.0-rc.40', 'v1-beta.4', 'v1.3+007'"
+          "  [plugin version]\t\tThe version of plugin. Examples: '2.0',  'v1.2',  '1.2.0-rc.40', 'v1-beta.4'"
         );
-        $this->info("  [--major]\t\tIncrement the major.y.z of plugin.");
-        $this->info("  [--minor]\t\tIncrement the x.minor.z of plugin.");
-        $this->info("  [--patch]\t\tIncrement the x.y.patch of plugin.");
-        $this->info("  [--prerelease]\tIncrement the x.y.z-rc.prerelease of plugin.\n");
+        $this->info("  [--major]\t\t\tIncrement the <major>.y.z of plugin.");
+        $this->info("  [--minor]\t\t\tIncrement the x.<minor>.z of plugin.");
+        $this->info("  [--patch]\t\t\tIncrement the x.y.<patch> of plugin.");
+        $this->info("  [--pre-patch] <prefix>\tIncrement the x.y.<patch>-<prefix>.<i> of plugin.");
+        $this->info("  [--pre-minor] <prefix>\tIncrement the x.<minor>.z-<prefix>.<i> of plugin.");
+        $this->info("  [--pre-major] <prefix>\tIncrement the <major>.y.z-<prefix>.<i> of plugin.\n");
         exit(0);
       } elseif (isset($argv[0]) && '--patch' === $argv[0]) {
         $version = semver($version_number_from_index_php)->incrementPatch();
@@ -1579,9 +1581,21 @@ namespace Bones {
         $version = semver($version_number_from_index_php)->incrementMinor();
       } elseif (isset($argv[0]) && '--major' === $argv[0]) {
         $version = semver($version_number_from_index_php)->incrementMajor();
-      } elseif (isset($argv[0]) && '--prerelease' === $argv[0]) {
+      } elseif (isset($argv[0]) && in_array($argv[0], ['--pre-patch', '--pre-major', '--pre-minor'])) {
         $prefix = $argv[1] ?? 'rc';
-        $version = semver($version_number_from_index_php)->setPreRelease($prefix)->incrementPreRelease();
+
+        $methods = [
+          '--pre-patch' => 'incrementPatch',
+          '--pre-major' => 'incrementMajor',
+          '--pre-minor' => 'incrementMinor',
+        ];
+        // if $version_number_from_index_php is not a pre-release version
+        if (strpos($version_number_from_index_php, $prefix) === false) {
+          $prerelease = semver($version_number_from_index_php)->{$methods[$argv[0]]}();
+          $version = semver($prerelease)->setPreRelease($prefix)->incrementPreRelease();
+        } else {
+          $version = semver($version_number_from_index_php)->incrementPreRelease();
+        }
       } else {
         $version = trim($argv[0]);
       }
