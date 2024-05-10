@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('ABSPATH')) {
+  exit();
+}
+
 /*
 |--------------------------------------------------------------------------
 | Global functions
@@ -9,9 +13,8 @@
 |
 */
 
-if ( ! function_exists( 'myGlobalFunction' ) ) {
-
-  function myGlobalFunction()
+if (!function_exists('myGlobalFunction')) {
+  function myGlobalFunction(): void
   {
     //
   }

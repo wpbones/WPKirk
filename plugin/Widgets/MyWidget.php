@@ -6,7 +6,6 @@ use WPKirk\WPBones\Support\Widget;
 
 class MyWidget extends Widget
 {
-
   /**
    * Base ID for the widget, lower case, if left empty a portion of the widget's class name will be used. Has to be
    * unique.
@@ -30,9 +29,7 @@ class MyWidget extends Widget
    *
    * @var array
    */
-  public $widget_options = [
-    'deccription' => 'WP Kirk Demo Widget Description'
-  ];
+  public $widget_options = ['description' => 'WP Kirk Demo Widget Description'];
 
   /**
    * Optional. Passed to wp_register_widget_control()
@@ -43,43 +40,41 @@ class MyWidget extends Widget
    * @var array
    */
   public $control_options = [
-    'width'  => 400,
+    'width' => 400,
     'height' => 350,
   ];
 
-  public function update( $new_instance, $old_instance )
+  public function update($new_instance, $old_instance)
   {
-    $old_instance[ 'title' ] = ( $new_instance[ 'title' ] );
+    $old_instance['title'] = $new_instance['title'];
 
     return $old_instance;
   }
 
+  public function viewForm($instance): string
+  {
+    $instance = array_merge($this->defaults(), $instance);
+
+    return WPKirk()
+      ->view('widgets.form')
+      ->with(['instance' => $instance, 'widget' => $this]);
+  }
+
   /**
-   * Retrun a key pairs array with the default value for widget.
+   * Return a key pairs array with the default value for widget.
    *
    * @return array
    */
-  public function defaults()
+  public function defaults(): array
   {
-    return [
-      'title' => 'My Title',
-    ];
+    return ['title' => 'My Title'];
   }
 
-  public function viewForm( $instance )
+  public function viewWidget($args, $instance)
   {
-    $instance = array_merge( $this->defaults(), $instance );
-
-    return WPKirk()->view( 'widgets.form' )
-                   ->with( [ 'instance' => $instance, 'widget' => $this ] );
+    return WPKirk()
+      ->view('widgets.index')
+      ->with(['args' => $args, 'instance' => $instance])
+      ->withStyles('wp-kirk-widget');
   }
-
-  public function viewWidget( $args, $instance )
-  {
-    return WPKirk()->view( 'widgets.index' )
-                   ->with( [ 'args' => $args, 'instance' => $instance ] )
-                   ->withStyles( 'wp-kirk-widget' );
-  }
-
-
 }

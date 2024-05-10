@@ -1,0 +1,31 @@
+{
+  "name": "yourName/yourPackage",
+  "version": "1.0.0",
+  "homepage": "https://github.com/yourName/yourPackage",
+  "license": "MIT",
+  "type": "library",
+  "description": "Your package description",
+  "keywords": ["WP Table", "WP Bones"],
+  "authors": [
+    {
+      "name": "Giovambattista Fazioli",
+      "email": "giovambattista.fazioli@gmail.com",
+      "homepage": "http://undolog.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourName/yourPackage.git"
+  },
+  "support": {
+    "email": "giovambattista.fazioli@gmail.com",
+    "issues": "https://github.com/yourName/yourPackage/issues"
+  },
+  "autoload": {
+    "psr-4": {
+      "WPKirk\\YourPackage\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

@@ -12,5 +12,5 @@
 */
 
 return [
-  'sample' => 'Hello, Captain!'
+  'sample' => 'Hello, Captain!',
 ];

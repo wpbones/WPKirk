@@ -6,10 +6,11 @@ use WPKirk\WPBones\Foundation\WordPressCustomTaxonomyTypeServiceProvider as Serv
 
 class MyCustomTaxonomy extends ServiceProvider
 {
+  protected $id = 'wp_kirk_tax';
 
-  protected $id         = 'wp_kirk_tax';
-  protected $name       = 'Ship';
-  protected $plural     = 'Ships';
+  protected $name = 'Ship';
+
+  protected $plural = 'Ships';
+
   protected $objectType = 'wp_kirk_cpt';
-
 }

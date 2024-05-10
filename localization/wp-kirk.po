@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Kirk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-27 11:41+0200\n"
-"PO-Revision-Date: 2016-10-27 11:41+0200\n"
+"POT-Creation-Date: 2018-01-05 17:56+0100\n"
+"PO-Revision-Date: 2018-01-05 17:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: Giovambattista Fazioli <giovambattista.fazioli@gmail.com>\n"
 "Language: en_US\n"
@@ -13,11 +13,27 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_nx:1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: plugin/Http/Controllers/SearchTable.php:90
+msgid "Search Cakes"
+msgstr ""
+
+#: plugin/Http/Controllers/SearchTable.php:132
+msgid "Delete"
+msgstr ""
+
+#: plugin/Http/Controllers/SearchTable.php:133
+msgid "Keep Trash"
+msgstr ""
+
+#: plugin/Http/Controllers/SearchTable.php:134
+msgid "Choccolate"
+msgstr ""
 
 #: resources/views/dashboard/second.php:14
 msgid "You can localize me"
@@ -52,9 +68,6 @@ msgstr ""
 
 #~ msgid "Restore"
 #~ msgstr "Repristina"
-
-#~ msgid "Delete"
-#~ msgstr "Elimina"
 
 #~ msgid "Icon"
 #~ msgstr "Icona"

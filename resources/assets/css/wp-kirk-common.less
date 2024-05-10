@@ -1,0 +1,83 @@
+/**
+ * Less sample file.
+ *
+ * You can keep a bound between css class and plugin name/namespace.
+ * To do this, you have to use the right naming for the css id and class.
+ *
+ */
+@import (reference) "wp-kirk-variables";
+
+.wp-kirk {
+
+	pre {
+		border-radius: 6px;
+	}
+
+	code.inline {
+    border-radius: 3px;
+    font-size: 0.9em;
+    padding: 2px 6px;
+  }
+
+	&.wp-kirk-sample {
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+.clearfix {
+	*zoom: 1 !important;
+
+	&:before,
+	&:after {
+		display: table !important;
+		line-height: 0 !important;
+		content: "" !important;
+	}
+
+	&:after {
+		clear: both !important;
+	}
+}
+
+.wp-kirk-align {
+	display: block;
+	clear: both;
+}
+
+.wp-kirk-align-left {
+	text-align: left;
+}
+
+.wp-kirk-toc {
+	float: left;
+	position: fixed;
+	background-color: #fff;
+	padding: 8px;
+	border: 1px solid #ddd;
+	width: 180px;
+}
+
+.wp-kirk-toc-content {
+	float: right;
+	width: calc(~"100% - 220px");
+}
+
+@media (max-width: 1000px) {
+	.wp-kirk-toc {
+		float: none;
+		position: relative;
+		width: auto;
+
+		li {
+			margin-right: 12px;
+			float: left;
+		}
+	}
+
+	.wp-kirk-toc-content {
+		float: none;
+		width: auto;
+	}
+}

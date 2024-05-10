@@ -1,6 +1,8 @@
 <?php
 
-define( 'WPKirk_START', microtime(true));
+if (! defined('ABSPATH')) {
+    exit;
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +17,35 @@ define( 'WPKirk_START', microtime(true));
 */
 
 require_once __DIR__ . '/../vendor/autoload.php';
+
+/*
+|--------------------------------------------------------------------------
+| Plugin Static class
+|--------------------------------------------------------------------------
+|
+| We will use this static class to keep global the plugin information
+|
+*/
+
+final class WPKirk
+{
+    public const TEXTDOMAIN = 'wp-kirk';
+    public static $plugin;
+    public static $start;
+}
+
+WPKirk::$plugin = require_once __DIR__ . '/plugin.php';
+WPKirk::$start = microtime(true);
+
+// Commodity function to get the plugin instance
+if (! function_exists('WPKirk')) {
+    /**
+     * Return the instance of plugin.
+     *
+     * @return Plugin
+     */
+    function WPKirk()
+    {
+        return WPKirk::$plugin;
+    }
+}

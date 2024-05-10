@@ -1,19 +1,22 @@
 <?php
 
 return [
-  
   /*
   |--------------------------------------------------------------------------
-  | Use minified styles and scripts
+  | Logging Configuration
   |--------------------------------------------------------------------------
   |
-  | If you like gulp to compile and compress your styles and scripts,
-  | the filenames in `public/css` will have `.min` as postfix. If this
-  | setting is TRUE then it will be used the minified version.
+  | Here you may configure the log settings for your plugin.
+  |
+  | Available Settings: "single", "daily", "errorlog".
+  |
+  | Set to false or 'none' to stop logging.
   |
   */
 
-  'minified' => false,
+  'log' => 'errorlog',
+
+  'log_level' => 'debug',
 
   /*
   |--------------------------------------------------------------------------
@@ -35,7 +38,7 @@ return [
   |
   */
 
-  'custom_post_types' => [ '\WPKirk\CustomPostTypes\MyCustomPostType' ],
+  'custom_post_types' => ['\WPKirk\CustomPostTypes\MyCustomPostType'],
 
   /*
   |--------------------------------------------------------------------------
@@ -46,7 +49,7 @@ return [
   |
   */
 
-  'custom_taxonomy_types' => [ '\WPKirk\CustomTaxonomyTypes\MyCustomTaxonomy' ],
+  'custom_taxonomy_types' => ['\WPKirk\CustomTaxonomyTypes\MyCustomTaxonomy'],
 
   /*
   |--------------------------------------------------------------------------
@@ -57,19 +60,18 @@ return [
   |
   */
 
-  'shortcodes' => [ '\WPKirk\Shortcodes\MyShortcodes' ],
+  'shortcodes' => ['\WPKirk\Shortcodes\MyShortcodes'],
 
   /*
   |--------------------------------------------------------------------------
   | Widgets
   |--------------------------------------------------------------------------
   |
-  | Here is where you can register all of the Widget for a plugin.
+  | Here is where you can register all the Widget for a plugin.
   |
   */
 
-  'widgets' => [ '\WPKirk\Widgets\MyWidget' ],
-
+  'widgets' => ['\WPKirk\Widgets\MyWidget'],
 
   /*
   |--------------------------------------------------------------------------
@@ -80,11 +82,11 @@ return [
   |
   */
 
-  'ajax' => [ '\WPKirk\Ajax\MyAjax' ],
+  'ajax' => ['\WPKirk\Ajax\MyAjax'],
 
   /*
   |--------------------------------------------------------------------------
-  | Autoloaded Service Providers
+  | Autoloader Service Providers
   |--------------------------------------------------------------------------
   |
   | The service providers listed here will be automatically loaded on the
@@ -93,6 +95,5 @@ return [
   |
   */
 
-  'providers' => [ ]
-
+  'providers' => [],
 ];
