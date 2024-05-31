@@ -4,16 +4,19 @@ const { render } = wp.element;
 import '@mantine/core/styles.css';
 import classes from './app.module.scss';
 
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Demo } from './components/Demo';
 
 const MyApp = () => {
+  const pathname = window.location.pathname;
+  const baseName = pathname.substring(0, pathname.indexOf('/admin.php'));
+
   return (
     <MantineProvider>
       <h2 className={classes.title}>Say Hello, Mantine Application</h2>
 
-      <BrowserRouter basename="/wp-admin/">
+      <BrowserRouter basename={baseName}>
         <Routes>
           <Route path="/admin.php" element={<Demo />} />
         </Routes>
