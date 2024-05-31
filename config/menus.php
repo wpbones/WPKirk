@@ -12,9 +12,9 @@
 
 return [
   'wp_kirk_slug_menu' => [
-    'menu_title' => 'WP Kirk Menu title',
+    'menu_title' => 'WP Kirk Menu',
     'capability' => 'read',
-    'icon' => 'dashicons-lightbulb',
+    'icon' => 'wpbones-logo-menu.png',
     'items' => [
       [
         'menu_title' => 'Main View',
