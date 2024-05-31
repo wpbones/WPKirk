@@ -1,6 +1,6 @@
 {
   "name": "@wpbones/wpkirk",
-  "version": "1.4.4",
+  "version": "1.4.6",
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp build",
