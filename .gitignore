@@ -3,3 +3,4 @@ resources/assets/vendor/
 vendor/
 .cache/
 .php-cs-fixer.cache
+release.sh
