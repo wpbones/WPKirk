@@ -6,22 +6,22 @@
  * $this Instance of bones command console
  * $path Destination path
  *
- * You'll be able to:
+ * You'll able to:
  *
  * Delete a file
- * @unlink("{$path}/myfile");
+ *   @unlink("{$path}/myfile");
  *
  * Delete a folder
- *   $this->deleteDirectory("{$path}/docs");
+ *   $console->deleteDirectory("{$path}/docs");
  *
  *
  */
 
 /**
- * Fired when the deployment command is started
+ * Fired when the deploy command is started
  *
  * @param object $console Instance of WPBones Console
- * @param string $path    Destination path
+ * @param string $path Destination path
  */
 add_action('wpbones_console_deploy_start', function ($console, $path) {
   // Do something
@@ -31,7 +31,7 @@ add_action('wpbones_console_deploy_start', function ($console, $path) {
  * Fired before compile assets
  *
  * @param object $console Instance of WPBones Console
- * @param string $path    Destination path
+ * @param string $path Destination path
  */
 add_action('wpbones_console_deploy_before_compile_assets', function ($console, $path) {
   // Do something
@@ -51,7 +51,7 @@ add_filter('wpbones_console_deploy_gulp_production', function ($command) {
  * Fired after compile assets
  *
  * @param object $console Instance of WPBones Console
- * @param string $path    Destination path
+ * @param string $path Destination path
  */
 add_action('wpbones_console_deploy_after_compile_assets', function ($console, $path) {
   // Do something
@@ -68,11 +68,11 @@ add_filter('wpbones_console_deploy_skip_folders', function ($folders) {
 });
 
 /**
- * Fired when the deployment command is completed
+ * Fired when the deploy command is completed
  *
  * @param object $console Instance of WPBones Console
- * @param string $path    Destination path
+ * @param string $path Destination path
  */
-add_action('wpbones_console_deployed', function ($console, $path) {
+add_action('wpbones_console_deploy_completed', function ($console, $path) {
   // Do something
 }, 10, 2);
