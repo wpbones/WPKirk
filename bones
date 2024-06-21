@@ -468,7 +468,7 @@ namespace Bones {
   /**
    * MARK: The WP Bones command line version.
    */
-  define('WPBONES_COMMAND_LINE_VERSION', '1.4.7');
+  define('WPBONES_COMMAND_LINE_VERSION', '1.4.9');
 
   use Bones\SemVer\Version;
   use Exception;
@@ -595,13 +595,13 @@ namespace Bones {
     {
       try {
         /*
-                |--------------------------------------------------------------------------
-                | Load WordPress
-                |--------------------------------------------------------------------------
-                |
-                | We have to load the WordPress environment.
-                |
-                */
+        |--------------------------------------------------------------------------
+        | Load WordPress
+        |--------------------------------------------------------------------------
+        |
+        | We have to load the WordPress environment.
+        |
+        */
         if (!file_exists(__DIR__ . '/../../../wp-load.php')) {
           echo "\n\033[33;5;82mWarning!!\n";
           echo "\n\033[38;5;82m\t" .
@@ -619,16 +619,16 @@ namespace Bones {
 
       try {
         /*
-                |--------------------------------------------------------------------------
-                | Register The Auto Loader
-                |--------------------------------------------------------------------------
-                |
-                | Composer provides a convenient, automatically generated class loader
-                | for our application. We just need to utilize it! We'll require it
-                | into the script here so that we do not have to worry about the
-                | loading of any classes "manually". Feels great to relax.
-                |
-                */
+        |--------------------------------------------------------------------------
+        | Register The Auto Loader
+        |--------------------------------------------------------------------------
+        |
+        | Composer provides a convenient, automatically generated class loader
+        | for our application. We just need to utilize it! We'll require it
+        | into the script here so that we do not have to worry about the
+        | loading of any classes "manually". Feels great to relax.
+        |
+        */
 
         if (file_exists(__DIR__ . '/vendor/autoload.php')) {
           require __DIR__ . '/vendor/autoload.php';
@@ -640,11 +640,11 @@ namespace Bones {
 
       try {
         /*
-                 |--------------------------------------------------------------------------
-                 | Load this plugin env
-                 |--------------------------------------------------------------------------
-                 |
-                 */
+        |--------------------------------------------------------------------------
+        | Load this plugin env
+        |--------------------------------------------------------------------------
+        |
+        */
 
         if (file_exists(__DIR__ . '/bootstrap/plugin.php')) {
           require_once __DIR__ . '/bootstrap/plugin.php';
@@ -783,6 +783,36 @@ namespace Bones {
     }
 
     /**
+     * Return true if the command is available in the system.
+     *
+     * @return string
+     */
+    protected function isCommandAvailable($command)
+    {
+      $whereCommand = (PHP_OS_FAMILY === 'Windows') ? 'where' : 'command -v';
+      $output = shell_exec("$whereCommand $command");
+      return !empty($output);
+    }
+
+    /**
+     * Returns the available package manager
+     *
+     * @return string|null The name of the available package manager (yarn, npm, pnpm, bun) or null if none is available.
+     */
+    protected function getAvailablePackageManager()
+    {
+      $packageManagers = ['yarn', 'npm', 'pnpm', 'bun'];
+
+      foreach ($packageManagers as $manager) {
+        if ($this->isCommandAvailable($manager)) {
+          return $manager;
+        }
+      }
+
+      return null;
+    }
+
+    /**
      * Commodity to display a message in the console.
      *
      * @param string $str The message to display.
@@ -841,63 +871,126 @@ namespace Bones {
         $this->info('Usage:');
         $this->line(' php bones rename [options] <Plugin Name> <Namespace>');
         $this->info('Available options:');
-        $this->line(
-          ' --reset                 Reset the plugin name and namespace'
-        );
-        $this->line(' --update                Rename after an update');
+        $this->line(' --reset                 Reset the plugin name and namespace');
+        $this->line(' --update                Rename after an update. For example after install a new package');
         exit();
       }
 
-      $ask_continue = false;
+      $arg_option_plugin_name = $args[0] ?? null;
 
-      // use the current plugin name and namespace from the namespace file
-      $search_plugin_name = $plugin_name = $this->getPluginName();
-      $search_namespace = $namespace = $this->getNamespace();
+      switch ($arg_option_plugin_name) {
+        case '--reset':
+          $this->resetPluginNameAndNamespace();
+          break;
+        case '--update':
+          $this->updatePluginNameAndNamespace();
+          break;
+        default:
+          [$search_plugin_name, $search_namespace, $plugin_name, $namespace] = $this->getAskPluginNameAndNamespace($args);
+          $this->info("\nThe new plugin name and namespace will be '{$plugin_name}', '{$namespace}'");
+          $yesno = $this->ask('Continue (y/n)', 'n');
+          if (strtolower($yesno) != 'y') {
+            return;
+          }
+          $this->setPluginNameAndNamespace($search_plugin_name, $search_namespace, $plugin_name, $namespace);
+          break;
+      }
+    }
 
-      // ask plugin name and namespace from console
-      if (empty($args[0]) && empty($args[1])) {
-        $plugin_name = $this->ask('Plugin name:', $this->getPluginName());
-        $namespace = $this->ask('Namespace:', $this->getNamespace());
-        $ask_continue = true;
+    /**
+     * Get the plugin name and namespace from args or ask them from the console
+     */
+    protected function getAskPluginNameAndNamespace($args)
+    {
+      // Get the current plugin name and namespace
+      $search_plugin_name =  $this->getPluginName();
+      $search_namespace =  $this->getNamespace();
+
+      if ($search_plugin_name === 'WP Kirk' && $search_namespace === 'WPKirk') {
+        $this->line("ℹ️  You are renaming your plugin for the first time.\n");
       }
 
-      // Reset the plugin name and namespace to the original values
-      if (!empty($args[0]) && $args[0] === '--reset') {
-        [$plugin_name, $namespace] = $this->getDefaultPlaginNameAndNamespace();
-      }
-      // force namespace as WPKirk after a composer update
-      elseif (!empty($args[0]) && $args[0] === '--update') {
-        [
-          $search_plugin_name,
-          $search_namespace,
-        ] = $this->getDefaultPlaginNameAndNamespace();
-      }
-      // new plugin name, the namespace will be created from plugin name
-      elseif (!empty($args[0]) && empty($args[1])) {
-        [$plugin_name, $null] = $args;
-        $namespace = $plugin_name;
-        $ask_continue = true;
-      }
-      // new plugin name and namespace
-      elseif (!empty($args[0]) && !empty($args[1])) {
-        [$plugin_name, $namespace] = $args;
+      $plugin_name = $args[0] ?? '';
+      $namespace = $args[1] ?? '';
+
+      // You may set just the plugin name and the namespace will be created from plugin name
+      if (!empty($plugin_name) && empty($namespace)) {
+        $namespace = str_replace(' ', '', ucwords($plugin_name));
+        return [$search_plugin_name, $search_namespace, $plugin_name, $namespace];
       }
 
-      // sanitize the namespace
-      $namespace = str_replace(' ', '', ucwords($namespace));
+      if (!empty($plugin_name) && !empty($namespace)) {
+        return [$search_plugin_name, $search_namespace, $plugin_name, $namespace];
+      }
 
-      $this->info(
-        "\nThe new plugin name and namespace will be '{$plugin_name}', '{$namespace}'"
-      );
+      $this->info('🚦 ---------------------------------------------------------------------------------');
+      $this->info("🚦 Remember the new plugin name and namespace must not contain \"WP Kirk\" or \"WPKirk\"");
+      $this->info("🚦 ---------------------------------------------------------------------------------\n");
 
-      if ($ask_continue) {
-        $yesno = $this->ask('Continue (y/n)', 'n');
+      $plugin_name = '';
+      $namespace = '';
 
-        if (strtolower($yesno) != 'y') {
-          return;
+      while (empty($plugin_name)) {
+        $plugin_name = $this->ask('Plugin name:', $plugin_name);
+        $namespace = $this->ask('Namespace:', $namespace);
+
+        // both plugin name and namespace don't have to contains 'WP Kirk' or 'WPKirk'
+        if (strpos($plugin_name, 'WP Kirk') !== false || strpos($plugin_name, 'WPKirk') !== false) {
+          $this->error('🛑 Plugin name cannot contain "WP Kirk" or "WPKirk"');
+          $plugin_name = '';
+          continue;
+        }
+
+        if (strpos($namespace, 'WP Kirk') !== false || strpos($namespace, 'WPKirk') !== false) {
+          $this->error('🛑 Namespace cannot contain "WP Kirk" or "WPKirk"');
+          $plugin_name = '';
+          $namespace = '';
+          continue;
         }
       }
 
+      // You may set just the plugin name and the namespace will be created from plugin name
+      if (empty($namespace)) {
+        $namespace = str_replace(' ', '', ucwords($plugin_name));
+      }
+
+      return [$search_plugin_name, $search_namespace, $plugin_name, $namespace];
+    }
+
+    /**
+     * Reset the plugin name and namespace to the original values
+     */
+    protected function resetPluginNameAndNamespace()
+    {
+      // use the current plugin name and namespace from the namespace file
+      $search_plugin_name =  $this->getPluginName();
+      $search_namespace =  $this->getNamespace();
+      [$plugin_name, $namespace] = $this->getDefaultPlaginNameAndNamespace();
+      $this->setPluginNameAndNamespace($search_plugin_name, $search_namespace, $plugin_name, $namespace);
+    }
+
+    /**
+     * Update the plugin name and namespace after a install new package
+     */
+    protected function updatePluginNameAndNamespace()
+    {
+      // use the current plugin name and namespace from the namespace file
+      $plugin_name = $this->getPluginName();
+      $namespace = $this->getNamespace();
+      [$search_plugin_name, $search_namespace] = $this->getDefaultPlaginNameAndNamespace();
+      $this->setPluginNameAndNamespace($search_plugin_name, $search_namespace, $plugin_name, $namespace);
+    }
+
+    /**
+     * Update the plugin name and namespace
+     *
+     * @param string $search_plugin_name The previous plugin name
+     * @param string $search_namespace The previous namespace
+     * @param string $plugin_name The new plugin name
+     * @param string $namespace The new namespace
+     */
+    protected function setPluginNameAndNamespace($search_plugin_name, $search_namespace, $plugin_name, $namespace)
+    {
       // start scan everything
       $files = array_filter(
         array_map(function ($e) {
@@ -922,7 +1015,7 @@ namespace Bones {
 
       // change namespace
       foreach ($files as $file) {
-        $this->line("Loading and process {$file}...");
+        $this->line("🚧 Loading and process {$file}...");
 
         $content = file_get_contents($file);
 
@@ -956,6 +1049,8 @@ namespace Bones {
         }
 
         file_put_contents($file, $content);
+
+        $this->info("✅ Renamed completed!");
       }
 
       foreach (glob('localization/*') as $file) {
@@ -1248,6 +1343,9 @@ namespace Bones {
         $this->line(' php bones update');
         exit();
       }
+      // delete the current vendor/wpbones/wpbones folder
+      $this->deleteDirectory('vendor/wpbones/wpbones');
+
       // update composer module
       $this->line(`composer update`);
     }
@@ -1341,13 +1439,13 @@ namespace Bones {
     }
 
     /*
-         |--------------------------------------------------------------------------
-         | Public task
-         |--------------------------------------------------------------------------
-         |
-         | Here you will find all tasks that a user can run from console.
-         |
-         */
+    |--------------------------------------------------------------------------
+    | Public task
+    |--------------------------------------------------------------------------
+    |
+    | Here you will find all tasks that a user can run from console.
+    |
+    */
 
     /**
      * Create a deployment version of the plugin
@@ -1383,19 +1481,39 @@ namespace Bones {
 
         do_action('wpbones_console_deploy_before_build_assets', $this, $path);
 
-        // run yarn production
+        // @deprecated
         $command = apply_filters(
           'wpbones_console_deploy_build_assets',
           'yarn build'
         );
 
-        if ($command) {
-          $this->info('🕐 Build for production');
-          shell_exec($command);
-          $this->info("\e[1A👍");
-        }
+        $packageManager = $this->getAvailablePackageManager();
 
-        do_action('wpbones_console_deploy_after_build_assets', $this, $path);
+
+        if ($packageManager) {
+
+          $this->info("✅ Found '$packageManager' as package manager");
+
+          $answer = $this->ask("Do you want to run '$packageManager build' to build assets? (y/n)", 'y');
+
+          if (strtolower($answer) === 'y') {
+            $this->info("📦 Build for production by using '{$packageManager} build'");
+            shell_exec("{$packageManager} build");
+            $this->info("✅ Build assets successfully");
+            do_action('wpbones_console_deploy_after_build_assets', $this, $path);
+          } else {
+            $answer = $this->ask("Enter the package manager to build assets (press RETURN to skip the build)", '');
+            if (empty($answer)) {
+              $this->info('⏭︎ Skip build assets');
+            } else {
+              $this->info("📦 Build for production by using '{$answer} build'");
+              shell_exec("{$answer} build");
+              $this->info("✅ Build assets successfully");
+            }
+          }
+        } else {
+          $this->info("🛑 No package manager found. The build assets will be skipped");
+        }
 
         // files and folders to skip
         $this->skipWhenDeploy = [
@@ -1438,9 +1556,9 @@ namespace Bones {
 
         $this->rootDeploy = __DIR__;
 
-        $this->info("🕐 Copying to {$path}");
+        $this->info("🚧 Copying to {$path}");
         $this->xcopy(__DIR__, $path);
-        $this->info("\e[1A👍");
+        $this->info("✅ Copy completed");
 
         /**
          * Fires when the console deploy is completed.
@@ -1450,7 +1568,8 @@ namespace Bones {
          */
         do_action('wpbones_console_deploy_completed', $this, $path);
 
-        $this->info('👏 Deploy Completed!');
+        $this->info("\n\e[5m👏 Deploy Completed!\e[0m");
+        $this->info("\n🚀 You can now deploy the plugin from the path: {$path}\n");
       }
     }
 
