@@ -23,7 +23,6 @@
     <h2>Assets</h2>
 
     <p>WP Bones provides a simple way to include assets in your plugin. You can include styles and scripts in the admin area and in the public area.</p>
-    </p>
 
     <a name="styles"></a>
     <h3>Styles</h3>
