@@ -60,7 +60,7 @@ if (!defined('ABSPATH')) {
 
 
     <p>You can try the API <code class="language- inline">/wp-json/wpkirk/v1/example</code> <a target="_blank"
-        href="/wp-json/wpkirk/v1/example">here</a></p>
+        href="<?php echo get_site_url(); ?>/wp-json/wpkirk/v1/example">here</a></p>
 
     <a name="http-methods"></a>
     <h2>HTTP Methods</h2>
