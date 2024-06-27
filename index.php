@@ -4,7 +4,7 @@
  * Plugin Name: WP Kirk
  * Plugin URI: https://github.com/wpbones/WPKirk
  * Description: WP Bones template WordPress plugin
- * Version: 1.4.6
+ * Version: 1.4.9
  * Author: Giovambattista Fazioli
  * Author URI: http://undolog.com
  * Text Domain: wp-kirk
@@ -13,7 +13,7 @@
  */
 
 if (!defined('ABSPATH')) {
-  exit();
+    exit();
 }
 
 /*
