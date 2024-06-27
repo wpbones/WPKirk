@@ -13,7 +13,7 @@
 
   <div class="wp-kirk-toc clearfix">
     <ul>
-      <li><a href="#current-options">Current Option</a></li>
+      <li><a href="#current-options">Current Options</a></li>
       <li><a href="#update">Update Options</a></li>
       <li><a href="#add">Add Options</a></li>
       <li><a href="#mass-update">Mass Update</a></li>
@@ -27,8 +27,7 @@
 
     <!-- Current options -->
     <hr />
-    <a name="current-options"></a>
-    <h2>Current option</h2>
+    <h2 id="current-options">Current options</h2>
 
     <p>Here you can see he current options are:</p>
 
@@ -83,8 +82,7 @@
 
     <!-- Update -->
     <hr />
-    <a name="update"></a>
-    <h2>Update</h2>
+    <h2 id="update">Update</h2>
     <p>You may update any options and branch tree in the same way, by using the dot notation</p>
 
     <pre><code class="language-php">$plugin->options->set( 'Special.Name', 'John' );</code></pre>
@@ -121,8 +119,7 @@
 
     <!-- Add -->
     <hr />
-    <a name="add"></a>
-    <h2>Add</h2>
+    <h2 id="add">Add</h2>
     <p>Of course, adding new options will work in the same way by using the dot notation</p>
 
     <?php $plugin->options->set('Special.time', time()); ?>
@@ -145,8 +142,7 @@
 
     <!-- Mass Update -->
     <hr />
-    <a name="mass-update"></a>
-    <h3>Mass update</h3>
+    <h3 id="mass-update">Mass update</h3>
     <p>In according with the options structure, you may also update a whole sub set of options instead of change them
       individually</p>
 
@@ -171,8 +167,7 @@
 
     <!-- Mass Insert -->
     <hr />
-    <a name="mass-insert"></a>
-    <h3>Mass insert</h3>
+    <h3 id="mass-insert">Mass insert</h3>
     <p>Of course, you may use the mass feature for the insert as well</p>
 
     <?php $plugin->options->update([
@@ -198,8 +193,7 @@
 
     <!-- Delete -->
     <hr />
-    <a name="delete"></a>
-    <h2>Delete</h2>
+    <h2 id="delete">Delete</h2>
     <p>You may delete an option or a set of options by using the <code>set()</code> method along with <code>null</code>
     </p>
 
@@ -228,8 +222,7 @@
 
     <!-- Reset -->
     <hr />
-    <a name="reset"></a>
-    <h2>Reset to default</h2>
+    <h2 id="reset">Reset to default</h2>
     <p>Don't worry, we can reset everything by using the original file</p>
 
     <?php $plugin->options->reset(); ?>

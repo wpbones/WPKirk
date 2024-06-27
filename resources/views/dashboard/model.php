@@ -10,11 +10,11 @@
 
 <div class="wp-kirk wrap wp-kirk-sample">
 
-  <h1>Model</h1>
+  <h1 id="model">Model</h1>
 
   <div class="wp-kirk-toc clearfix">
     <ul>
-      <li><a href="#">Model</a></li>
+      <li><a href="#model">Model</a></li>
       <li><a href="#example">Example</a></li>
     </ul>
   </div>
@@ -55,7 +55,7 @@ class MyPluginProducts extends Model
   protected $table = 'my_plugin_products';
 }</code></pre>
 
-    <h2>Example</h2>
+    <h2 id="example">Example</h2>
 
     <pre><code class="language-php">&lt;?php MyPluginProducts::all()</code></pre>
 

@@ -23,16 +23,14 @@
     </p>
 
     <hr />
-    <a name="your-package"></a>
-    <h2>Create your Package</h2>
+    <h2 id="your-package">Create your Package</h2>
 
     <pre><code class="language-php">&lt;?php WPKirk\YourPackage\YourPackageProvider::yourPackageMethod(); ?&gt;</code></pre>
 
     <?php WPKirk\YourPackage\YourPackageProvider::yourPackageMethod(); ?>
 
     <hr />
-    <a name="pure-css-tabs"></a>
-    <h2>Pure CSS Tabs</h2>
+    <h2 id="pure-css-tabs">Pure CSS Tabs</h2>
 
     <p>
       Here we are using the <a href="https://github.com/wpbones/pure-css-tabs">Pure CSS Tabs</a> package.
@@ -108,8 +106,7 @@ EOT;
 
     <hr />
 
-    <a name="pure-css-switch"></a>
-    <h2>Pure CSS Switch Button</h2>
+    <h2 id="pure-css-switch">Pure CSS Switch Button</h2>
 
     <p>
       Here we are using the <a href="https://github.com/wpbones/pure-css-switch">Pure CSS Switch</a> package.
@@ -215,9 +212,8 @@ EOT;
     </p>
 
     <hr>
-    <a name="user-agent"></a>
 
-    <h2>User Agent</h2>
+    <h2 id="user-agent">User Agent</h2>
 
     <p>You may use this package to extend WP Bones with a Mobile Detect Library.</p>
 
