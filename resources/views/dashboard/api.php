@@ -28,8 +28,7 @@ if (!defined('ABSPATH')) {
 
     <!-- Current options -->
     <hr />
-    <a name="rest-api"></a>
-    <h2>REST API</h2>
+    <h2 id="rest-api">REST API</h2>
 
     <p>From release v0.13+ WPBones provides a simple way to handle the WordPress Rest API.</p>
     <p>To create your custom API, you have to create a new folder into <code class="language- inline">/api</code> in the root of your plugin. The
@@ -40,8 +39,7 @@ if (!defined('ABSPATH')) {
       <pre><code class="language-sh">/api/vendor/v1</code></pre>
 
 
-    <a name="routing"></a>
-    <h2>Routing</h2>
+    <h2 id="routing">Routing</h2>
 
     <p>Now, we can start to create the Rest API route by adding a new file in the our structure. For example, we'll use
       <code class="language-sh inline">route.php</code>
@@ -62,8 +60,7 @@ if (!defined('ABSPATH')) {
     <p>You can try the API <code class="language- inline">/wp-json/wpkirk/v1/example</code> <a target="_blank"
         href="<?php echo get_site_url(); ?>/wp-json/wpkirk/v1/example">here</a></p>
 
-    <a name="http-methods"></a>
-    <h2>HTTP Methods</h2>
+    <h2 id="http-methods">HTTP Methods</h2>
     <p>The Route class supports the following HTTP methods: <code class="language- inline">get</code>, <code class="language- inline">post</code>, <code class="language- inline">put</code>,
       <code class="language- inline">patch</code>, <code class="language- inline">delete</code> In short, the same supported by the WordPress REST API and defined in the
       <code class="language- inline">WP_REST_Server</code> class.

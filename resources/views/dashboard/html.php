@@ -9,7 +9,7 @@
 
 <div class="wp-kirk wrap wp-kirk-sample">
 
-  <h1>Html Tags Support</h1>
+  <h1>HTML Tags Support</h1>
 
   <div class="wp-kirk-toc clearfix">
     <ul>
@@ -30,10 +30,9 @@
 
   <div class="wp-kirk-toc-content">
 
-    <p>Here you'll find some example about Html support.</p>
+    <p>Here you'll find some example about HTML support.</p>
 
-    <a name="facade"></a>
-    <h2>Html facade</h2>
+    <h2 id="facade">Html facade</h2>
 
     <p>You can render a HTML component in different ways</p>
 
@@ -43,10 +42,9 @@
       <?php echo WPKirk\Html::button('Hello, world!'); ?>
     </div>
 
-    <a name="fluent"></a>
     <hr />
 
-    <h2>Fluent Example</h2>
+    <h2 id="fluent">Fluent Example</h2>
 
     <pre><code class="language-php">$html = WPKirk\Html::button( "Hello, world!" )->html();
 echo $html;</code></pre>
@@ -120,8 +118,7 @@ echo $button;</code></pre>
 
     <hr />
 
-    <a name="styles"></a>
-    <h2>Styles</h2>
+    <h2 id="styles">Styles</h2>
 
     <p>You may change the HTML component styles immediately by using <code class="language-php inline">style()</code></p>
 
@@ -153,8 +150,7 @@ echo $button;</code></pre>
 
     <hr />
 
-    <a name="a"></a>
-    <h2>Available HTML tags</h2>
+    <h2 id="a">Available HTML tags</h2>
 
     <h3>a</h3>
 
@@ -166,8 +162,7 @@ echo $button;</code></pre>
 
     <hr />
 
-    <a name="button"></a>
-    <h3>button</h3>
+    <h3 id="button">button</h3>
 
     <pre><code class="language-php">echo WPKirk\Html::button('Hello, world!')->class('button button-primary')</code></pre>
 
@@ -179,8 +174,7 @@ echo $button;</code></pre>
 
     <hr />
 
-    <a name="form"></a>
-    <h3>Form</h3>
+    <h3 id="form">Form</h3>
 
     <pre><code class="language-php">echo WPKirk\Html::form()->acceptcharset('ISO-8859-1')</code></pre>
 
@@ -190,8 +184,7 @@ echo $button;</code></pre>
 
     <hr />
 
-    <a name="input"></a>
-    <h3>Input</h3>
+    <h3 id="input">Input</h3>
 
     <pre><code class="language-php">echo WPKirk\Html::input()->type('text')->value('Hello')</code></pre>
 
@@ -201,8 +194,7 @@ echo $button;</code></pre>
 
     <hr />
 
-    <a name="checkbox"></a>
-    <h3>Checkbox</h3>
+    <h3 id="checkbox">Checkbox</h3>
 
     <pre><code class="language-php">echo WPKirk\Html::checkbox()->name('myname')->value('Hello')</code></pre>
 
@@ -216,10 +208,9 @@ echo $button;</code></pre>
 &lt;input type=&quot;checkbox&quot; name=&quot;myname&quot; value=&quot;Hello&quot; /&gt;
 </code></pre>
 
-    <a name="select"></a>
     <hr />
 
-    <h3>Select</h3>
+    <h3 id="select">Select</h3>
 
     <p>To use a <code class="language-html inline">select</code> you have to define the options as well. Below, you'll see different ways to do that.
       The first
@@ -271,10 +262,9 @@ echo $button;</code></pre>
         ->selected('item-5'); ?>
     </div>
 
-    <a name="textarea"></a>
     <hr />
 
-    <h3>Textarea</h3>
+    <h3 id="textarea">Textarea</h3>
 
     <pre><code class="language-php">echo WPKirk\Html::textarea('Hi there, How are you?')</code></pre>
 
@@ -282,10 +272,9 @@ echo $button;</code></pre>
       <?php echo WPKirk\Html::textarea('Hi there, How are you?'); ?>
     </div>
 
-    <a name="datetime"></a>
     <hr />
 
-    <h3>Datetime</h3>
+    <h3 id="datetime">Datetime</h3>
 
     <div>
 
@@ -312,10 +301,9 @@ echo $button;</code></pre>
       <?php echo WPKirk\Html::datetime()->value('2015-11-10 12:13'); ?>
     </div>
 
-    <a name="custom-attributes"></a>
     <hr />
 
-    <h2>Custom attributes</h2>
+    <h2 id="custom-attributes">Custom attributes</h2>
 
     <p>You may also set any custom attributes in the HTML component</p>
 

@@ -15,7 +15,7 @@
     <ul>
       <li><a href="#passing-data">Passing data to view</a></li>
       <li><a href="#configuration">Configuration</a></li>
-      <li><a href="#plugin-information">Plugin information</a></li>
+      <li><a href="#plugin-info">Plugin information</a></li>
       <li><a href="#custom-pages">Custom Pages</a></li>
     </ul>
   </div>
@@ -30,15 +30,13 @@
     <h3>PHP Version <?php echo phpversion(); ?></h3>
 
     <hr />
-    <a name="passing-data"></a>
-    <h2>Passing data to view</h2>
+    <h2 id="passing-data">Passing data to view</h2>
 
     <p>You may get variable from the controller. For example, the variable <code class="language- inline">kirk</code> is <?php echo $kirk; ?>
     </p>
 
     <hr />
-    <a name="configuration"></a>
-    <h2>Configuration</h2>
+    <h2 id="configuration">Configuration</h2>
     <p>Get the <code class="language- inline">custom</code> configuration by using</p>
 
     <pre><code class="language-php">&lt;?php echo $plugin-&gt;config('custom.sample') ?&gt;</code></pre>
@@ -48,8 +46,7 @@
     <pre><code class="language-"><?php echo $plugin->config("custom.sample"); ?></code></pre>
 
     <hr />
-    <a name="plugin-information"></a>
-    <h2>Plugin information</h2>
+    <h2 id="plugin-info">Plugin information</h2>
     <p>You may get the plugin information by using</p>
 
 
@@ -62,8 +59,7 @@
     <pre><code class="language-php">&lt;?php echo $plugin-&gt;TextDomain ?&gt; // <?php echo $plugin->TextDomain; ?></code></pre>
 
     <hr />
-    <a name="custom-pages"></a>
-    <h2>Custom Pages</h2>
+    <h2 id="custom-pages">Custom Pages</h2>
 
     <p>To create a custom pages without a menu, you may config the <code class="language- inline">route.php</code> file in the
       <code class="language- inline">config</code>

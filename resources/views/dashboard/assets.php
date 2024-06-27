@@ -24,8 +24,7 @@
 
     <p>WP Bones provides a simple way to include assets in your plugin. You can include styles and scripts in the admin area and in the public area.</p>
 
-    <a name="styles"></a>
-    <h3>Styles</h3>
+    <h3 id="styles">Styles</h3>
 
     <p>Currently, WP Bones supports the following styles: standard CSS files, SCSS files, and LESS files.
     You may create your styles in the <code class="language-bash inline">resources/assets/css</code> directory.</p>
@@ -39,14 +38,12 @@
     ->withAdminStyles('my-styles');
   }</code></pre>
 
-  <a name="javascript"></a>
-  <h3>Javascript</h3>
+  <h3 id="javascript">Javascript</h3>
 
   <p>Javascript files work in the same way as styles. You can create your javascript files in the <code class="language-bash inline">resources/assets/js</code> directory.</p>
   <p>You can find more details in the <a href="https://wpbones.vercel.app/docs/GettingStarted/assets">Assets documentation</a>.</p>
 
-  <a name="react"></a>
-  <h3>ReactJS and Typescript</h3>
+  <h3 id="react">ReactJS and Typescript</h3>
 
   <p>You may use gulp to compile simple React components. you will be able to compile .jsx files and .tsx files. The compiled files will be in the <code class="language-html inline">public/js</code> directory.</p>
 

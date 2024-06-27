@@ -14,12 +14,14 @@
 
   <div class="wp-kirk-toc clearfix">
     <ul>
-      <li><a href="#">Query Builder</a></li>
+      <li><a href="#query-builder">Query Builder</a></li>
       <li><a href="#example">Example</a></li>
     </ul>
   </div>
 
   <div class="wp-kirk-toc-content">
+
+    <h2 id="query-builder">Query Builder</h2>
 
     <p>WP Bones's database query builder provides a convenient, fluent interface to creating and running database
       queries. It can be used to perform most database operations in your WordPress instance.</p>
@@ -30,8 +32,7 @@
       ->all()
       ->dump(); ?></code></pre>
 
-    <a name="example"></a>
-    <h2>Example</h2>
+    <h2 id="example">Example</h2>
 
 <pre><code class="language-php">foreach (DB::table('users')->get() as $user) {
   echo "{$user->user_login}\n";
