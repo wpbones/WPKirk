@@ -13,4 +13,6 @@ class MyCustomTaxonomy extends ServiceProvider
   protected $plural = 'Ships';
 
   protected $objectType = 'wp_kirk_cpt';
+
+  protected $hierarchical = true;
 }

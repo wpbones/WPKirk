@@ -14,10 +14,6 @@ class MyCustomPostType extends ServiceProvider
 
   protected $public = true;
 
-  protected $publiclyQueryable = true;
-
-  protected $mapMetaCap = true;
-
   protected $menuIcon = 'dashicons-universal-access-alt';
 
   protected $rewrite = [
