@@ -38,16 +38,6 @@ add_action('wpbones_console_deploy_before_build_assets', function ($console, $pa
 }, 10, 2);
 
 /**
- * Filter the console command used to compile assets
- *
- * @param string $command Command to use. Default 'gulp production'
- * @return string A different command or NULL to skip the compilation
- */
-add_filter('wpbones_console_deploy_gulp_production', function ($command) {
-  return $command;
-});
-
-/**
  * Fired after building assets
  *
  * @param object $console Instance of WPBones Console
