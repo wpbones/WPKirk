@@ -28,12 +28,12 @@ add_action('wpbones_console_deploy_start', function ($console, $path) {
 }, 10, 2);
 
 /**
- * Fired before compile assets
+ * Fired before building assets
  *
  * @param object $console Instance of WPBones Console
  * @param string $path Destination path
  */
-add_action('wpbones_console_deploy_before_compile_assets', function ($console, $path) {
+add_action('wpbones_console_deploy_before_build_assets', function ($console, $path) {
   // Do something
 }, 10, 2);
 
@@ -48,12 +48,12 @@ add_filter('wpbones_console_deploy_gulp_production', function ($command) {
 });
 
 /**
- * Fired after compile assets
+ * Fired after building assets
  *
  * @param object $console Instance of WPBones Console
  * @param string $path Destination path
  */
-add_action('wpbones_console_deploy_after_compile_assets', function ($console, $path) {
+add_action('wpbones_console_deploy_after_build_assets', function ($console, $path) {
   // Do something
 }, 10, 2);
 
