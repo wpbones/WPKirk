@@ -466,7 +466,7 @@ namespace Bones {
   /**
    * MARK: The WP Bones command line version.
    */
-  define('WPBONES_COMMAND_LINE_VERSION', '1.4.13');
+  define('WPBONES_COMMAND_LINE_VERSION', '1.4.14');
 
   use Bones\SemVer\Version;
   use Exception;
@@ -1479,14 +1479,7 @@ namespace Bones {
 
         do_action('wpbones_console_deploy_before_build_assets', $this, $path);
 
-        // @deprecated
-        $command = apply_filters(
-          'wpbones_console_deploy_build_assets',
-          'yarn build'
-        );
-
         $packageManager = $this->getAvailablePackageManager();
-
 
         if ($packageManager) {
 
@@ -1497,7 +1490,7 @@ namespace Bones {
           if (strtolower($answer) === 'y') {
             $this->info("📦 Build for production by using '{$packageManager} run build'");
             shell_exec("{$packageManager} run build");
-            $this->info("✅ Build assets successfully");
+            $this->info("✅ Built assets successfully");
             do_action('wpbones_console_deploy_after_build_assets', $this, $path);
           } else {
             $answer = $this->ask("Enter the package manager to build assets (press RETURN to skip the build)", '');
@@ -1506,7 +1499,8 @@ namespace Bones {
             } else {
               $this->info("📦 Build for production by using '{$answer} run build'");
               shell_exec("{$answer} run build");
-              $this->info("✅ Build assets successfully");
+              $this->info("✅ Built assets successfully");
+              do_action('wpbones_console_deploy_after_build_assets', $this, $path);
             }
           }
         } else {
@@ -1535,11 +1529,13 @@ namespace Bones {
           '/package.json',
           '/package-lock.json',
           '/yarn.lock',
+          '/pnpm-lock.yaml',
           '/README.md',
           '/webpack.mix.js',
           '/webpack.config.js',
           '/phpcs.xml.dist',
           '/mix-manifest.json',
+          '/release.sh',
         ];
 
         /**
@@ -1566,7 +1562,7 @@ namespace Bones {
          */
         do_action('wpbones_console_deploy_completed', $this, $path);
 
-        $this->info("\n\e[5m👏 Deploy Completed!\e[0m");
+        $this->info("\n\e[5m👏 Deploy completed!\e[0m");
         $this->info("\n🚀 You can now deploy the plugin from the path: {$path}\n");
       }
     }
