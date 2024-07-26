@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('ABSPATH')) {
+    exit();
+}
+
 /*
 |--------------------------------------------------------------------------
 | WordPress REST API configuration

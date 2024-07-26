@@ -1,14 +1,14 @@
 === WP Kirk ===
 Contributors: gfazioli
 Donate link: http://undolog.com
-Tags: template, wpbones
+Tags: demo, wpbones
 Requires at least: 6.2
-Tested up to: 6.4.3
-Stable tag: 1.4.11
+Tested up to: 6.5
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WP Bones template plugin.
+WP Bones Demo plugin.
 
 == Description ==
 
