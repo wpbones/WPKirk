@@ -17,17 +17,18 @@ if (!defined('ABSPATH')) {
 */
 
 return [
-  'version' => '1.0',
-  'General' => [
-    'option_1' => 'true',
-    'option_2' => 'true',
-    'option_3' => [
-      'sub_option_of_3' => 'Hello',
+    'version' => '1.0',
+    'General' => [
+        'option_1' => 'true',
+        'option_2' => 'true',
+        'option_3' => [
+            'sub_option_of_3' => 'Hello',
+        ],
+        'option_4' => 'to delete',
+        'option_5' => null
     ],
-    'option_4' => 'to delete',
-  ],
 
-  'Special' => [
-    'Name' => 'James Kirk',
-  ],
+    'Special' => [
+        'Name' => 'James Kirk',
+    ],
 ];
