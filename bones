@@ -1479,7 +1479,7 @@ namespace Bones {
 
             $path = $argv[0] !== '--wp' ? $argv[0] : '';
             $index = $argv[0] !== '--wp' ? 1 : 0;
-            $is_wp_org = $argv[$index] === '--wp';
+            $is_wp_org = array_key_exists($index, $argv) && $argv[$index] === '--wp';
 
             $this->info("\nStarting deploy ¯\_(ツ)_/¯\n");
 
