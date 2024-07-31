@@ -468,7 +468,7 @@ namespace Bones {
     /**
      * MARK: The WP Bones command line version.
      */
-    define('WPBONES_COMMAND_LINE_VERSION', '1.5.3');
+    define('WPBONES_COMMAND_LINE_VERSION', '1.5.7');
 
     use Bones\SemVer\Exceptions\InvalidVersionException;
     use Bones\SemVer\Version;
@@ -876,6 +876,7 @@ namespace Bones {
                         return;
                     }
                     $this->setPluginNameAndNamespace($search_plugin_name, $search_namespace, $plugin_name, $namespace);
+                    $this->update();
                     break;
             }
         }
@@ -924,14 +925,14 @@ namespace Bones {
             // use the current plugin name and namespace from the namespace file
             $search_plugin_name = $this->getPluginName();
             $search_namespace = $this->getNamespace();
-            [$plugin_name, $namespace] = $this->getDefaultPlaginNameAndNamespace();
+            [$plugin_name, $namespace] = $this->getDefaultPluginNameAndNamespace();
             $this->setPluginNameAndNamespace($search_plugin_name, $search_namespace, $plugin_name, $namespace);
         }
 
         /**
          * Return the default plugin name and namespace.
          */
-        protected function getDefaultPlaginNameAndNamespace(): array
+        protected function getDefaultPluginNameAndNamespace(): array
         {
             return ['WP Kirk', 'WPKirk'];
         }
@@ -955,7 +956,7 @@ namespace Bones {
                 $currentMainPluginFile = 'index.php';
             }
 
-            rename($currentMainPluginFile, $mainPluginFile);
+            @rename($currentMainPluginFile, $mainPluginFile);
 
             // start scan everything
             $files = array_filter(
@@ -1216,6 +1217,55 @@ namespace Bones {
         }
 
         /**
+         * Execute composer update
+         */
+        protected function update()
+        {
+            if ($this->isHelp()) {
+                $this->line(
+                    "Will run the composer update. Useful if there is a new version of WP Bones\n"
+                );
+                $this->info('Usage:');
+                $this->line(' php bones update');
+                exit();
+            }
+            // delete the current vendor/wpbones/wpbones folder
+            $this->deleteDirectory('vendor/wpbones/wpbones');
+
+            // update composer module
+            $this->line(`composer update`);
+        }
+
+        /**
+         * Delete a whole folder
+         *
+         * @param string $path The path to the folder to delete
+         */
+        public function deleteDirectory($path)
+        {
+            $path = rtrim($path, '/');
+
+            array_map(function ($file) {
+                if (is_dir($file)) {
+                    $this->deleteDirectory($file);
+                } else {
+                    @unlink($file);
+                }
+            }, glob("{$path}/" . '{,.}[!.,!..]*', GLOB_MARK | GLOB_BRACE));
+
+            @rmdir("{$path}");
+        }
+
+        /*
+        |--------------------------------------------------------------------------
+        | Internal useful function
+        |--------------------------------------------------------------------------
+        |
+        | Here you will find all internal methods
+        |
+        */
+
+        /**
          * Update the plugin name and namespace after a install new package
          */
         protected function updatePluginNameAndNamespace()
@@ -1223,7 +1273,7 @@ namespace Bones {
             // use the current plugin name and namespace from the namespace file
             $plugin_name = $this->getPluginName();
             $namespace = $this->getNamespace();
-            [$search_plugin_name, $search_namespace] = $this->getDefaultPlaginNameAndNamespace();
+            [$search_plugin_name, $search_namespace] = $this->getDefaultPluginNameAndNamespace();
             $this->setPluginNameAndNamespace($search_plugin_name, $search_namespace, $plugin_name, $namespace);
         }
 
@@ -1249,11 +1299,13 @@ namespace Bones {
             // You may set just the plugin name and the namespace will be created from plugin name
             if (!empty($plugin_name) && empty($namespace)) {
                 $namespace = str_replace(' ', '', ucwords($plugin_name));
-                return [$search_plugin_name, $search_namespace, $plugin_name, $namespace];
+                $mainPluginFile = $this->getMainPluginFile($plugin_name);
+                return [$search_plugin_name, $search_namespace, $plugin_name, $namespace, $mainPluginFile];
             }
 
             if (!empty($plugin_name) && !empty($namespace)) {
-                return [$search_plugin_name, $search_namespace, $plugin_name, $namespace];
+                $mainPluginFile = $this->getMainPluginFile($plugin_name);
+                return [$search_plugin_name, $search_namespace, $plugin_name, $namespace, $mainPluginFile];
             }
 
             $this->info('🚦 ---------------------------------------------------------------------------------');
@@ -1291,15 +1343,6 @@ namespace Bones {
 
             return [$search_plugin_name, $search_namespace, $plugin_name, $namespace, $mainPluginFile];
         }
-
-        /*
-        |--------------------------------------------------------------------------
-        | Internal useful function
-        |--------------------------------------------------------------------------
-        |
-        | Here you will find all internal methods
-        |
-        */
 
         /**
          * Get input from console
@@ -1347,46 +1390,6 @@ namespace Bones {
                 exit();
             }
             $this->line(`composer install`);
-        }
-
-        /**
-         * Execute composer update
-         */
-        protected function update()
-        {
-            if ($this->isHelp()) {
-                $this->line(
-                    "Will run the composer update. Useful if there is a new version of WP Bones\n"
-                );
-                $this->info('Usage:');
-                $this->line(' php bones update');
-                exit();
-            }
-            // delete the current vendor/wpbones/wpbones folder
-            $this->deleteDirectory('vendor/wpbones/wpbones');
-
-            // update composer module
-            $this->line(`composer update`);
-        }
-
-        /**
-         * Delete a whole folder
-         *
-         * @param string $path The path to the folder to delete
-         */
-        public function deleteDirectory($path)
-        {
-            $path = rtrim($path, '/');
-
-            array_map(function ($file) {
-                if (is_dir($file)) {
-                    $this->deleteDirectory($file);
-                } else {
-                    @unlink($file);
-                }
-            }, glob("{$path}/" . '{,.}[!.,!..]*', GLOB_MARK | GLOB_BRACE));
-
-            @rmdir("{$path}");
         }
 
         /**
@@ -1472,7 +1475,7 @@ namespace Bones {
         /**
          * Create a deployment version of the plugin
          *
-         * @param string $path The path to the deployment version of the plugin
+         * @param $argv
          */
         protected function deploy($argv)
         {
@@ -1612,7 +1615,6 @@ namespace Bones {
                 $this->info("\n🚀 You can now deploy the plugin from the path: {$path}\n");
             }
         }
-
 
         /**
          * Returns the available package manager
