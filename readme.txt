@@ -4,7 +4,7 @@ Donate link: http://undolog.com
 Tags: demo, wpbones
 Requires at least: 6.2
 Tested up to: 6.5
-Stable tag: 1.5.7
+Stable tag: 1.5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
