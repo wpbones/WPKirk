@@ -1,0 +1,695 @@
+# Copyright (C) 2024 Giovambattista Fazioli
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Kirk 1.5.10\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-kirk\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-09-15T15:09:25+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wp-kirk\n"
+
+#. Plugin Name of the plugin
+#: wp-kirk.php
+msgid "WP Kirk"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: wp-kirk.php
+msgid "https://github.com/wpbones/WPKirk"
+msgstr ""
+
+#. Description of the plugin
+#: wp-kirk.php
+msgid "WP Bones Demo WordPress plugin"
+msgstr ""
+
+#. Author of the plugin
+#: wp-kirk.php
+msgid "Giovambattista Fazioli"
+msgstr ""
+
+#. Author URI of the plugin
+#: wp-kirk.php
+msgid "http://undolog.com"
+msgstr ""
+
+#: config/custom.php:19
+msgid "Hello, Captain!"
+msgstr ""
+
+#: config/menus.php:24
+msgid "Main View"
+msgstr ""
+
+#: config/menus.php:30
+#: resources/views/dashboard/assets.php:12
+#: resources/views/dashboard/assets.php:23
+msgid "Assets"
+msgstr ""
+
+#: config/menus.php:36
+msgid "React Application"
+msgstr ""
+
+#: config/menus.php:42
+msgid "React Settings"
+msgstr ""
+
+#: config/menus.php:48
+msgid "Ajax Example"
+msgstr ""
+
+#: config/menus.php:54
+msgid "Options"
+msgstr ""
+
+#: config/menus.php:60
+msgid "Options View"
+msgstr ""
+
+#: config/menus.php:67
+msgid "Options Resource"
+msgstr ""
+
+#: config/menus.php:74
+msgid "HTML"
+msgstr ""
+
+#: config/menus.php:80
+msgid "Official Packages"
+msgstr ""
+
+#: config/menus.php:87
+msgid "Tables Example #1"
+msgstr ""
+
+#: config/menus.php:94
+msgid "Tables Example #2"
+msgstr ""
+
+#: config/menus.php:101
+msgid "Tables Example #3"
+msgstr ""
+
+#: config/menus.php:108
+msgid "API"
+msgstr ""
+
+#: config/menus.php:114
+#: resources/views/dashboard/database.php:13
+msgid "Database"
+msgstr ""
+
+#: config/menus.php:120
+msgid "Model"
+msgstr ""
+
+#: config/menus.php:126
+#: resources/views/dashboard/eloquent.php:16
+msgid "Eloquent ORM"
+msgstr ""
+
+#: config/menus.php:132
+msgid "Blade"
+msgstr ""
+
+#: config/options.php:25
+msgid "Hello"
+msgstr ""
+
+#: config/routes.php:19
+msgid "Title of page"
+msgstr ""
+
+#: config/routes.php:27
+msgid "Second"
+msgstr ""
+
+#: pages/custom_page.php:9
+msgid "Hello, Custom Page!"
+msgstr ""
+
+#: plugin/Ajax/MyAjax.php:35
+msgid "You have clicked Ajax Trusted"
+msgstr ""
+
+#: plugin/Ajax/MyAjax.php:42
+msgid "You have clicked Ajax Logged"
+msgstr ""
+
+#: plugin/Ajax/MyAjax.php:49
+msgid "You have clicked Ajax notLogged"
+msgstr ""
+
+#: plugin/Http/Controllers/SearchTable.php:17
+msgid "My amazing list of Cakes"
+msgstr ""
+
+#: plugin/Http/Controllers/SearchTable.php:26
+msgid "Description"
+msgstr ""
+
+#: plugin/Http/Controllers/SearchTable.php:27
+msgid "Ingredients"
+msgstr ""
+
+#: resources/views/dashboard/api.php:22
+msgid "REST API"
+msgstr ""
+
+#: resources/views/dashboard/api.php:23
+#: resources/views/dashboard/api.php:40
+msgid "Routing"
+msgstr ""
+
+#: resources/views/dashboard/api.php:24
+#: resources/views/dashboard/api.php:61
+msgid "HTTP Methods"
+msgstr ""
+
+#: resources/views/dashboard/api.php:34
+msgid "From release v0.13+ WPBones provides a simple way to handle the WordPress Rest API."
+msgstr ""
+
+#: resources/views/dashboard/api.php:35
+msgid "To create your custom API, you have to create a new folder into"
+msgstr ""
+
+#: resources/views/dashboard/api.php:35
+msgid "in the root of your plugin. The main folder will be the vendor. Usually, into the vendor folder you'll create the version folder as well. For example, you may create"
+msgstr ""
+
+#: resources/views/dashboard/api.php:42
+msgid "Now, we can start to create the Rest API route by adding a new file in the our structure. For example, we'll use"
+msgstr ""
+
+#: resources/views/dashboard/api.php:48
+#: resources/views/dashboard/api.php:68
+#: resources/views/dashboard/api.php:81
+msgid "Let's see a simple implementation of"
+msgstr ""
+
+#: resources/views/dashboard/api.php:58
+msgid "You can try the API"
+msgstr ""
+
+#: resources/views/dashboard/api.php:59
+msgid "here"
+msgstr ""
+
+#: resources/views/dashboard/api.php:63
+msgid "The Route class supports the following HTTP methods:"
+msgstr ""
+
+#: resources/views/dashboard/api.php:64
+msgid "In short, the same supported by the WordPress REST API and defined in the"
+msgstr ""
+
+#: resources/views/dashboard/api.php:68
+#: resources/views/dashboard/api.php:81
+msgid "using the"
+msgstr ""
+
+#: resources/views/dashboard/api.php:68
+#: resources/views/dashboard/api.php:81
+msgid "method"
+msgstr ""
+
+#: resources/views/dashboard/api.php:79
+msgid "Instead of use the static method"
+msgstr ""
+
+#: resources/views/dashboard/api.php:79
+msgid "and so on, you can use the"
+msgstr ""
+
+#: resources/views/dashboard/api.php:79
+msgid "instead. You will be able to use multiple HTTP verbs at the same time."
+msgstr ""
+
+#: resources/views/dashboard/api.php:105
+msgid "You will find further information and details in the"
+msgstr ""
+
+#: resources/views/dashboard/api.php:106
+msgid "Official WP Bones docs"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:16
+msgid "Styles"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:17
+msgid "Javascript"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:18
+#: resources/views/dashboard/assets.php:45
+msgid "ReactJS and Typescript"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:25
+msgid "WP Bones provides a simple way to include assets in your plugin. You can include styles and scripts in the admin area and in the public area."
+msgstr ""
+
+#: resources/views/dashboard/assets.php:29
+msgid "Currently, WP Bones supports the following styles: standard CSS files, SCSS files, and LESS files. You may create your styles in the <code class=\"language-bash inline\">resources/assets/css</code> directory."
+msgstr ""
+
+#: resources/views/dashboard/assets.php:30
+msgid "The files <code class=\"language-bash inline\">.css</code>, <code class=\"language-bash inline\">.scss</code>, and <code class=\"language-bash inline\">.less</code> will be compiled and you will find the css compiled in the <code class=\"language-html inline\">public/css</code> directory."
+msgstr ""
+
+#: resources/views/dashboard/assets.php:31
+msgid "Next, you can include your styles by using the usual way"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:42
+msgid "Javascript files work in the same way as styles. You can create your javascript files in the <code class=\"language-bash inline\">resources/assets/js</code> directory."
+msgstr ""
+
+#: resources/views/dashboard/assets.php:43
+msgid "You can find more details in the <a href=\"https://wpbones.vercel.app/docs/GettingStarted/assets\">Assets documentation</a>."
+msgstr ""
+
+#: resources/views/dashboard/assets.php:47
+msgid "You may use gulp to compile simple React components. you will be able to compile .jsx files and .tsx files. The compiled files will be in the <code class=\"language-html inline\">public/js</code> directory."
+msgstr ""
+
+#: resources/views/dashboard/assets.php:49
+msgid "React component is a JavaScript file that contains a component. It can be a simple component or a complex one. You can use it to create a custom page or a custom widget. Now it's available to use in your WordPress environment."
+msgstr ""
+
+#: resources/views/dashboard/assets.php:51
+msgid "Step 1 - create a placeholder"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:53
+msgid "We create a placeholder <code class=\"language-html inline\">div</code> with an <code class=\"language-html inline\">id</code>."
+msgstr ""
+
+#: resources/views/dashboard/assets.php:57
+msgid "Step 2 - include the JavaScript file"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:59
+msgid "In the Dashboard controller we include the JavaScript file. It's a simple example, but you can include it in a more complex way."
+msgstr ""
+
+#: resources/views/dashboard/assets.php:71
+msgid "Step 3 - create the React component"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:73
+msgid "In the"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:73
+msgid "directory we create a new file"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:73
+msgid "with the following content:"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:111
+msgid "Step 4 - compile"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:113
+msgid "Run the following command to compile the JavaScript file:"
+msgstr ""
+
+#: resources/views/dashboard/assets.php:117
+msgid "Step 5 - check the result below"
+msgstr ""
+
+#: resources/views/dashboard/custom_page.php:11
+msgid "Hello, I'm a Custom Page defined in"
+msgstr ""
+
+#: resources/views/dashboard/custom_page.php:11
+msgid "folder"
+msgstr ""
+
+#: resources/views/dashboard/custom_page.php:13
+msgid "You may create a PHP file in"
+msgstr ""
+
+#: resources/views/dashboard/custom_page.php:13
+msgid "folder and name it"
+msgstr ""
+
+#: resources/views/dashboard/custom_page.php:38
+msgid "Back"
+msgstr ""
+
+#: resources/views/dashboard/database.php:17
+#: resources/views/dashboard/database.php:24
+msgid "Query Builder"
+msgstr ""
+
+#: resources/views/dashboard/database.php:18
+#: resources/views/dashboard/database.php:34
+msgid "Example"
+msgstr ""
+
+#: resources/views/dashboard/database.php:26
+msgid "WP Bones's database query builder provides a convenient, fluent interface to creating and running database queries. It can be used to perform most database operations in your WordPress instance."
+msgstr ""
+
+#: resources/views/dashboard/database.php:47
+msgid "You can find more"
+msgstr ""
+
+#: resources/views/dashboard/database.php:47
+msgid "example here"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:18
+msgid "You may include the Eloquent ORM to provide a beautiful, simple ActiveRecord implementation for working with your database. Each database table has a corresponding \"Model\" which is used to interact with that table. Models allow you to query for data in your tables, as well as insert new records into the table."
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:20
+msgid "You may install Eloquent ORM in your plugin by using"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:24
+msgid "As we are using the complete illuminate database package, for further documentation on using the various database facilities this library provides, consult the"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:24
+#: resources/views/dashboard/eloquent.php:94
+msgid "Laravel framework documentation"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:26
+msgid "Query WordPress users table"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:34
+#: resources/views/dashboard/eloquent.php:63
+msgid "Output"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:40
+msgid "Find"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:42
+msgid "Of course, you'll be able to use all eloquent features"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:53
+msgid "Custom Table"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:55
+msgid "Alongside the WordPress table you may use eloquent for your custom database table"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:69
+msgid "and get single column value"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:80
+msgid "Loop into"
+msgstr ""
+
+#: resources/views/dashboard/eloquent.php:94
+msgid "For further documentation on using the various database facilities this library provides, consult the"
+msgstr ""
+
+#: resources/views/dashboard/index.php:12
+msgid "Hello, I'm the first %s view"
+msgstr ""
+
+#: resources/views/dashboard/index.php:17
+#: resources/views/dashboard/index.php:69
+msgid "Passing data to view"
+msgstr ""
+
+#: resources/views/dashboard/index.php:18
+#: resources/views/dashboard/index.php:75
+msgid "Configuration"
+msgstr ""
+
+#: resources/views/dashboard/index.php:19
+#: resources/views/dashboard/index.php:85
+msgid "Flags"
+msgstr ""
+
+#: resources/views/dashboard/index.php:20
+#: resources/views/dashboard/index.php:120
+msgid "Plugin information"
+msgstr ""
+
+#: resources/views/dashboard/index.php:21
+#: resources/views/dashboard/index.php:133
+msgid "Custom Pages"
+msgstr ""
+
+#: resources/views/dashboard/index.php:26
+msgid "Welcome to the WP Bones template WordPress plugin"
+msgstr ""
+
+#: resources/views/dashboard/index.php:27
+msgid "This is a simple template plugin for WordPress. It is based on the WP Bones framework."
+msgstr ""
+
+#: resources/views/dashboard/index.php:28
+msgid "It is a plugin that shows most of the features of the WP Bones framework. It is a good starting point for creating your own plugin."
+msgstr ""
+
+#: resources/views/dashboard/index.php:36
+msgid "This view is displayed by a Controller connected to the menu you have selected."
+msgstr ""
+
+#: resources/views/dashboard/index.php:37
+msgid "The menu is defined in the"
+msgstr ""
+
+#: resources/views/dashboard/index.php:37
+#: resources/views/dashboard/index.php:54
+#: resources/views/dashboard/index.php:67
+msgid "file."
+msgstr ""
+
+#: resources/views/dashboard/index.php:54
+msgid "The controller is located in the"
+msgstr ""
+
+#: resources/views/dashboard/index.php:67
+msgid "The HTML part view is located in the"
+msgstr ""
+
+#: resources/views/dashboard/index.php:71
+msgid "You may get variable from the controller. For example, the variable"
+msgstr ""
+
+#: resources/views/dashboard/index.php:71
+msgid "is"
+msgstr ""
+
+#: resources/views/dashboard/index.php:76
+msgid "Get the"
+msgstr ""
+
+#: resources/views/dashboard/index.php:76
+msgid "configuration by using"
+msgstr ""
+
+#: resources/views/dashboard/index.php:80
+msgid "It will return"
+msgstr ""
+
+#: resources/views/dashboard/index.php:86
+msgid "The new optional <code>flags.yaml</code> file is used to set flags for the plugin. The flags are used to enable or disable features in the plugin."
+msgstr ""
+
+#: resources/views/dashboard/index.php:87
+msgid "Why use flags instead the PHP code?"
+msgstr ""
+
+#: resources/views/dashboard/index.php:89
+msgid "The flags file is specifically designed to be used by non-developers."
+msgstr ""
+
+#: resources/views/dashboard/index.php:90
+msgid "It's easier to understand and modify."
+msgstr ""
+
+#: resources/views/dashboard/index.php:91
+msgid "For this reason, it's recommended to use YAML flags instead of PHP code."
+msgstr ""
+
+#: resources/views/dashboard/index.php:92
+msgid "You can provide this file to your clients or users, and they can easily change the behavior of the plugin."
+msgstr ""
+
+#: resources/views/dashboard/index.php:93
+msgid "Remember that the flags file is optional. You can use it or not."
+msgstr ""
+
+#: resources/views/dashboard/index.php:107
+msgid "You may get the flag by using"
+msgstr ""
+
+#: resources/views/dashboard/index.php:111
+msgid "You may use the dot notation to get the flag."
+msgstr ""
+
+#: resources/views/dashboard/index.php:114
+msgid "For example"
+msgstr ""
+
+#: resources/views/dashboard/index.php:121
+msgid "You may get the plugin information by using"
+msgstr ""
+
+#: resources/views/dashboard/index.php:135
+msgid "To create a custom pages without a menu, you may config the"
+msgstr ""
+
+#: resources/views/dashboard/index.php:135
+#: resources/views/dashboard/index.php:140
+msgid "file in the"
+msgstr ""
+
+#: resources/views/dashboard/index.php:137
+msgid "folder of the Plugin"
+msgstr ""
+
+#: resources/views/dashboard/index.php:140
+msgid "For example, you may create a"
+msgstr ""
+
+#: resources/views/dashboard/index.php:141
+msgid "folder of the plugin"
+msgstr ""
+
+#: resources/views/dashboard/index.php:143
+msgid "Here is an example of"
+msgstr ""
+
+#: resources/views/dashboard/index.php:176
+msgid "You can get the custom page URL by using"
+msgstr ""
+
+#: resources/views/dashboard/index.php:183
+msgid "Custom Page"
+msgstr ""
+
+#: resources/views/dashboard/second.php:12
+msgid "Hello, I'm a second view"
+msgstr ""
+
+#: resources/views/dashboard/second.php:14
+msgid "You can localize me"
+msgstr ""
+
+#: resources/views/dashboard/second.php:16
+msgid "Click me for Ajax logged"
+msgstr ""
+
+#: resources/views/dashboard/second.php:17
+msgid "Click me for Ajax trusted"
+msgstr ""
+
+#: resources/views/dashboard/second.php:18
+msgid "Click me for Ajax notLogged"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "The %s is a collection of React components that are designed to be simple, easy to use, and accessible. The library is built with TypeScript and has a small bundle size, making it a great choice for building modern web applications."
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Some of the key features of Mantine include:"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Simple and easy-to-use components"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Accessible design and keyboard navigation"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Dark mode support"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Customizable styles and themes"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Support for TypeScript"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Small bundle size"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Active development and community support"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "And much more!"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "In this Demo we are using the %s to create a simple tabbed interface. And we are using the %s to handle the routing."
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "This is a React component that is rendered inside a div with the id react-app."
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "The component was created using the official WordPress package for React"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Obviously, this is a very simple example, but it should give you a good starting point for creating more complex interfaces. And remember, you can use any React library you want, not just Mantine."
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Swimming challenge"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "32 km / week"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Progress"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "4 days left"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Overview"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Mantine UI"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Settings"
+msgstr ""
+
+#: public/apps/app.js:1
+msgid "Say Hello, Mantine Application"
+msgstr ""

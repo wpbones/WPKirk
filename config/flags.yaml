@@ -1,0 +1,35 @@
+# WPBones Flags
+#
+# This is an example of a (feature) flag file for the WPBones plugin.
+# The file is in YAML format. It's used to enable or disable features of the WPBones plugin.
+# In general, you can use this file to change the behavior of the plugin.
+#
+# !! Why use flags instead the PHP code? !!
+# The flags file is specifically designed to be used by non-developers. It's easier to understand and modify.
+# For this reason, it's recommended to use YAML flags instead of PHP code.
+# You can provide this file to your clients or users, and they can easily change the behavior of the plugin.
+# Remember that the flags file is optional. You can use it or not.
+# The current plugin.php, menus.php, etc. files are written and used to bootstrap the plugin. And should be used by developers.
+#
+# You can find more information about YAML here: https://yaml.org/
+#
+# !! How to use the flags file? !!
+# You can use any instance of the plugin, for example:
+#
+#   WPKirk()->flags->get('example.enabled');
+#
+# This will return the value of the flag. If the flag is not set, it will return the default value.
+#
+#   WPKirk()->flags->get('example.throttle', 10); // 10 is the default value
+#
+
+# The version of the file is 1.0.0
+version: "1.0.0"
+example:
+  # Enable or disable the Example feature
+  enabled: true
+  # Throttle request time in minutes
+  # By setting this value to 0, the feature will be disabled
+  throttle: 5
+  # Request timeout
+  timeout: 0

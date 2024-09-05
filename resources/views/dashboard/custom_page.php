@@ -8,9 +8,9 @@
 -->
 
 <div class="wp-kirk wrap">
-  <h1>Hello, I'm a Custom Page defined in <code class="language- inline">pages</code> folder</h1>
+  <h1><?php _e('Hello, I\'m a Custom Page defined in', 'wp-kirk'); ?> <code class="language- inline">pages</code> <?php _e('folder', 'wp-kirk'); ?></h1>
 
-  <p>You may create a PHP file in <code class="language- inline">pages</code> folder and name it <code class="language- inline">custom_page.php</code>.</p>
+  <p><?php _e('You may create a PHP file in', 'wp-kirk'); ?> <code class="language- inline">pages</code> <?php _e('folder and name it', 'wp-kirk'); ?> <code class="language- inline">custom_page.php</code>.</p>
 
   <pre><code class="language-php">&lt;?php
 
@@ -35,6 +35,6 @@ class CustomPage extends Page
 
   <form method="post"
     action="<?php echo $plugin->getPageUrl('first_custom_page'); ?>">
-    <button class="button button-hero button-primary">Back</button>
+    <button class="button button-hero button-primary"><?php _e('Back', 'wp-kirk'); ?></button>
   </form>
 </div>

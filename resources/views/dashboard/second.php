@@ -9,12 +9,12 @@
 
 <div class="wp-kirk wrap">
 
-  <h1>Hello, I'm a second view</h1>
+  <h1><?php _e('Hello, I\'m a second view', 'wp-kirk'); ?></h1>
 
   <h2><?php _e('You can localize me', 'wp-kirk'); ?></h2>
 
-  <button class="button-primary" id="ajax-logged">Click me for Ajax logged</button>
-  <button class="button-primary" id="ajax-trusted">Click me for Ajax trusted</button>
-  <button class="button-secondary" id="ajax-notLogged">Click me for Ajax notLogged</button>
+  <button class="button-primary" id="ajax-logged"><?php _e('Click me for Ajax logged', 'wp-kirk'); ?></button>
+  <button class="button-primary" id="ajax-trusted"><?php _e('Click me for Ajax trusted', 'wp-kirk'); ?></button>
+  <button class="button-secondary" id="ajax-notLogged"><?php _e('Click me for Ajax notLogged', 'wp-kirk'); ?></button>
 
 </div>

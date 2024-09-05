@@ -25,7 +25,7 @@ class DashboardController extends Controller
       ->withAdminStyles('wp-kirk-common')
       ->withAdminStyles('prism')
       ->withAdminScripts('prism')
-      ->with('kirk', 'Captain');
+      ->with('my_inject_variable', 'Captain');
   }
 
   public function secondMenu()

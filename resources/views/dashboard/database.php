@@ -10,21 +10,20 @@
 
 <div class="wp-kirk wrap wp-kirk-sample">
 
-  <h1>Database</h1>
+  <h1><?php _e('Database', 'wp-kirk'); ?></h1>
 
   <div class="wp-kirk-toc clearfix">
     <ul>
-      <li><a href="#query-builder">Query Builder</a></li>
-      <li><a href="#example">Example</a></li>
+      	<li><a href="#query-builder"><?php _e('Query Builder', 'wp-kirk'); ?></a></li>
+      <li><a href="#example"><?php _e('Example', 'wp-kirk'); ?></a></li>
     </ul>
   </div>
 
   <div class="wp-kirk-toc-content">
 
-    <h2 id="query-builder">Query Builder</h2>
+    <h2 id="query-builder"><?php _e('Query Builder', 'wp-kirk'); ?></h2>
 
-    <p>WP Bones's database query builder provides a convenient, fluent interface to creating and running database
-      queries. It can be used to perform most database operations in your WordPress instance.</p>
+    <p><?php _e("WP Bones's database query builder provides a convenient, fluent interface to creating and running database queries. It can be used to perform most database operations in your WordPress instance.", 'wp-kirk'); ?></p>
 
     <pre><code class="language-php">DB::table('users')->all()</code></pre>
 
@@ -32,7 +31,7 @@
       ->all()
       ->dump(); ?></code></pre>
 
-    <h2 id="example">Example</h2>
+    <h2 id="example"><?php _e('Example', 'wp-kirk'); ?></h2>
 
 <pre><code class="language-php">foreach (DB::table('users')->get() as $user) {
   echo "{$user->user_login}\n";
@@ -45,8 +44,7 @@
       echo "{$user->user_login}\n";
     } ?></code></pre>
 
-    <p>You can find more <a target="_blank" href="https://wpbones.vercel.app/docs/DatabaseORM/query-builder">example
-        here</a></>
+    <p><?php _e("You can find more", 'wp-kirk'); ?> <a target="_blank" href="https://wpbones.vercel.app/docs/DatabaseORM/query-builder"><?php _e("example here", 'wp-kirk'); ?></a></p>
 
   </div>
 </div>

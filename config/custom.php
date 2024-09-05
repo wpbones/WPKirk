@@ -16,5 +16,5 @@ if (!defined('ABSPATH')) {
 */
 
 return [
-  'sample' => 'Hello, Captain!',
+    'sample' => __('Hello, Captain!', 'wp-kirk'),
 ];

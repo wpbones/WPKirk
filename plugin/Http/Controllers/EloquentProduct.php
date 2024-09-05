@@ -7,22 +7,18 @@ use WPKirk\WPBones\Database\DB;
 
 class EloquentProduct extends Model
 {
-  /**
-   * Disable Illuminate timestamp columns.
-   *
-   * @var bool
-   */
-  public $timestamps = false;
+    /**
+     * Disable Illuminate timestamp columns.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
 
-  /**
-   * Get the table associated with the model.
-   */
-  public function getTable(): string
-  {
-    return DB::getTableName('MyPluginProducts');
-  }
-
-  /*
-   * Hello
-   */
+    /**
+     * Get the table associated with the model.
+     */
+    public function getTable(): string
+    {
+        return DB::getTableName('MyPluginProducts');
+    }
 }

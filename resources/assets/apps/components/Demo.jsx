@@ -1,7 +1,8 @@
-import { useNavigate, useLocation } from 'react-router-dom';
 import { Tabs } from '@mantine/core';
-import { Overview } from './Overview';
+import { __ } from '@wordpress/i18n';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Mantine } from './Mantine';
+import { Overview } from './Overview';
 import { Settings } from './Settings';
 
 export const Demo = () => {
@@ -13,11 +14,14 @@ export const Demo = () => {
   const defaultTab = window?.ReactApp?.tab || 'overview';
 
   return (
-    <Tabs variant="outline" value={tabValue || defaultTab} onChange={value => navigate(`?page=${page}#${value}`)}>
+    <Tabs
+      variant="outline"
+      value={tabValue || defaultTab}
+      onChange={value => navigate(`?page=${page}#${value}`)}>
       <Tabs.List>
-        <Tabs.Tab value="overview">Overview</Tabs.Tab>
-        <Tabs.Tab value="mantine">Mantine UI</Tabs.Tab>
-        <Tabs.Tab value="settings">Settings</Tabs.Tab>
+        <Tabs.Tab value="overview">{__('Overview', 'wp-kirk')}</Tabs.Tab>
+        <Tabs.Tab value="mantine">{__('Mantine UI', 'wp-kirk')}</Tabs.Tab>
+        <Tabs.Tab value="settings">{__('Settings', 'wp-kirk')}</Tabs.Tab>
       </Tabs.List>
 
       <Tabs.Panel value="overview">

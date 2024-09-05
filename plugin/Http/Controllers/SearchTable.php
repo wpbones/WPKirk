@@ -14,7 +14,7 @@ class SearchTable extends WPTable
   public function boot()
   {
     // here you can override the properties
-    $this->title = 'My amazing list of Cakes';
+    $this->title = __('My amazing list of Cakes', 'wp-kirk');
 
     $this->name = 'cakes';
   }
@@ -23,8 +23,8 @@ class SearchTable extends WPTable
   {
     return [
       'id' => 'Name',
-      'description' => 'Description',
-      'ingredients' => 'Ingredients',
+      'description' => __('Description', 'wp-kirk'),
+      'ingredients' => __('Ingredients', 'wp-kirk'),
     ];
   }
 

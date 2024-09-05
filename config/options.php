@@ -22,7 +22,7 @@ return [
         'option_1' => 'true',
         'option_2' => 'true',
         'option_3' => [
-            'sub_option_of_3' => 'Hello',
+            'sub_option_of_3' => __('Hello', 'wp-kirk'),
         ],
         'option_4' => 'to delete',
         'option_5' => null

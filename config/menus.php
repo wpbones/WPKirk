@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('ABSPATH')) {
-    exit();
+  exit();
 }
 
 /*
@@ -21,115 +21,115 @@ return [
     'icon' => 'wpbones-logo-menu.png',
     'items' => [
       [
-        'menu_title' => 'Main View',
+        'menu_title' => __('Main View', 'wp-kirk'),
         'route' => [
           'get' => 'Dashboard\DashboardController@firstMenu',
         ],
       ],
       [
-        'menu_title' => 'Assets',
+        'menu_title' => __('Assets', 'wp-kirk'),
         'route' => [
           'get' => 'AssetsController@index',
         ],
       ],
       [
-        'menu_title' => 'React Application',
+        'menu_title' => __('React Application', 'wp-kirk'),
         'route' => [
           'get' => 'ReactApplicationController@index',
         ],
       ],
       [
-        'menu_title' => 'Application Settings',
+        'menu_title' => __('React Settings', 'wp-kirk'),
         'route' => [
           'get' => 'ReactApplicationController@reactSettings',
         ],
       ],
       [
-        'menu_title' => 'Ajax Example',
+        'menu_title' => __('Ajax Example', 'wp-kirk'),
         'route' => [
           'get' => 'Dashboard\DashboardController@secondMenu',
         ],
       ],
       'options_submenu' => [
-        'menu_title' => 'Options',
+        'menu_title' => __('Options', 'wp-kirk'),
         'route' => [
           'get' => 'Dashboard\DashboardController@optionsMenu',
         ],
       ],
       [
-        'menu_title' => 'Options View',
+        'menu_title' => __('Options View', 'wp-kirk'),
         'route' => [
           'get' => 'Dashboard\DashboardController@optionsView',
           'post' => 'Dashboard\DashboardController@saveOptions',
         ],
       ],
       [
-        'menu_title' => 'Options View Resource',
+        'menu_title' => __('Options Resource', 'wp-kirk'),
         'route' => [
           'load' => 'Dashboard\DashboardResourceController@load',
           'resource' => 'Dashboard\DashboardResourceController',
         ],
       ],
       [
-        'menu_title' => 'Html Tags',
+        'menu_title' => __('HTML', 'wp-kirk'),
         'route' => [
           'get' => 'Dashboard\DashboardController@html',
         ],
       ],
       [
-        'menu_title' => 'Official Packages',
+        'menu_title' => __('Official Packages', 'wp-kirk'),
         'route' => [
           'get' => 'Dashboard\DashboardController@package',
           'post' => 'Dashboard\DashboardController@packagePost',
         ],
       ],
       [
-        'menu_title' => 'Tables Example #1',
+        'menu_title' => __('Tables Example #1', 'wp-kirk'),
         'route' => [
           'load' => 'ExampleTableController@load',
           'get' => 'ExampleTableController@index',
         ],
       ],
       [
-        'menu_title' => 'Tables Example #2',
+        'menu_title' => __('Tables Example #2', 'wp-kirk'),
         'route' => [
           'load' => 'ExampleTableController@loadFluentExample',
           'get' => 'ExampleTableController@indexFluentExample',
         ],
       ],
       [
-        'menu_title' => 'Tables Example #3',
+        'menu_title' => __('Tables Example #3', 'wp-kirk'),
         'route' => [
           'load' => 'ExampleTableController@loadSearchExample',
           'get' => 'ExampleTableController@indexSearchExample',
         ],
       ],
       [
-        'menu_title' => 'API',
+        'menu_title' => __('API', 'wp-kirk'),
         'route' => [
           'get' => 'ExampleAPIController@index',
         ],
       ],
       [
-        'menu_title' => 'Database',
+        'menu_title' => __('Database', 'wp-kirk'),
         'route' => [
           'get' => 'ExampleDatabaseController@index',
         ],
       ],
       [
-        'menu_title' => 'Model',
+        'menu_title' => __('Model', 'wp-kirk'),
         'route' => [
           'get' => 'ExampleModelController@index',
         ],
       ],
       [
-        'menu_title' => 'Eloquent ORM',
+        'menu_title' => __('Eloquent ORM', 'wp-kirk'),
         'route' => [
           'get' => 'ExampleEloquentController@index',
         ],
       ],
       [
-        'menu_title' => 'Blade',
+        'menu_title' => __('Blade', 'wp-kirk'),
         'route' => [
           'get' => 'ExampleBladeController@index',
         ],

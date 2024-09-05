@@ -5,6 +5,7 @@ import '@mantine/core/styles.css';
 import classes from './app.module.scss';
 
 import { MantineProvider } from '@mantine/core';
+import { __ } from '@wordpress/i18n';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Demo } from './components/Demo';
 
@@ -14,7 +15,9 @@ const MyApp = () => {
 
   return (
     <MantineProvider>
-      <h2 className={classes.title}>Say Hello, Mantine Application</h2>
+      <h2 className={classes.title}>
+        {__('Say Hello, Mantine Application', 'wp-kirk')}
+      </h2>
 
       <BrowserRouter basename={baseName}>
         <Routes>

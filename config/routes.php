@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('ABSPATH')) {
-    exit();
+  exit();
 }
 
 /*
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 
 return [
   'first_custom_page' => [
-    'title' => 'Title of page',
+    'title' => __('Title of page', 'wp-kirk'),
     'capability' => 'read',
     'route' => [
       'get' => 'Dashboard\DashboardController@customPage',
@@ -24,7 +24,7 @@ return [
     ],
   ],
   'second_custom_page' => [
-    'title' => 'Second',
+    'title' => __('Second', 'wp-kirk'),
     'capability' => 'read',
     'route' => [
       'post' => 'Dashboard\DashboardController@secondCustomPage',

@@ -13,21 +13,17 @@ use WPKirk\Http\Controllers\EloquentUser as User;
 
 <div class="wp-kirk wrap wp-kirk-sample">
 
-  <h1>Eloquent ORM</h1>
-  <p>You may include the Eloquent ORM to provide a beautiful, simple ActiveRecord implementation for working with your
-    database. Each database table has a corresponding "Model" which is used to interact with that table. Models allow
-    you to query for data in your tables, as well as insert new records into the table.
-  </p>
+  <h1><?php _e('Eloquent ORM', 'wp-kirk'); ?></h1>
 
-  <p>You may install Eloquent ORM in your plugin by using</p>
+  <p><?php _e('You may include the Eloquent ORM to provide a beautiful, simple ActiveRecord implementation for working with your database. Each database table has a corresponding "Model" which is used to interact with that table. Models allow you to query for data in your tables, as well as insert new records into the table.', 'wp-kirk'); ?></p>
+
+  <p><?php _e('You may install Eloquent ORM in your plugin by using', 'wp-kirk'); ?></p>
 
   <pre><code class="language-sh">composer install illuminate/database</code></pre>
 
-  <p>A we are using the complete illuminate database package, for further documentation on using the various
-    database facilities this library provides, consult the <a href="https://laravel.com/docs/8.x/eloquent">Laravel
-      framework documentation</a></p>
+  <p><?php _e('As we are using the complete illuminate database package, for further documentation on using the various database facilities this library provides, consult the', 'wp-kirk'); ?> <a href="https://laravel.com/docs/8.x/eloquent"><?php _e('Laravel framework documentation', 'wp-kirk'); ?></a></p>
 
-  <h2>Query WordPress users table</h2>
+  <h2><?php _e('Query WordPress users table', 'wp-kirk'); ?></h2>
 
   <pre><code class="language-php">&lt;?php
   use WPKirk\Http\Controllers\User;
@@ -35,15 +31,15 @@ use WPKirk\Http\Controllers\EloquentUser as User;
   var_dump(User::all());</code></pre>
 
   <details>
-  <summary>Output</summary>
+  <summary><?php _e('Output', 'wp-kirk'); ?></summary>
     <pre><code class="language-json">
   <?php var_dump(User::all()); ?>
   </code></pre>
   </details>
 
-  <h2>Find</h2>
+  <h2><?php _e('Find', 'wp-kirk'); ?></h2>
 
-  <p>Of course, you'll be able to use all eloquent features</p>
+  <p><?php _e('Of course, you\'ll be able to use all eloquent features', 'wp-kirk'); ?></p>
 
   <pre><code class="language-php">&lt;?php
   use WPKirk\Http\Controllers\User;
@@ -54,9 +50,9 @@ use WPKirk\Http\Controllers\EloquentUser as User;
   User::find(1)->user_email
 ); ?></code></pre>
 
-  <h2>Custom Table</h2>
+  <h2><?php _e('Custom Table', 'wp-kirk'); ?></h2>
 
-  <p>Alongside the WordPress table you may use eloquent for your custom database table</p>
+  <p><?php _e('Alongside the WordPress table you may use eloquent for your custom database table', 'wp-kirk'); ?></p>
 
   <pre><code class="language-php">&lt;?php
   use WPKirk\Http\Controllers\Product;
@@ -64,13 +60,13 @@ use WPKirk\Http\Controllers\EloquentUser as User;
   var_dump(Product::find([3,4]));</code></pre>
 
   <details>
-  <summary>Output</summary>
+  <summary><?php _e('Output', 'wp-kirk'); ?></summary>
     <pre><code class="language-json">
   <?php var_dump(Product::find([3, 4])); ?>
   </code></pre>
   </details>
 
-  <p>and get single column value</p>
+  <p><?php _e('and get single column value', 'wp-kirk'); ?></p>
 
   <pre><code class="language-php">&lt;?php
   use WPKirk\Http\Controllers\Product;
@@ -81,7 +77,7 @@ use WPKirk\Http\Controllers\EloquentUser as User;
     Product::find(3)->name
   ); ?></code></pre>
 
-  <h2>Loop into</h2>
+  <h2><?php _e('Loop into', 'wp-kirk'); ?></h2>
 
   <pre><code class="language-php">&lt;?php
   use WPKirk\Http\Controllers\Product;
@@ -95,6 +91,5 @@ use WPKirk\Http\Controllers\EloquentUser as User;
     var_dump($e->id);
   }); ?></code></pre>
 
-  <p>For further documentation on using the various database facilities this library provides, consult the <a
-      target="_blank" href="https://laravel.com/docs/5.8/eloquent">Laravel framework documentation</a></p>
+  <p><?php _e('For further documentation on using the various database facilities this library provides, consult the', 'wp-kirk'); ?> <a target="_blank" href="https://laravel.com/docs/5.8/eloquent"><?php _e('Laravel framework documentation', 'wp-kirk'); ?></a></p>
 </div>
