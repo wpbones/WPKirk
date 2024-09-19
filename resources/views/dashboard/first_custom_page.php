@@ -17,7 +17,7 @@
   <p>Below an example of how to post some data to the same page</p>
 
   <pre><code class="language-php">Current Method <?php echo !isset($method) ?:
-    strtoupper($method); ?></code></pre>
+                                                    strtoupper($method); ?></code></pre>
 
   <pre><code class="language-html">&lt;form method=&quot;post&quot;&gt;
   &lt;button class=&quot;button button-hero button-primary&quot;&gt;Post Here&lt;/button&gt;
@@ -53,5 +53,4 @@
   <p><a class="button button-hero button-primary"
       href="<?php echo $plugin->getPageUrl('custom_page'); ?>">Load
       custom page</a></p>
-
 </div>

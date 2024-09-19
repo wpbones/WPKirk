@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Plugin Name: WP Kirk
+ * Plugin Name: WP Kirk Demo
  * Plugin URI: https://github.com/wpbones/WPKirk
  * Description: WP Bones Demo WordPress plugin
- * Version: 1.5.10
+ * Version: 1.6.0
  * Requires at least: 6.2
  * Requires PHP: 7.4
  * Author: Giovambattista Fazioli
@@ -12,7 +12,7 @@
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: wp-kirk
- * Domain Path: localization
+ * Domain Path: languages
  *
  */
 

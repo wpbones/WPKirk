@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a42a3041e40a516754a5313f4a2d8c4",
+    "content-hash": "3a1c51c4c896d3e367463fcd577deb08",
     "packages": [
         {
             "name": "brick/math",
@@ -1007,6 +1007,73 @@
             "time": "2024-05-31T14:57:53+00:00"
         },
         {
+            "name": "symfony/deprecation-contracts",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
+                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.5-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "function.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A generic function and convention to trigger deprecation notices",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-04-18T09:32:20+00:00"
+        },
+        {
             "name": "symfony/polyfill-ctype",
             "version": "v1.31.0",
             "source": {
@@ -1243,32 +1310,33 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v7.1.3",
+            "version": "v6.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "8d5e50c813ba2859a6dfc99a0765c550507934a1"
+                "reference": "94041203f8ac200ae9e7c6a18fa6137814ccecc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/8d5e50c813ba2859a6dfc99a0765c550507934a1",
-                "reference": "8d5e50c813ba2859a6dfc99a0765c550507934a1",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/94041203f8ac200ae9e7c6a18fa6137814ccecc9",
+                "reference": "94041203f8ac200ae9e7c6a18fa6137814ccecc9",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.1",
+                "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/translation-contracts": "^2.5|^3.0"
             },
             "conflict": {
-                "symfony/config": "<6.4",
-                "symfony/console": "<6.4",
-                "symfony/dependency-injection": "<6.4",
+                "symfony/config": "<5.4",
+                "symfony/console": "<5.4",
+                "symfony/dependency-injection": "<5.4",
                 "symfony/http-client-contracts": "<2.5",
-                "symfony/http-kernel": "<6.4",
+                "symfony/http-kernel": "<5.4",
                 "symfony/service-contracts": "<2.5",
-                "symfony/twig-bundle": "<6.4",
-                "symfony/yaml": "<6.4"
+                "symfony/twig-bundle": "<5.4",
+                "symfony/yaml": "<5.4"
             },
             "provide": {
                 "symfony/translation-implementation": "2.3|3.0"
@@ -1276,17 +1344,17 @@
             "require-dev": {
                 "nikic/php-parser": "^4.18|^5.0",
                 "psr/log": "^1|^2|^3",
-                "symfony/config": "^6.4|^7.0",
-                "symfony/console": "^6.4|^7.0",
-                "symfony/dependency-injection": "^6.4|^7.0",
-                "symfony/finder": "^6.4|^7.0",
+                "symfony/config": "^5.4|^6.0|^7.0",
+                "symfony/console": "^5.4|^6.0|^7.0",
+                "symfony/dependency-injection": "^5.4|^6.0|^7.0",
+                "symfony/finder": "^5.4|^6.0|^7.0",
                 "symfony/http-client-contracts": "^2.5|^3.0",
-                "symfony/http-kernel": "^6.4|^7.0",
-                "symfony/intl": "^6.4|^7.0",
+                "symfony/http-kernel": "^5.4|^6.0|^7.0",
+                "symfony/intl": "^5.4|^6.0|^7.0",
                 "symfony/polyfill-intl-icu": "^1.21",
-                "symfony/routing": "^6.4|^7.0",
+                "symfony/routing": "^5.4|^6.0|^7.0",
                 "symfony/service-contracts": "^2.5|^3",
-                "symfony/yaml": "^6.4|^7.0"
+                "symfony/yaml": "^5.4|^6.0|^7.0"
             },
             "type": "library",
             "autoload": {
@@ -1317,7 +1385,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v7.1.3"
+                "source": "https://github.com/symfony/translation/tree/v6.4.10"
             },
             "funding": [
                 {
@@ -1333,7 +1401,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-26T12:41:01+00:00"
+            "time": "2024-07-26T12:30:32+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -1415,27 +1483,31 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v7.1.4",
+            "version": "v5.4.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "92e080b851c1c655c786a2da77f188f2dccd0f4b"
+                "reference": "62f96e1cfd4cf518882a36bfedcf1fe4093c1299"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/92e080b851c1c655c786a2da77f188f2dccd0f4b",
-                "reference": "92e080b851c1c655c786a2da77f188f2dccd0f4b",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/62f96e1cfd4cf518882a36bfedcf1fe4093c1299",
+                "reference": "62f96e1cfd4cf518882a36bfedcf1fe4093c1299",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1|^3",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "symfony/console": "<6.4"
+                "symfony/console": "<5.3"
             },
             "require-dev": {
-                "symfony/console": "^6.4|^7.0"
+                "symfony/console": "^5.3|^6.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
             },
             "bin": [
                 "Resources/bin/yaml-lint"
@@ -1466,7 +1538,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v7.1.4"
+                "source": "https://github.com/symfony/yaml/tree/v5.4.43"
             },
             "funding": [
                 {
@@ -1482,7 +1554,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-08-12T09:59:40+00:00"
+            "time": "2024-08-11T17:40:32+00:00"
         },
         {
             "name": "voku/portable-ascii",
@@ -1559,17 +1631,69 @@
             "time": "2022-03-08T17:03:00+00:00"
         },
         {
-            "name": "wpbones/pure-css-switch",
-            "version": "1.1.1",
+            "name": "wpbones/flags",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wpbones/pure-css-switch.git",
-                "reference": "b7bc7d47eafd24a21322113dcb93d181936d5976"
+                "url": "https://github.com/wpbones/flags.git",
+                "reference": "53801fe61b27e88d2b77937326f236c72c7f4cfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/pure-css-switch/zipball/b7bc7d47eafd24a21322113dcb93d181936d5976",
-                "reference": "b7bc7d47eafd24a21322113dcb93d181936d5976",
+                "url": "https://api.github.com/repos/wpbones/flags/zipball/53801fe61b27e88d2b77937326f236c72c7f4cfb",
+                "reference": "53801fe61b27e88d2b77937326f236c72c7f4cfb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "symfony/yaml": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "WPKirk\\Flags\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Giovambattista Fazioli",
+                    "email": "giovambattista.fazioli@gmail.com",
+                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
+                }
+            ],
+            "description": "Flags for WP Bones",
+            "homepage": "https://github.com/wpbones/flags",
+            "keywords": [
+                "WP Bones",
+                "features",
+                "flags"
+            ],
+            "support": {
+                "email": "giovambattista.fazioli@gmail.com",
+                "issues": "https://github.com/wpbones/flags/issues",
+                "source": "https://github.com/wpbones/flags/tree/1.0.2"
+            },
+            "time": "2024-09-19T12:29:10+00:00"
+        },
+        {
+            "name": "wpbones/pure-css-switch",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wpbones/pure-css-switch.git",
+                "reference": "13636cbdb033a05fc4d2f8b5012dc9da6b1ddf78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wpbones/pure-css-switch/zipball/13636cbdb033a05fc4d2f8b5012dc9da6b1ddf78",
+                "reference": "13636cbdb033a05fc4d2f8b5012dc9da6b1ddf78",
                 "shasum": ""
             },
             "type": "library",
@@ -1585,8 +1709,8 @@
             "authors": [
                 {
                     "name": "Giovambattista Fazioli",
-                    "email": "giovambattista.fazioli@gmail.com",
-                    "homepage": "http://wpbones.wordpress.com"
+                    "email": "wpbones.info@gmail.com",
+                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
                 }
             ],
             "description": "Pure CSS Switch Button for WP Bones",
@@ -1597,11 +1721,11 @@
                 "less"
             ],
             "support": {
-                "email": "giovambattista.fazioli@gmail.com",
+                "email": "wpbones.info@gmail.com",
                 "issues": "https://github.com/wpbones/pure-css-switch/issues",
-                "source": "https://github.com/wpbones/pure-css-switch/tree/1.1.1"
+                "source": "https://github.com/wpbones/pure-css-switch/tree/1.1.2"
             },
-            "time": "2024-04-09T16:23:14+00:00"
+            "time": "2024-09-19T17:29:26+00:00"
         },
         {
             "name": "wpbones/pure-css-tabs",
@@ -1701,18 +1825,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "f08ac200faacaaf105e1d0ea65ea1b868fd92d46"
+                "reference": "b59b20fc9378a42c23f027ace9f66b762b822f04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/f08ac200faacaaf105e1d0ea65ea1b868fd92d46",
-                "reference": "f08ac200faacaaf105e1d0ea65ea1b868fd92d46",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/b59b20fc9378a42c23f027ace9f66b762b822f04",
+                "reference": "b59b20fc9378a42c23f027ace9f66b762b822f04",
                 "shasum": ""
             },
             "require": {
                 "eftec/bladeone": "^4.13",
-                "php": ">=7.4",
-                "symfony/yaml": "^7.1"
+                "php": ">=7.4"
             },
             "type": "library",
             "autoload": {
@@ -1748,20 +1871,20 @@
                 "issues": "https://github.com/wpbones/WPBones/issues",
                 "source": "https://github.com/wpbones/WPBones/"
             },
-            "time": "2024-09-15T14:44:08+00:00"
+            "time": "2024-09-20T14:31:47+00:00"
         },
         {
             "name": "wpbones/wptables",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/wptables.git",
-                "reference": "6c3bfb0b1750cc2506b381a7a20dc18ec1b304d9"
+                "reference": "d428461aa972769c2e9119cdf3cf272233c2dbe4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/wptables/zipball/6c3bfb0b1750cc2506b381a7a20dc18ec1b304d9",
-                "reference": "6c3bfb0b1750cc2506b381a7a20dc18ec1b304d9",
+                "url": "https://api.github.com/repos/wpbones/wptables/zipball/d428461aa972769c2e9119cdf3cf272233c2dbe4",
+                "reference": "d428461aa972769c2e9119cdf3cf272233c2dbe4",
                 "shasum": ""
             },
             "type": "library",
@@ -1777,8 +1900,8 @@
             "authors": [
                 {
                     "name": "Giovambattista Fazioli",
-                    "email": "giovambattista.fazioli@gmail.com",
-                    "homepage": "http://wpbones.wordpress.com"
+                    "email": "wpbones.info@gmail.com",
+                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
                 }
             ],
             "description": "A fluent implementation of WordPress WP List Table for WP Bones",
@@ -1788,11 +1911,11 @@
                 "WP Table"
             ],
             "support": {
-                "email": "giovambattista.fazioli@gmail.com",
+                "email": "wpbones.info@gmail.com",
                 "issues": "https://github.com/wpbones/wptables/issues",
-                "source": "https://github.com/wpbones/wptables/tree/1.0.4"
+                "source": "https://github.com/wpbones/wptables/tree/1.0.5"
             },
-            "time": "2024-04-09T16:15:35+00:00"
+            "time": "2024-09-19T17:47:44+00:00"
         }
     ],
     "packages-dev": [],

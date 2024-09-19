@@ -6,10 +6,10 @@ use WPKirk\Http\Controllers\EloquentUser as User;
 
 class ExampleBladeController extends Controller
 {
-  public function index()
-  {
+    public function index()
+    {
 
-    $controller = <<<'EOT'
+        $controller = <<<'EOT'
     <?php
     namespace WPKirk\Http\Controllers;
 
@@ -21,23 +21,23 @@ class ExampleBladeController extends Controller
         {
             return WPKirk()
               ->view('blade.demo', ['users' => User::all()])
-              ->withAdminStyles('prism')
-              ->withAdminScripts('prism')
-              ->withAdminStyles('wp-kirk-common');
+              ->withAdminStyle('prism')
+              ->withAdminScript('prism')
+              ->withAdminStyle('wp-kirk-common');
         }
     }
     EOT;
 
-    $code = '@foreach ($users as $user)
+        $code = '@foreach ($users as $user)
       <p>user_nicename: {{ $user->user_nicename }}</p>
       <p>user_email: {{ $user->user_email }}</p>
  @endforeach';
 
 
-    return WPKirk()
-      ->view('blade.demo', ['users' => User::all(), 'code' => $code, 'controller' => $controller])
-      ->withAdminStyles('prism')
-      ->withAdminScripts('prism')
-      ->withAdminStyles('wp-kirk-common');
-  }
+        return WPKirk()
+          ->view('blade.demo', ['users' => User::all(), 'code' => $code, 'controller' => $controller])
+          ->withAdminStyle('prism')
+          ->withAdminScript('prism')
+          ->withAdminStyle('wp-kirk-common');
+    }
 }

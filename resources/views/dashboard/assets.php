@@ -34,7 +34,7 @@
 {
   return WPKirk()
     ->view('dashboard.assets')
-    ->withAdminStyles('my-styles');
+    ->withAdminStyle('my-styles');
   }</code></pre>
 
   <h3 id="javascript">Javascript</h3>
@@ -62,10 +62,10 @@
 {
 return WPKirk()
   ->view('dashboard.assets')
-  ->withAdminStyles('wp-kirk-common')
-  ->withAdminStyles('prism')
-  ->withAdminScripts('prism')
-  ->withAdminScripts('wp-react-component', ['wp-element']); // wp-element is a dependency
+  ->withAdminStyle('wp-kirk-common')
+  ->withAdminStyle('prism')
+  ->withAdminScript('prism')
+  ->withAdminScript('wp-react-component', ['wp-element']); // wp-element is a dependency
 }</code></pre>
 
 <h3><?php _e('Step 3 - create the React component', 'wp-kirk'); ?></h3>

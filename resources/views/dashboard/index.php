@@ -16,7 +16,6 @@
     <ul>
       <li><a href="#passing-data"><?php _e('Passing data to view', 'wp-kirk'); ?></a></li>
       <li><a href="#configuration"><?php _e('Configuration', 'wp-kirk'); ?></a></li>
-      <li><a href="#flags"><?php _e('Flags', 'wp-kirk'); ?></a></li>
       <li><a href="#plugin-info"><?php _e('Plugin information', 'wp-kirk'); ?></a></li>
       <li><a href="#custom-pages"><?php _e('Custom Pages', 'wp-kirk'); ?></a></li>
     </ul>
@@ -57,9 +56,9 @@
       public function firstMenu() {
         return WPKirk()
           ->view('dashboard.index')
-          ->withAdminStyles('wp-kirk-common')
-          ->withAdminStyles('prism')
-          ->withAdminScripts('prism')
+          ->withAdminStyle('wp-kirk-common')
+          ->withAdminStyle('prism')
+          ->withAdminScript('prism')
           ->with('my_inject_variable', 'Captain');
       }
   }</code></pre>
@@ -80,41 +79,6 @@
     <p><?php _e('It will return', 'wp-kirk'); ?></p>
 
     <pre><code class="language-"><?php echo $plugin->config("custom.sample"); ?></code></pre>
-
-    <hr />
-    <h2 id="flags"><?php _e('Flags', 'wp-kirk'); ?></h2>
-    <p><?php _e('The new optional <code>flags.yaml</code> file is used to set flags for the plugin. The flags are used to enable or disable features in the plugin.', 'wp-kirk'); ?></p>
-    <p><?php _e('Why use flags instead the PHP code?', 'wp-kirk'); ?></p>
-    <ul>
-      <li><?php _e('The flags file is specifically designed to be used by non-developers.', 'wp-kirk'); ?></li>
-      <li><?php _e('It\'s easier to understand and modify.', 'wp-kirk'); ?></li>
-      <li><?php _e('For this reason, it\'s recommended to use YAML flags instead of PHP code.', 'wp-kirk'); ?></li>
-      <li><?php _e('You can provide this file to your clients or users, and they can easily change the behavior of the plugin.', 'wp-kirk'); ?></li>
-      <li><?php _e('Remember that the flags file is optional. You can use it or not.', 'wp-kirk'); ?></li>
-    </ul>
-
-    <pre><code class="language-yaml"># The version of the file is 1.0.0
-version: "1.0.0"
-example:
-  # Enable or disable the Example feature
-  enabled: true
-  # Throttle request time in minutes
-  # By setting this value to 0, the feature will be disabled
-  throttle: 5
-  # Request timeout
-  timeout: 0)</code></pre>
-
-    <p><?php _e('You may get the flag by using', 'wp-kirk'); ?></p>
-
-    <pre><code class="language-php">WPkirk()-&gt;flags('flag_name')</code></pre>
-
-    <p><?php _e('You may use the dot notation to get the flag.', 'wp-kirk'); ?></p>
-    <pre><code class="language-php">WPkirk()-&gt;flags('flag_name.sub_flag')</code></pre>
-
-    <p><?php _e('For example', 'wp-kirk'); ?></p>
-    <pre><code class="language-php">WPkirk()-&gt;flags('version'); // <?php echo WPkirk()->flags('version'); ?></code></pre>
-    <pre><code class="language-php">WPkirk()-&gt;flags('example.throttle'); // <?php echo WPkirk()->flags('example.throttle'); ?></code></pre>
-    <pre><code class="language-php">WPkirk()-&gt;flags('example.miss', 'default-value'); // <?php echo WPkirk()->flags('example.miss', 'default-value'); ?></code></pre>
 
     <hr />
     <h2 id="plugin-info"><?php _e('Plugin information', 'wp-kirk'); ?></h2>
@@ -155,7 +119,7 @@ example:
 
 return [
 
-  'custom_page' => [
+  'first_custom_page' => [
     'title'      => 'Title of page',
     'capability' => 'read',
     'route'      => [
@@ -175,12 +139,25 @@ return [
 
     <p><?php _e('You can get the custom page URL by using', 'wp-kirk'); ?></p>
 
-    <?php $page_url = $plugin->getPageUrl("custom_page"); ?>
+    <?php $page_url = $plugin->getPageUrl("first_custom_page"); ?>
 
-    <pre><code class="language-php">&lt;?php echo $plugin-&gt;getPageUrl( 'custom_page' ) ?&gt; // <?php echo $page_url ?></code></pre>
+    <pre><code class="language-php">&lt;?php echo $plugin-&gt;getPageUrl( 'first_custom_page' ) ?&gt; // <?php echo $page_url ?></code></pre>
 
-    <p><a
-        href="<?php echo $plugin->getPageUrl("first_custom_page"); ?>"><?php _e('Custom Page', 'wp-kirk'); ?></a></p>
+    <p>
+      <a href="<?php echo $plugin->getPageUrl("first_custom_page"); ?>"><?php _e('Custom Page', 'wp-kirk'); ?></a>
+    </p>
 
-  </div>
-</div>
+    <?php $menu_url = $plugin->getMenuUrl("assets"); ?>
+    <pre><code class="language-php">&lt;?php echo $plugin-&gt;getMenuUrl( 'assets' ) ?&gt; // <?php echo $menu_url ?></code></pre>
+
+    <p>
+      <a href="<?php echo $plugin->getMenuUrl('assets'); ?>"><?php _e('Assets Menu', 'wp-kirk'); ?></a>
+    </p>
+
+    <?php $menu_url = $plugin->getMenuUrl(5); ?>
+    <pre><code class="language-php">&lt;?php echo $plugin-&gt;getMenuUrl(5) ?&gt; // <?php echo $menu_url ?></code></pre>
+    <p>
+      <a href="<?php echo $plugin->getMenuUrl(5); ?>"><?php _e('#5 Menu', 'wp-kirk'); ?></a>
+    </p>
+
+    </d

@@ -13,8 +13,8 @@ class CustomPage extends Page
     {
         return $this->plugin
             ->view('dashboard.custom_page')
-            ->withAdminStyles('prism')
-            ->withAdminScripts('prism')
-            ->withAdminStyles('wp-kirk-common');
+            ->withAdminStyle('prism')
+            ->withAdminScript('prism')
+            ->withAdminStyle('wp-kirk-common');
     }
 }

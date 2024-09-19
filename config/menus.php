@@ -26,7 +26,7 @@ return [
           'get' => 'Dashboard\DashboardController@firstMenu',
         ],
       ],
-      [
+      'assets' => [
         'menu_title' => __('Assets', 'wp-kirk'),
         'route' => [
           'get' => 'AssetsController@index',

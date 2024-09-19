@@ -1,8 +1,10 @@
 {
   "name": "wpbones/wpkirk",
   "type": "wordpress-plugin",
-  "description": "A WP Bones template WordPress plugin",
+  "description": "A WP Bones Demo WordPress plugin",
   "keywords": [
+    "WP Bones",
+    "demo",
     "wordpress"
   ],
   "homepage": "https://wpbones.vercel.app/",
@@ -10,8 +12,8 @@
   "authors": [
     {
       "name": "Giovambattista Fazioli",
-      "email": "giovambattista.fazioli@gmail.com",
-      "homepage": "http://undolog.com"
+      "email": "wpbones.info@gmail.com",
+      "homepage": "https://wpbones.vercel.app/"
     }
   ],
   "support": {
@@ -25,6 +27,7 @@
     "wpbones/pure-css-switch": "~1.0",
     "wpbones/wptables": "~1.0",
     "wpbones/useragent": "^1.0",
+    "wpbones/flags": "^1.0",
     "illuminate/database": "~11.0"
   },
   "autoload": {

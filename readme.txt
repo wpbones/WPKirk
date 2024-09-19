@@ -1,18 +1,18 @@
-=== WP Kirk ===
+=== WP Kirk Demo ===
 Contributors: gfazioli
-Donate link: http://undolog.com
+Donate link: https://wpbones.vercel.app/
 Tags: demo, wpbones
 Requires at least: 6.2
-Tested up to: 6.5
-Stable tag: 1.5.10
+Tested up to: 6.6
+Stable tag: 1.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WP Bones Demo plugin.
+WP Bones Demo WordPress plugin.
 
 == Description ==
 
-WP Bones template plugin
+WP Bones Demo plugin
 
 == Installation ==
 
