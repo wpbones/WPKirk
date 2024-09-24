@@ -6,7 +6,7 @@
  * Description: WP Bones Demo WordPress plugin
  * Version: 1.6.0
  * Requires at least: 6.2
- * Requires PHP: 7.4
+ * Requires PHP: 8.2
  * Author: Giovambattista Fazioli
  * Author URI: http://undolog.com
  * License: GPLv2 or later

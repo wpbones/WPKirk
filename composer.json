@@ -21,7 +21,7 @@
     "source": "https://github.com/wpbones/WPKirk/"
   },
   "require": {
-    "php": ">=7.4",
+    "php": ">=8.2",
     "wpbones/wpbones": "dev-dev",
     "wpbones/pure-css-tabs": "~1.0",
     "wpbones/pure-css-switch": "~1.0",
