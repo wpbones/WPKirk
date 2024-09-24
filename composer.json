@@ -26,8 +26,8 @@
     "wpbones/pure-css-tabs": "~1.0",
     "wpbones/pure-css-switch": "~1.0",
     "wpbones/wptables": "~1.0",
-    "wpbones/useragent": "^1.0",
-    "wpbones/flags": "^1.0",
+    "wpbones/useragent": "~1.0",
+    "wpbones/flags": "~1.0",
     "illuminate/database": "~11.0"
   },
   "autoload": {

@@ -17,13 +17,17 @@ class DashboardResourceController extends Controller
   // GET
   public function index()
   {
-    return WPKirk()->view('dashboard.optionsresview')->with('method', 'GET');
+    return WPKirk()
+      ->view('dashboard.optionsresview')
+      ->with('method', 'GET');
   }
 
   // POST
   public function store()
   {
-    return WPKirk()->view('dashboard.optionsresview')->with('method', 'POST');
+    return WPKirk()
+      ->view('dashboard.optionsresview')
+      ->with('method', 'POST');
   }
 
   // PUT AND PATCH
@@ -37,6 +41,8 @@ class DashboardResourceController extends Controller
   // DELETE
   public function destroy()
   {
-    return WPKirk()->view('dashboard.optionsresview')->with('method', 'DELETE');
+    return WPKirk()
+      ->view('dashboard.optionsresview')
+      ->with('method', 'DELETE');
   }
 }

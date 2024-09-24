@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a1c51c4c896d3e367463fcd577deb08",
+    "content-hash": "8b652a136b7266467991952e3d539922",
     "packages": [
         {
             "name": "brick/math",
@@ -1310,16 +1310,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v6.4.10",
+            "version": "v6.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "94041203f8ac200ae9e7c6a18fa6137814ccecc9"
+                "reference": "cf8360b8352b086be620fae8342c4d96e391a489"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/94041203f8ac200ae9e7c6a18fa6137814ccecc9",
-                "reference": "94041203f8ac200ae9e7c6a18fa6137814ccecc9",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/cf8360b8352b086be620fae8342c4d96e391a489",
+                "reference": "cf8360b8352b086be620fae8342c4d96e391a489",
                 "shasum": ""
             },
             "require": {
@@ -1385,7 +1385,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v6.4.10"
+                "source": "https://github.com/symfony/translation/tree/v6.4.12"
             },
             "funding": [
                 {
@@ -1401,7 +1401,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-26T12:30:32+00:00"
+            "time": "2024-09-16T06:02:54+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -1483,16 +1483,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.4.43",
+            "version": "v5.4.44",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "62f96e1cfd4cf518882a36bfedcf1fe4093c1299"
+                "reference": "7025b964f123bbf1896d7563db6ec7f1f63e918a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/62f96e1cfd4cf518882a36bfedcf1fe4093c1299",
-                "reference": "62f96e1cfd4cf518882a36bfedcf1fe4093c1299",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/7025b964f123bbf1896d7563db6ec7f1f63e918a",
+                "reference": "7025b964f123bbf1896d7563db6ec7f1f63e918a",
                 "shasum": ""
             },
             "require": {
@@ -1538,7 +1538,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.4.43"
+                "source": "https://github.com/symfony/yaml/tree/v5.4.44"
             },
             "funding": [
                 {
@@ -1554,7 +1554,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-08-11T17:40:32+00:00"
+            "time": "2024-09-16T14:36:56+00:00"
         },
         {
             "name": "voku/portable-ascii",
@@ -1632,16 +1632,16 @@
         },
         {
             "name": "wpbones/flags",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/flags.git",
-                "reference": "53801fe61b27e88d2b77937326f236c72c7f4cfb"
+                "reference": "ee1e1c66404e876f778c05d2a90d6aedeab040a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/flags/zipball/53801fe61b27e88d2b77937326f236c72c7f4cfb",
-                "reference": "53801fe61b27e88d2b77937326f236c72c7f4cfb",
+                "url": "https://api.github.com/repos/wpbones/flags/zipball/ee1e1c66404e876f778c05d2a90d6aedeab040a1",
+                "reference": "ee1e1c66404e876f778c05d2a90d6aedeab040a1",
                 "shasum": ""
             },
             "require": {
@@ -1664,7 +1664,7 @@
             "authors": [
                 {
                     "name": "Giovambattista Fazioli",
-                    "email": "giovambattista.fazioli@gmail.com",
+                    "email": "wpbones.info@gmail.com",
                     "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
                 }
             ],
@@ -1676,11 +1676,11 @@
                 "flags"
             ],
             "support": {
-                "email": "giovambattista.fazioli@gmail.com",
+                "email": "wpbones.info@gmail.com",
                 "issues": "https://github.com/wpbones/flags/issues",
-                "source": "https://github.com/wpbones/flags/tree/1.0.2"
+                "source": "https://github.com/wpbones/flags/tree/1.0.3"
             },
-            "time": "2024-09-19T12:29:10+00:00"
+            "time": "2024-09-24T09:10:08+00:00"
         },
         {
             "name": "wpbones/pure-css-switch",
@@ -1825,12 +1825,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "b59b20fc9378a42c23f027ace9f66b762b822f04"
+                "reference": "078a3efef373ecc3d44456d12f2b72f470e76504"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/b59b20fc9378a42c23f027ace9f66b762b822f04",
-                "reference": "b59b20fc9378a42c23f027ace9f66b762b822f04",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/078a3efef373ecc3d44456d12f2b72f470e76504",
+                "reference": "078a3efef373ecc3d44456d12f2b72f470e76504",
                 "shasum": ""
             },
             "require": {
@@ -1853,8 +1853,8 @@
             "authors": [
                 {
                     "name": "Giovambattista Fazioli",
-                    "email": "giovambattista.fazioli@gmail.com",
-                    "homepage": "http://undolog.com"
+                    "email": "wpbones.info@gmail.com",
+                    "homepage": "https://wpbones.vercel.app/"
                 }
             ],
             "description": "WordPress framework for Laravel developers",
@@ -1871,7 +1871,7 @@
                 "issues": "https://github.com/wpbones/WPBones/issues",
                 "source": "https://github.com/wpbones/WPBones/"
             },
-            "time": "2024-09-20T14:31:47+00:00"
+            "time": "2024-09-24T09:12:22+00:00"
         },
         {
             "name": "wpbones/wptables",

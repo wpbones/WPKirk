@@ -69,7 +69,7 @@ Route::post('/version', '\WPKirk\API\WPKirkV1Controller@version');
 Route::request(['get', 'POST'], '/multiple', '\WPKirk\API\WPKirkV1Controller@multiple');
 
 // controller error example
-Route::get('/error', '\WPKirk\API\WPKirkV1Controller@error');
+Route::get('/error/controller', '\WPKirk\API\WPKirkV1Controller@error');
 
 // controller args example
 Route::get('/controller_args', '\WPKirk\API\WPKirkV1Controller@controller_args');
