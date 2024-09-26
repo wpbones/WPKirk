@@ -262,6 +262,60 @@ echo $button;</code></pre>
         ->selected('item-5'); ?>
     </div>
 
+    <p>Multiple select</p>
+
+    <p><?php _e('You may use the <code>multiple</code> method to enable multiple selection', 'wp-kirk') ?></p>
+
+    <pre><code class="language-php">echo WPKirk\Html::select()
+      ->multiple(true)
+      ->options([
+        'item-1' => 'Item 1',
+        'item-2' => 'Item 2',
+        'item-3' => 'Item 3',
+        'item-4' => 'Item 4',
+        'item-5' => 'Item 5'
+      ])
+      ->selected('item-2,item-1');</code></pre>
+
+    <p><?php _e('You may also pass an array of selected values', 'wp-kirk') ?></p>
+
+    <div>
+      <?php echo WPKirk\Html::select()
+        ->multiple(true)
+        ->options([
+          'item-1' => 'Item 1',
+          'item-2' => 'Item 2',
+          'item-3' => 'Item 3',
+          'item-4' => 'Item 4',
+          'item-5' => 'Item 5'
+        ])
+        ->selected('item-2,item-1'); ?>
+    </div>
+
+    <pre><code class="language-php">echo WPKirk\Html::select()
+      ->multiple(true)
+      ->options([
+        'item-1' => 'Item 1',
+        'item-2' => 'Item 2',
+        'item-3' => 'Item 3',
+        'item-4' => 'Item 4',
+        'item-5' => 'Item 5'
+      ])
+      ->selected(['item-2', 'item-4']);</code></pre>
+
+    <div>
+      <?php echo WPKirk\Html::select()
+        ->multiple(true)
+        ->options([
+          'item-1' => 'Item 1',
+          'item-2' => 'Item 2',
+          'item-3' => 'Item 3',
+          'item-4' => 'Item 4',
+          'item-5' => 'Item 5'
+        ])
+        ->selected(['item-2', 'item-4']); ?>
+    </div>
+
     <hr />
 
     <h3 id="textarea">Textarea</h3>
@@ -316,9 +370,4 @@ echo $button;</code></pre>
       ); ?>
     </div>
 
-    <p>The HTML markup output will be</p>
-
-    <pre><code class="language-html">&lt;button hello=&quot;world&quot;&gt;Click me!&lt;/button&gt;</code></pre>
-
-  </div>
-</div>
+    <p>The HTM

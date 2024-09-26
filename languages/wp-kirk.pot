@@ -2,21 +2,21 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Kirk 1.5.10\n"
+"Project-Id-Version: WP Kirk Demo 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-kirk\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-09-15T15:09:25+00:00\n"
+"POT-Creation-Date: 2024-09-26T15:56:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: wp-kirk\n"
 
 #. Plugin Name of the plugin
 #: wp-kirk.php
-msgid "WP Kirk"
+msgid "WP Kirk Demo"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -431,159 +431,178 @@ msgid "Hello, I'm the first %s view"
 msgstr ""
 
 #: resources/views/dashboard/index.php:17
-#: resources/views/dashboard/index.php:69
+#: resources/views/dashboard/index.php:68
 msgid "Passing data to view"
 msgstr ""
 
 #: resources/views/dashboard/index.php:18
-#: resources/views/dashboard/index.php:75
+#: resources/views/dashboard/index.php:74
 msgid "Configuration"
 msgstr ""
 
 #: resources/views/dashboard/index.php:19
-#: resources/views/dashboard/index.php:85
-msgid "Flags"
-msgstr ""
-
-#: resources/views/dashboard/index.php:20
-#: resources/views/dashboard/index.php:120
+#: resources/views/dashboard/index.php:84
 msgid "Plugin information"
 msgstr ""
 
-#: resources/views/dashboard/index.php:21
-#: resources/views/dashboard/index.php:133
+#: resources/views/dashboard/index.php:20
+#: resources/views/dashboard/index.php:97
 msgid "Custom Pages"
 msgstr ""
 
-#: resources/views/dashboard/index.php:26
+#: resources/views/dashboard/index.php:25
 msgid "Welcome to the WP Bones template WordPress plugin"
 msgstr ""
 
-#: resources/views/dashboard/index.php:27
+#: resources/views/dashboard/index.php:26
 msgid "This is a simple template plugin for WordPress. It is based on the WP Bones framework."
 msgstr ""
 
-#: resources/views/dashboard/index.php:28
+#: resources/views/dashboard/index.php:27
 msgid "It is a plugin that shows most of the features of the WP Bones framework. It is a good starting point for creating your own plugin."
 msgstr ""
 
-#: resources/views/dashboard/index.php:36
+#: resources/views/dashboard/index.php:35
 msgid "This view is displayed by a Controller connected to the menu you have selected."
 msgstr ""
 
-#: resources/views/dashboard/index.php:37
+#: resources/views/dashboard/index.php:36
 msgid "The menu is defined in the"
 msgstr ""
 
-#: resources/views/dashboard/index.php:37
-#: resources/views/dashboard/index.php:54
-#: resources/views/dashboard/index.php:67
+#: resources/views/dashboard/index.php:36
+#: resources/views/dashboard/index.php:53
+#: resources/views/dashboard/index.php:66
 msgid "file."
 msgstr ""
 
-#: resources/views/dashboard/index.php:54
+#: resources/views/dashboard/index.php:53
 msgid "The controller is located in the"
 msgstr ""
 
-#: resources/views/dashboard/index.php:67
+#: resources/views/dashboard/index.php:66
 msgid "The HTML part view is located in the"
 msgstr ""
 
-#: resources/views/dashboard/index.php:71
+#: resources/views/dashboard/index.php:70
 msgid "You may get variable from the controller. For example, the variable"
 msgstr ""
 
-#: resources/views/dashboard/index.php:71
+#: resources/views/dashboard/index.php:70
 msgid "is"
 msgstr ""
 
-#: resources/views/dashboard/index.php:76
+#: resources/views/dashboard/index.php:75
 msgid "Get the"
 msgstr ""
 
-#: resources/views/dashboard/index.php:76
+#: resources/views/dashboard/index.php:75
 msgid "configuration by using"
 msgstr ""
 
-#: resources/views/dashboard/index.php:80
+#: resources/views/dashboard/index.php:79
 msgid "It will return"
 msgstr ""
 
-#: resources/views/dashboard/index.php:86
-msgid "The new optional <code>flags.yaml</code> file is used to set flags for the plugin. The flags are used to enable or disable features in the plugin."
-msgstr ""
-
-#: resources/views/dashboard/index.php:87
-msgid "Why use flags instead the PHP code?"
-msgstr ""
-
-#: resources/views/dashboard/index.php:89
-msgid "The flags file is specifically designed to be used by non-developers."
-msgstr ""
-
-#: resources/views/dashboard/index.php:90
-msgid "It's easier to understand and modify."
-msgstr ""
-
-#: resources/views/dashboard/index.php:91
-msgid "For this reason, it's recommended to use YAML flags instead of PHP code."
-msgstr ""
-
-#: resources/views/dashboard/index.php:92
-msgid "You can provide this file to your clients or users, and they can easily change the behavior of the plugin."
-msgstr ""
-
-#: resources/views/dashboard/index.php:93
-msgid "Remember that the flags file is optional. You can use it or not."
-msgstr ""
-
-#: resources/views/dashboard/index.php:107
-msgid "You may get the flag by using"
-msgstr ""
-
-#: resources/views/dashboard/index.php:111
-msgid "You may use the dot notation to get the flag."
-msgstr ""
-
-#: resources/views/dashboard/index.php:114
-msgid "For example"
-msgstr ""
-
-#: resources/views/dashboard/index.php:121
+#: resources/views/dashboard/index.php:85
 msgid "You may get the plugin information by using"
 msgstr ""
 
-#: resources/views/dashboard/index.php:135
+#: resources/views/dashboard/index.php:99
 msgid "To create a custom pages without a menu, you may config the"
 msgstr ""
 
-#: resources/views/dashboard/index.php:135
-#: resources/views/dashboard/index.php:140
+#: resources/views/dashboard/index.php:99
+#: resources/views/dashboard/index.php:104
 msgid "file in the"
 msgstr ""
 
-#: resources/views/dashboard/index.php:137
+#: resources/views/dashboard/index.php:101
 msgid "folder of the Plugin"
 msgstr ""
 
-#: resources/views/dashboard/index.php:140
+#: resources/views/dashboard/index.php:104
 msgid "For example, you may create a"
 msgstr ""
 
-#: resources/views/dashboard/index.php:141
+#: resources/views/dashboard/index.php:105
 msgid "folder of the plugin"
 msgstr ""
 
-#: resources/views/dashboard/index.php:143
+#: resources/views/dashboard/index.php:107
 msgid "Here is an example of"
 msgstr ""
 
-#: resources/views/dashboard/index.php:176
+#: resources/views/dashboard/index.php:140
 msgid "You can get the custom page URL by using"
 msgstr ""
 
-#: resources/views/dashboard/index.php:183
+#: resources/views/dashboard/index.php:147
 msgid "Custom Page"
+msgstr ""
+
+#: resources/views/dashboard/index.php:154
+msgid "Assets Menu"
+msgstr ""
+
+#: resources/views/dashboard/index.php:160
+msgid "#5 Menu"
+msgstr ""
+
+#: resources/views/dashboard/package.php:164
+msgid "Switch Button Post Test"
+msgstr ""
+
+#: resources/views/dashboard/package.php:181
+msgid "Getting Post"
+msgstr ""
+
+#: resources/views/dashboard/package.php:338
+msgid "Flags"
+msgstr ""
+
+#: resources/views/dashboard/package.php:339
+msgid "Flags for WP Bones is a PHP package designed for the WP Bones framework, allowing you to enable or disable features in plugins using YAML configuration files. This approach simplifies feature management and makes the plugin more flexible and easy to configure, even for non-technical users."
+msgstr ""
+
+#: resources/views/dashboard/package.php:340
+msgid "Why use flags instead the PHP code?"
+msgstr ""
+
+#: resources/views/dashboard/package.php:342
+msgid "The flags file is specifically designed to be used by non-developers."
+msgstr ""
+
+#: resources/views/dashboard/package.php:343
+msgid "It's easier to understand and modify."
+msgstr ""
+
+#: resources/views/dashboard/package.php:344
+msgid "For this reason, it's recommended to use YAML flags instead of PHP code."
+msgstr ""
+
+#: resources/views/dashboard/package.php:345
+msgid "You can provide this file to your clients or users, and they can easily change the behavior of the plugin."
+msgstr ""
+
+#: resources/views/dashboard/package.php:346
+msgid "Remember that the flags file is optional. You can use it or not."
+msgstr ""
+
+#: resources/views/dashboard/package.php:360
+msgid "You may get the flag by using"
+msgstr ""
+
+#: resources/views/dashboard/package.php:364
+msgid "You may use the dot notation to get the flag."
+msgstr ""
+
+#: resources/views/dashboard/package.php:367
+msgid "For example"
+msgstr ""
+
+#: resources/views/dashboard/package.php:372
+msgid "More information"
 msgstr ""
 
 #: resources/views/dashboard/second.php:12

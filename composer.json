@@ -22,7 +22,7 @@
   },
   "require": {
     "php": ">=8.2",
-    "wpbones/wpbones": "dev-dev",
+    "wpbones/wpbones": "~1.6",
     "wpbones/pure-css-tabs": "~1.0",
     "wpbones/pure-css-switch": "~1.0",
     "wpbones/wptables": "~1.0",

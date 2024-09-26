@@ -4,7 +4,7 @@
  * Plugin Name: WP Kirk Demo
  * Plugin URI: https://github.com/wpbones/WPKirk
  * Description: WP Bones Demo WordPress plugin
- * Version: 1.6.0
+ * Version: 1.6.1
  * Requires at least: 6.2
  * Requires PHP: 8.2
  * Author: Giovambattista Fazioli
