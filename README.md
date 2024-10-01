@@ -4,12 +4,12 @@
 
 # WP Bones Demo
 
-WP Kirk is a demo plugin written by using [WP Bones](https://wpbones.vercel.app/) Framework Library.
-You may start from here to create a [WP Bones](https://wpbones.vercel.app/) WordPress plugin.
+WP Kirk is a demo plugin written by using [WP Bones](https://wpbones.com/) Framework Library.
+You may start from here to create a [WP Bones](https://wpbones.com/) WordPress plugin.
 
 ## See it in action
 
-You can see the plugin in action by clicking [here](https://playground.wordpress.net/?blueprint-url=https://wpbones.vercel.app/blueprint.json).
+You can see the plugin in action by clicking [here](https://playground.wordpress.net/?blueprint-url=https://wpbones.com/blueprint.json).
 
 ## Installation
 
@@ -21,4 +21,10 @@ composer install
 
 ## Documentation
 
-You'll find the [complete docs here](https://wpbones.vercel.app/docs).
+You'll find the [complete docs here](https://wpbones.com/docs).
+
+## Contributors
+
+<a href="https://github.com/wpbones/wpkirk/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wpbones/wpkirk" />
+</a>
