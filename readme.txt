@@ -1,6 +1,6 @@
 === WP Kirk Demo ===
 Contributors: gfazioli
-Donate link: https://wpbones.vercel.app/
+Donate link: https://wpbones.com/
 Tags: demo, wpbones
 Requires at least: 6.2
 Tested up to: 6.6
@@ -26,7 +26,7 @@ This section describes how to install the plugin and get it working.
 
 = What is WP Bones framework ? =
 
-See detail to  ([WP Bones](https://wpbones.vercel.app/)).
+See detail to  ([WP Bones](https://wpbones.com/)).
 
 == Screenshots ==
 

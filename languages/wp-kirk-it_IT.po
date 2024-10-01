@@ -320,10 +320,10 @@ msgstr ""
 
 #: resources/views/dashboard/assets.php:43
 msgid ""
-"You can find more details in the <a href=\"https://wpbones.vercel.app/docs/"
+"You can find more details in the <a href=\"https://wpbones.com/docs/"
 "GettingStarted/assets\">Assets documentation</a>."
 msgstr ""
-"Per ulteriori informazioni, consulta la <a href=\"https://wpbones.vercel.app/"
+"Per ulteriori informazioni, consulta la <a href=\"https://wpbones.com/"
 "docs/GettingStarted/assets\">documentazione relativa alle risorse</a>."
 
 #: resources/views/dashboard/assets.php:47

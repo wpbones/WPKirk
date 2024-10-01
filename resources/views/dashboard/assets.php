@@ -40,7 +40,7 @@
   <h3 id="javascript">Javascript</h3>
 
   <p><?php _e('Javascript files work in the same way as styles. You can create your javascript files in the <code class="language-bash inline">resources/assets/js</code> directory.', 'wp-kirk'); ?></p>
-  <p><?php _e('You can find more details in the <a href="https://wpbones.vercel.app/docs/GettingStarted/assets">Assets documentation</a>.', 'wp-kirk'); ?></p>
+  <p><?php _e('You can find more details in the <a href="https://wpbones.com/docs/GettingStarted/assets">Assets documentation</a>.', 'wp-kirk'); ?></p>
 
   <h3 id="react"><?php _e('ReactJS and Typescript', 'wp-kirk'); ?></h3>
 

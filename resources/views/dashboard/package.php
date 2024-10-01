@@ -20,7 +20,7 @@
     </p>
     <p>
       You'll find the complete list and the documentation of all packages in the <a
-        href="https://wpbones.vercel.app/docs/Packages/official-packages">official package repository</a>.
+        href="https://wpbones.com/docs/Packages/official-packages">official package repository</a>.
     </p>
 
     <hr />
@@ -69,7 +69,7 @@
     </div>
 
     <pre><code class="language-php"><?php
-                                                                                                                                                                                                                                                                                                                                                $code = <<<'EOT'
+                                                                                                                                                                                                                                                                                                                                                      $code = <<<'EOT'
 <div class="wpbones-tabs">
 
   <!-- first tab -->

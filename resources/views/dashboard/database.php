@@ -6,7 +6,9 @@
  | return PluginClassName()->view( 'dashboard.index', [ 'var' => 'value' ] );
  |
 -->
-<?php use WPKirk\WPBones\Database\DB; ?>
+<?php use WPKirk\WPBones\Database\DB;
+
+?>
 
 <div class="wp-kirk wrap wp-kirk-sample">
 
@@ -38,13 +40,12 @@
 }</code></pre>
 
     <pre><code class="language-"><?php foreach (
-      DB::table('users')->get()
-      as $user
+        DB::table('users')->get() as $user
     ) {
-      echo "{$user->user_login}\n";
+        echo "{$user->user_login}\n";
     } ?></code></pre>
 
-    <p><?php _e("You can find more", 'wp-kirk'); ?> <a target="_blank" href="https://wpbones.vercel.app/docs/DatabaseORM/query-builder"><?php _e("example here", 'wp-kirk'); ?></a></p>
+    <p><?php _e("You can find more", 'wp-kirk'); ?> <a target="_blank" href="https://wpbones.com/docs/DatabaseORM/query-builder"><?php _e("example here", 'wp-kirk'); ?></a></p>
 
   </div>
 </div>

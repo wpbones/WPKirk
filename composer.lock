@@ -1667,7 +1667,7 @@
                 {
                     "name": "Giovambattista Fazioli",
                     "email": "wpbones.info@gmail.com",
-                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
+                    "homepage": "https://wpbones.com/docs/Packages/official-packages"
                 }
             ],
             "description": "Flags for WP Bones",
@@ -1712,7 +1712,7 @@
                 {
                     "name": "Giovambattista Fazioli",
                     "email": "wpbones.info@gmail.com",
-                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
+                    "homepage": "https://wpbones.com/docs/Packages/official-packages"
                 }
             ],
             "description": "Pure CSS Switch Button for WP Bones",
@@ -1856,11 +1856,11 @@
                 {
                     "name": "Giovambattista Fazioli",
                     "email": "wpbones.info@gmail.com",
-                    "homepage": "https://wpbones.vercel.app/"
+                    "homepage": "https://wpbones.com/"
                 }
             ],
             "description": "WordPress framework for Laravel developers",
-            "homepage": "https://wpbones.vercel.app",
+            "homepage": "https://wpbones.com",
             "keywords": [
                 "framework",
                 "laravel",
@@ -1903,7 +1903,7 @@
                 {
                     "name": "Giovambattista Fazioli",
                     "email": "wpbones.info@gmail.com",
-                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
+                    "homepage": "https://wpbones.com/docs/Packages/official-packages"
                 }
             ],
             "description": "A fluent implementation of WordPress WP List Table for WP Bones",

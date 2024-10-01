@@ -275,7 +275,7 @@ msgid "Javascript files work in the same way as styles. You can create your java
 msgstr ""
 
 #: resources/views/dashboard/assets.php:43
-msgid "You can find more details in the <a href=\"https://wpbones.vercel.app/docs/GettingStarted/assets\">Assets documentation</a>."
+msgid "You can find more details in the <a href=\"https://wpbones.com/docs/GettingStarted/assets\">Assets documentation</a>."
 msgstr ""
 
 #: resources/views/dashboard/assets.php:47

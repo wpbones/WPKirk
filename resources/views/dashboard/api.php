@@ -103,6 +103,6 @@ if (!defined('ABSPATH')) {
     });</code></pre>
 
     <p><?php _e('You will find further information and details in the', 'wp-kirk'); ?> <a target="_blank"
-        href="https://wpbones.vercel.app/docs/ServicesProvider/rest-api"><?php _e('Official WP Bones docs', 'wp-kirk'); ?></a></p>
+        href="https://wpbones.com/docs/ServicesProvider/rest-api"><?php _e('Official WP Bones docs', 'wp-kirk'); ?></a></p>
   </div>
 </div>

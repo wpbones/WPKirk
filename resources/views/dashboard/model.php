@@ -6,7 +6,9 @@
  | return PluginClassName()->view( 'dashboard.index', [ 'var' => 'value' ] );
  |
 -->
-<?php use WPKirk\Models\MyPluginProducts; ?>
+<?php use WPKirk\Models\MyPluginProducts;
+
+?>
 
 <div class="wp-kirk wrap wp-kirk-sample">
 
@@ -22,7 +24,7 @@
   <div class="wp-kirk-toc-content">
 
     <p>In your Plugin you may use the Database Model class instead of the <a target="_blank"
-                                                                             href="https://wpbones.vercel.app/docs/DatabaseORM/query-builder">Query
+                                                                             href="https://wpbones.com/docs/DatabaseORM/query-builder">Query
         Builder</a>.</p>
     <p>To use the Model convection you need to extend the Model class:</p>
 
@@ -67,7 +69,7 @@ class MyPluginProducts extends Model
 
 
     <p>You can find more <a target="_blank"
-                            href="https://wpbones.vercel.app/docs/DatabaseORM/model">example
+                            href="https://wpbones.com/docs/DatabaseORM/model">example
         here</a></>
 
   </div>
