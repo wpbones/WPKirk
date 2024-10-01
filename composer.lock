@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f174f26725d7d2438416ade2e807c707",
+    "content-hash": "df7156106c5c165d421d6171424056f8",
     "packages": [
         {
             "name": "brick/math",
@@ -287,16 +287,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.24.1",
+            "version": "v11.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "f205537e0ad131a1a87cb3cf04924e9edda4f2b1"
+                "reference": "4d333ea19a27230b424b9af56f34cd658b5bbce2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/f205537e0ad131a1a87cb3cf04924e9edda4f2b1",
-                "reference": "f205537e0ad131a1a87cb3cf04924e9edda4f2b1",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/4d333ea19a27230b424b9af56f34cd658b5bbce2",
+                "reference": "4d333ea19a27230b424b9af56f34cd658b5bbce2",
                 "shasum": ""
             },
             "require": {
@@ -338,11 +338,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-09-16T14:32:15+00:00"
+            "time": "2024-09-27T14:54:48+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.24.1",
+            "version": "v11.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -388,7 +388,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v11.24.1",
+            "version": "v11.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -439,7 +439,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.24.1",
+            "version": "v11.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -487,16 +487,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v11.24.1",
+            "version": "v11.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "1ddc76127d2c5e5bfb31c0fc0dee3f3b0291ccda"
+                "reference": "1373985d7695c5a635036b877bfc4f8d3a932255"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/1ddc76127d2c5e5bfb31c0fc0dee3f3b0291ccda",
-                "reference": "1ddc76127d2c5e5bfb31c0fc0dee3f3b0291ccda",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/1373985d7695c5a635036b877bfc4f8d3a932255",
+                "reference": "1373985d7695c5a635036b877bfc4f8d3a932255",
                 "shasum": ""
             },
             "require": {
@@ -552,11 +552,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-09-23T13:33:25+00:00"
+            "time": "2024-09-27T14:53:18+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.24.1",
+            "version": "v11.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -602,16 +602,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v11.24.1",
+            "version": "v11.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "f1bcdb2205223a70f01ec1750669689154037444"
+                "reference": "0431fbb96752bb8a13136a53e4be345fdc8484c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/f1bcdb2205223a70f01ec1750669689154037444",
-                "reference": "f1bcdb2205223a70f01ec1750669689154037444",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/0431fbb96752bb8a13136a53e4be345fdc8484c2",
+                "reference": "0431fbb96752bb8a13136a53e4be345fdc8484c2",
                 "shasum": ""
             },
             "require": {
@@ -674,7 +674,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-09-17T15:56:18+00:00"
+            "time": "2024-09-30T14:29:28+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1667,7 +1667,7 @@
                 {
                     "name": "Giovambattista Fazioli",
                     "email": "wpbones.info@gmail.com",
-                    "homepage": "https://wpbones.com/docs/Packages/official-packages"
+                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
                 }
             ],
             "description": "Flags for WP Bones",
@@ -1712,7 +1712,7 @@
                 {
                     "name": "Giovambattista Fazioli",
                     "email": "wpbones.info@gmail.com",
-                    "homepage": "https://wpbones.com/docs/Packages/official-packages"
+                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
                 }
             ],
             "description": "Pure CSS Switch Button for WP Bones",
@@ -1823,16 +1823,16 @@
         },
         {
             "name": "wpbones/wpbones",
-            "version": "1.6.0",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "078a3efef373ecc3d44456d12f2b72f470e76504"
+                "reference": "afaca71894f717ab293575c5fe560f8461662871"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/078a3efef373ecc3d44456d12f2b72f470e76504",
-                "reference": "078a3efef373ecc3d44456d12f2b72f470e76504",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/afaca71894f717ab293575c5fe560f8461662871",
+                "reference": "afaca71894f717ab293575c5fe560f8461662871",
                 "shasum": ""
             },
             "require": {
@@ -1873,7 +1873,7 @@
                 "issues": "https://github.com/wpbones/WPBones/issues",
                 "source": "https://github.com/wpbones/WPBones/"
             },
-            "time": "2024-09-24T09:12:22+00:00"
+            "time": "2024-10-01T15:51:27+00:00"
         },
         {
             "name": "wpbones/wptables",
@@ -1903,7 +1903,7 @@
                 {
                     "name": "Giovambattista Fazioli",
                     "email": "wpbones.info@gmail.com",
-                    "homepage": "https://wpbones.com/docs/Packages/official-packages"
+                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
                 }
             ],
             "description": "A fluent implementation of WordPress WP List Table for WP Bones",
@@ -1923,7 +1923,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "wpbones/wpbones": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
