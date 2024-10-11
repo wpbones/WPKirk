@@ -4,8 +4,10 @@ namespace WPKirk\Models;
 
 use WPKirk\WPBones\Database\Model;
 
-class MyPluginProducts extends Model
+class MyPluginBooks extends Model
 {
+  protected $usePrefix = false;
+
   /**
    * You may comment out this property if you want to use the class name.
    *

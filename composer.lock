@@ -228,16 +228,16 @@
         },
         {
             "name": "eftec/bladeone",
-            "version": "4.13",
+            "version": "4.15.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EFTEC/BladeOne.git",
-                "reference": "a24ce564a681fa3e37b2490952915c403ee9e56a"
+                "reference": "7f05b927689782ee51bccf0199412a43b0b91f05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EFTEC/BladeOne/zipball/a24ce564a681fa3e37b2490952915c403ee9e56a",
-                "reference": "a24ce564a681fa3e37b2490952915c403ee9e56a",
+                "url": "https://api.github.com/repos/EFTEC/BladeOne/zipball/7f05b927689782ee51bccf0199412a43b0b91f05",
+                "reference": "7f05b927689782ee51bccf0199412a43b0b91f05",
                 "shasum": ""
             },
             "require": {
@@ -281,13 +281,13 @@
             ],
             "support": {
                 "issues": "https://github.com/EFTEC/BladeOne/issues",
-                "source": "https://github.com/EFTEC/BladeOne/tree/4.13"
+                "source": "https://github.com/EFTEC/BladeOne/tree/4.15.2"
             },
-            "time": "2024-03-26T21:35:25+00:00"
+            "time": "2024-10-10T20:06:35+00:00"
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.26.0",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -342,7 +342,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.26.0",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -388,16 +388,16 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v11.26.0",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "d6aca7c315d68cb6807c139facd7ea134b4f5104"
+                "reference": "bc49d144a20b0d432e1ac812c9e056594b6c6480"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/d6aca7c315d68cb6807c139facd7ea134b4f5104",
-                "reference": "d6aca7c315d68cb6807c139facd7ea134b4f5104",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/bc49d144a20b0d432e1ac812c9e056594b6c6480",
+                "reference": "bc49d144a20b0d432e1ac812c9e056594b6c6480",
                 "shasum": ""
             },
             "require": {
@@ -435,11 +435,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-09-20T12:51:05+00:00"
+            "time": "2024-10-08T13:34:53+00:00"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.26.0",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -487,16 +487,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v11.26.0",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "1373985d7695c5a635036b877bfc4f8d3a932255"
+                "reference": "03036fa71b47b54017047db8b5660b10cea002d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/1373985d7695c5a635036b877bfc4f8d3a932255",
-                "reference": "1373985d7695c5a635036b877bfc4f8d3a932255",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/03036fa71b47b54017047db8b5660b10cea002d8",
+                "reference": "03036fa71b47b54017047db8b5660b10cea002d8",
                 "shasum": ""
             },
             "require": {
@@ -552,11 +552,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-09-27T14:53:18+00:00"
+            "time": "2024-10-03T17:48:01+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.26.0",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -602,16 +602,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v11.26.0",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "0431fbb96752bb8a13136a53e4be345fdc8484c2"
+                "reference": "a567431e4820363d0bc28bdf14914ab16a2e63ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/0431fbb96752bb8a13136a53e4be345fdc8484c2",
-                "reference": "0431fbb96752bb8a13136a53e4be345fdc8484c2",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/a567431e4820363d0bc28bdf14914ab16a2e63ef",
+                "reference": "a567431e4820363d0bc28bdf14914ab16a2e63ef",
                 "shasum": ""
             },
             "require": {
@@ -674,7 +674,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-09-30T14:29:28+00:00"
+            "time": "2024-10-08T18:54:07+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1634,16 +1634,16 @@
         },
         {
             "name": "wpbones/flags",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/flags.git",
-                "reference": "ee1e1c66404e876f778c05d2a90d6aedeab040a1"
+                "reference": "0a33faaf35568af2ff489b83f04479174039d6a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/flags/zipball/ee1e1c66404e876f778c05d2a90d6aedeab040a1",
-                "reference": "ee1e1c66404e876f778c05d2a90d6aedeab040a1",
+                "url": "https://api.github.com/repos/wpbones/flags/zipball/0a33faaf35568af2ff489b83f04479174039d6a8",
+                "reference": "0a33faaf35568af2ff489b83f04479174039d6a8",
                 "shasum": ""
             },
             "require": {
@@ -1667,7 +1667,7 @@
                 {
                     "name": "Giovambattista Fazioli",
                     "email": "wpbones.info@gmail.com",
-                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
+                    "homepage": "https://wpbones.com/docs/Packages/official-packages"
                 }
             ],
             "description": "Flags for WP Bones",
@@ -1680,22 +1680,22 @@
             "support": {
                 "email": "wpbones.info@gmail.com",
                 "issues": "https://github.com/wpbones/flags/issues",
-                "source": "https://github.com/wpbones/flags/tree/1.0.3"
+                "source": "https://github.com/wpbones/flags/tree/1.0.4"
             },
-            "time": "2024-09-24T09:10:08+00:00"
+            "time": "2024-10-01T15:54:58+00:00"
         },
         {
             "name": "wpbones/pure-css-switch",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/pure-css-switch.git",
-                "reference": "13636cbdb033a05fc4d2f8b5012dc9da6b1ddf78"
+                "reference": "e774d8db48123fefcd09a612d2eebd2256232bb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/pure-css-switch/zipball/13636cbdb033a05fc4d2f8b5012dc9da6b1ddf78",
-                "reference": "13636cbdb033a05fc4d2f8b5012dc9da6b1ddf78",
+                "url": "https://api.github.com/repos/wpbones/pure-css-switch/zipball/e774d8db48123fefcd09a612d2eebd2256232bb6",
+                "reference": "e774d8db48123fefcd09a612d2eebd2256232bb6",
                 "shasum": ""
             },
             "type": "library",
@@ -1712,7 +1712,7 @@
                 {
                     "name": "Giovambattista Fazioli",
                     "email": "wpbones.info@gmail.com",
-                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
+                    "homepage": "https://wpbones.com/docs/Packages/official-packages"
                 }
             ],
             "description": "Pure CSS Switch Button for WP Bones",
@@ -1725,22 +1725,22 @@
             "support": {
                 "email": "wpbones.info@gmail.com",
                 "issues": "https://github.com/wpbones/pure-css-switch/issues",
-                "source": "https://github.com/wpbones/pure-css-switch/tree/1.1.2"
+                "source": "https://github.com/wpbones/pure-css-switch/tree/1.1.3"
             },
-            "time": "2024-09-19T17:29:26+00:00"
+            "time": "2024-10-01T15:55:40+00:00"
         },
         {
             "name": "wpbones/pure-css-tabs",
-            "version": "1.0.12",
+            "version": "1.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/pure-css-tabs.git",
-                "reference": "b9c8177d316c95bb7ae60eb80d91c42da4007578"
+                "reference": "d1ee5c174ce82c0e6867da0a5210db46767897d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/pure-css-tabs/zipball/b9c8177d316c95bb7ae60eb80d91c42da4007578",
-                "reference": "b9c8177d316c95bb7ae60eb80d91c42da4007578",
+                "url": "https://api.github.com/repos/wpbones/pure-css-tabs/zipball/d1ee5c174ce82c0e6867da0a5210db46767897d6",
+                "reference": "d1ee5c174ce82c0e6867da0a5210db46767897d6",
                 "shasum": ""
             },
             "type": "library",
@@ -1756,8 +1756,8 @@
             "authors": [
                 {
                     "name": "Giovambattista Fazioli",
-                    "email": "giovambattista.fazioli@gmail.com",
-                    "homepage": "http://wpbones.wordpress.com"
+                    "email": "wpbones.info@gmail.com",
+                    "homepage": "https://wpbones.com/docs/Packages/official-packages"
                 }
             ],
             "description": "Pure CSS tabs for WP Bones",
@@ -1768,24 +1768,24 @@
                 "less"
             ],
             "support": {
-                "email": "giovambattista.fazioli@gmail.com",
+                "email": "wpbones.info@gmail.com",
                 "issues": "https://github.com/wpbones/pure-css-tabs/issues",
-                "source": "https://github.com/wpbones/pure-css-tabs/tree/1.0.12"
+                "source": "https://github.com/wpbones/pure-css-tabs/tree/1.0.13"
             },
-            "time": "2024-04-09T16:20:34+00:00"
+            "time": "2024-10-01T15:55:48+00:00"
         },
         {
             "name": "wpbones/useragent",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/useragent.git",
-                "reference": "9c9f2c317c2faf0bc4ae911b3a53b8010ae01994"
+                "reference": "e489cc2bfc19af3c33d78ece75ea97e0baee4a07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/useragent/zipball/9c9f2c317c2faf0bc4ae911b3a53b8010ae01994",
-                "reference": "9c9f2c317c2faf0bc4ae911b3a53b8010ae01994",
+                "url": "https://api.github.com/repos/wpbones/useragent/zipball/e489cc2bfc19af3c33d78ece75ea97e0baee4a07",
+                "reference": "e489cc2bfc19af3c33d78ece75ea97e0baee4a07",
                 "shasum": ""
             },
             "type": "library",
@@ -1804,8 +1804,8 @@
             "authors": [
                 {
                     "name": "Giovambattista Fazioli",
-                    "email": "giovambattista.fazioli@gmail.com",
-                    "homepage": "http://wpbones.wordpress.com"
+                    "email": "wpbones.info@gmail.com",
+                    "homepage": "https://wpbones.com/docs/Packages/official-packages"
                 }
             ],
             "description": "An useful method to detect the useragent",
@@ -1815,11 +1815,11 @@
                 "user agent"
             ],
             "support": {
-                "email": "giovambattista.fazioli@gmail.com",
+                "email": "wpbones.info@gmail.com",
                 "issues": "https://github.com/wpbones/useragent/issues",
-                "source": "https://github.com/wpbones/useragent/tree/1.0.2"
+                "source": "https://github.com/wpbones/useragent/tree/1.0.3"
             },
-            "time": "2024-04-09T16:19:19+00:00"
+            "time": "2024-10-01T15:55:55+00:00"
         },
         {
             "name": "wpbones/wpbones",
@@ -1827,12 +1827,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "afaca71894f717ab293575c5fe560f8461662871"
+                "reference": "adfc4bb3109db042262b9bb19d56d931dafc6763"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/afaca71894f717ab293575c5fe560f8461662871",
-                "reference": "afaca71894f717ab293575c5fe560f8461662871",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/adfc4bb3109db042262b9bb19d56d931dafc6763",
+                "reference": "adfc4bb3109db042262b9bb19d56d931dafc6763",
                 "shasum": ""
             },
             "require": {
@@ -1873,20 +1873,20 @@
                 "issues": "https://github.com/wpbones/WPBones/issues",
                 "source": "https://github.com/wpbones/WPBones/"
             },
-            "time": "2024-10-01T15:51:27+00:00"
+            "time": "2024-10-10T14:11:03+00:00"
         },
         {
             "name": "wpbones/wptables",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/wptables.git",
-                "reference": "d428461aa972769c2e9119cdf3cf272233c2dbe4"
+                "reference": "b40fe00187e5559e52664d845736972682fbc7bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/wptables/zipball/d428461aa972769c2e9119cdf3cf272233c2dbe4",
-                "reference": "d428461aa972769c2e9119cdf3cf272233c2dbe4",
+                "url": "https://api.github.com/repos/wpbones/wptables/zipball/b40fe00187e5559e52664d845736972682fbc7bc",
+                "reference": "b40fe00187e5559e52664d845736972682fbc7bc",
                 "shasum": ""
             },
             "type": "library",
@@ -1903,7 +1903,7 @@
                 {
                     "name": "Giovambattista Fazioli",
                     "email": "wpbones.info@gmail.com",
-                    "homepage": "https://wpbones.vercel.app/docs/Packages/official-packages"
+                    "homepage": "https://wpbones.com/docs/Packages/official-packages"
                 }
             ],
             "description": "A fluent implementation of WordPress WP List Table for WP Bones",
@@ -1915,9 +1915,9 @@
             "support": {
                 "email": "wpbones.info@gmail.com",
                 "issues": "https://github.com/wpbones/wptables/issues",
-                "source": "https://github.com/wpbones/wptables/tree/1.0.5"
+                "source": "https://github.com/wpbones/wptables/tree/1.0.6"
             },
-            "time": "2024-09-19T17:47:44+00:00"
+            "time": "2024-10-01T15:56:02+00:00"
         }
     ],
     "packages-dev": [],
@@ -1931,6 +1931,6 @@
     "platform": {
         "php": ">=8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
