@@ -4,3 +4,4 @@ vendor/
 .cache/
 .php-cs-fixer.cache
 release.sh
+storage

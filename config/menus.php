@@ -123,6 +123,12 @@ return [
         ],
       ],
       [
+        'menu_title' => __('Model No Prefix', 'wp-kirk'),
+        'route' => [
+          'get' => 'ExampleModelNoPrefixController@index',
+        ],
+      ],
+      [
         'menu_title' => __('Eloquent ORM', 'wp-kirk'),
         'route' => [
           'get' => 'ExampleEloquentController@index',
