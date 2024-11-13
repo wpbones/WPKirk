@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "54ffb3332f3184b9705a8f4835e70d1e",
+    "content-hash": "df7156106c5c165d421d6171424056f8",
     "packages": [
         {
             "name": "brick/math",
@@ -287,16 +287,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.28.0",
+            "version": "v11.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "2d99ccbb19e34450508ff3ab2f62ba90aa2e9793"
+                "reference": "4fdef06e35aac0239d76033a2bad0ddb921226e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/2d99ccbb19e34450508ff3ab2f62ba90aa2e9793",
-                "reference": "2d99ccbb19e34450508ff3ab2f62ba90aa2e9793",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/4fdef06e35aac0239d76033a2bad0ddb921226e8",
+                "reference": "4fdef06e35aac0239d76033a2bad0ddb921226e8",
                 "shasum": ""
             },
             "require": {
@@ -338,11 +338,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-10-10T19:23:07+00:00"
+            "time": "2024-11-08T03:05:25+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.28.0",
+            "version": "v11.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -388,7 +388,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v11.28.0",
+            "version": "v11.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -439,7 +439,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.28.0",
+            "version": "v11.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -487,16 +487,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v11.28.0",
+            "version": "v11.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "7298ba7bab389b390df1c9f72004598f5388b6f5"
+                "reference": "9132b3f229b9e4bbc1c0346bca6108d1d54a58c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/7298ba7bab389b390df1c9f72004598f5388b6f5",
-                "reference": "7298ba7bab389b390df1c9f72004598f5388b6f5",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/9132b3f229b9e4bbc1c0346bca6108d1d54a58c0",
+                "reference": "9132b3f229b9e4bbc1c0346bca6108d1d54a58c0",
                 "shasum": ""
             },
             "require": {
@@ -552,11 +552,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-10-15T13:54:33+00:00"
+            "time": "2024-11-11T20:38:24+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.28.0",
+            "version": "v11.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -602,16 +602,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v11.28.0",
+            "version": "v11.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "d4f5513271db1efae5c6c3a7011239cb1ba58d18"
+                "reference": "866b8240387ecdcbbf4a7e5713c0f93b321544d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/d4f5513271db1efae5c6c3a7011239cb1ba58d18",
-                "reference": "d4f5513271db1efae5c6c3a7011239cb1ba58d18",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/866b8240387ecdcbbf4a7e5713c0f93b321544d5",
+                "reference": "866b8240387ecdcbbf4a7e5713c0f93b321544d5",
                 "shasum": ""
             },
             "require": {
@@ -674,24 +674,24 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-10-15T13:42:42+00:00"
+            "time": "2024-11-11T20:45:02+00:00"
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.8.0",
+            "version": "3.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "bbd3eef89af8ba66a3aa7952b5439168fbcc529f"
+                "reference": "e1268cdbc486d97ce23fef2c666dc3c6b6de9947"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bbd3eef89af8ba66a3aa7952b5439168fbcc529f",
-                "reference": "bbd3eef89af8ba66a3aa7952b5439168fbcc529f",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/e1268cdbc486d97ce23fef2c666dc3c6b6de9947",
+                "reference": "e1268cdbc486d97ce23fef2c666dc3c6b6de9947",
                 "shasum": ""
             },
             "require": {
-                "carbonphp/carbon-doctrine-types": "*",
+                "carbonphp/carbon-doctrine-types": "<100.0",
                 "ext-json": "*",
                 "php": "^8.1",
                 "psr/clock": "^1.0",
@@ -780,7 +780,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-08-19T06:22:39+00:00"
+            "time": "2024-11-07T17:46:48+00:00"
         },
         {
             "name": "psr/clock",
@@ -936,16 +936,16 @@
         },
         {
             "name": "symfony/clock",
-            "version": "v7.1.1",
+            "version": "v7.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/clock.git",
-                "reference": "3dfc8b084853586de51dd1441c6242c76a28cbe7"
+                "reference": "97bebc53548684c17ed696bc8af016880f0f098d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/clock/zipball/3dfc8b084853586de51dd1441c6242c76a28cbe7",
-                "reference": "3dfc8b084853586de51dd1441c6242c76a28cbe7",
+                "url": "https://api.github.com/repos/symfony/clock/zipball/97bebc53548684c17ed696bc8af016880f0f098d",
+                "reference": "97bebc53548684c17ed696bc8af016880f0f098d",
                 "shasum": ""
             },
             "require": {
@@ -990,7 +990,7 @@
                 "time"
             ],
             "support": {
-                "source": "https://github.com/symfony/clock/tree/v7.1.1"
+                "source": "https://github.com/symfony/clock/tree/v7.1.6"
             },
             "funding": [
                 {
@@ -1006,7 +1006,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:57:53+00:00"
+            "time": "2024-09-25T14:20:29+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -1312,16 +1312,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v6.4.12",
+            "version": "v6.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "cf8360b8352b086be620fae8342c4d96e391a489"
+                "reference": "bee9bfabfa8b4045a66bf82520e492cddbaffa66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/cf8360b8352b086be620fae8342c4d96e391a489",
-                "reference": "cf8360b8352b086be620fae8342c4d96e391a489",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/bee9bfabfa8b4045a66bf82520e492cddbaffa66",
+                "reference": "bee9bfabfa8b4045a66bf82520e492cddbaffa66",
                 "shasum": ""
             },
             "require": {
@@ -1387,7 +1387,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v6.4.12"
+                "source": "https://github.com/symfony/translation/tree/v6.4.13"
             },
             "funding": [
                 {
@@ -1403,7 +1403,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-16T06:02:54+00:00"
+            "time": "2024-09-27T18:14:25+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -1485,16 +1485,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.4.44",
+            "version": "v5.4.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "7025b964f123bbf1896d7563db6ec7f1f63e918a"
+                "reference": "a454d47278cc16a5db371fe73ae66a78a633371e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/7025b964f123bbf1896d7563db6ec7f1f63e918a",
-                "reference": "7025b964f123bbf1896d7563db6ec7f1f63e918a",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/a454d47278cc16a5db371fe73ae66a78a633371e",
+                "reference": "a454d47278cc16a5db371fe73ae66a78a633371e",
                 "shasum": ""
             },
             "require": {
@@ -1540,7 +1540,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.4.44"
+                "source": "https://github.com/symfony/yaml/tree/v5.4.45"
             },
             "funding": [
                 {
@@ -1556,7 +1556,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-16T14:36:56+00:00"
+            "time": "2024-09-25T14:11:13+00:00"
         },
         {
             "name": "voku/portable-ascii",
@@ -1823,16 +1823,16 @@
         },
         {
             "name": "wpbones/wpbones",
-            "version": "1.7.0",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "01e9a3c70dee3c842c3d6fc54d532304487b197a"
+                "reference": "4e8733669e8b9dfede74b460b50d50c27dfd4639"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/01e9a3c70dee3c842c3d6fc54d532304487b197a",
-                "reference": "01e9a3c70dee3c842c3d6fc54d532304487b197a",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/4e8733669e8b9dfede74b460b50d50c27dfd4639",
+                "reference": "4e8733669e8b9dfede74b460b50d50c27dfd4639",
                 "shasum": ""
             },
             "require": {
@@ -1873,7 +1873,13 @@
                 "issues": "https://github.com/wpbones/WPBones/issues",
                 "source": "https://github.com/wpbones/WPBones/"
             },
-            "time": "2024-10-16T12:42:22+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/wpbones",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-11-13T10:16:44+00:00"
         },
         {
             "name": "wpbones/wptables",
@@ -1923,7 +1929,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "wpbones/wpbones": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
