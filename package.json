@@ -21,7 +21,7 @@
     "@babel/core": "^7.24.3",
     "@babel/preset-env": "^7.24.3",
     "@babel/preset-react": "^7.24.1",
-    "@wordpress/scripts": "^29.0.0",
+    "@wordpress/scripts": "^30.5.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
