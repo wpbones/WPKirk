@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('ABSPATH')) {
-    exit();
+  exit();
 }
 
 return [
@@ -12,15 +12,44 @@ return [
   |
   | Here you may configure the log settings for your plugin.
   |
-  | Available Settings: "single", "daily", "errorlog".
-  |
-  | Set to false or 'none' to stop logging.
-  |
   */
 
-  'log' => 'errorlog',
+  "logging" => [
+    /**
+     * Type of log.
+     * Available Settings: "single", "daily", "errorlog".
+     *
+     * - "errorlog", the log will be saved in the default WordPress log file.
+     * Usually, this is located in the wp-content/debug.log file.
+     *
+     * - "single", the log will be saved in a single file in the log_path directory.
+     * Default: [plugin-path]/storage/logs/debug.log
+     *
+     * - "daily", the log will be saved in a daily file in the log_path directory.
+     * Default: [plugin-path]/storage/logs/[Y-m-d].log
+     * Example: [plugin-path]/storage/logs/2024-10-09.log
+     */
+    "type" => "errorlog",
 
-  'log_level' => 'debug',
+    /**
+     * The path where the log will be saved.
+     * Default: [plugin-path]/storage/logs/
+     */
+    //"path" => '',
+
+    /**
+     * Daily format.
+     * Default: 'Y-m-d'
+     */
+    "daily_format" => 'Y-m-d',
+
+    /**
+     * The timestamp format used in the log.
+     * Default: 'd-M-Y H:i:s T'
+     * Example: [09-Oct-2024 12:51:22 UTC] [debug]: This is a debug message
+     */
+    "timestamp_format" => 'd-M-Y H:i:s T',
+  ],
 
   /*
   |--------------------------------------------------------------------------
