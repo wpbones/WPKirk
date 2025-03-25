@@ -30,12 +30,18 @@ require_once __DIR__ . '/../vendor/autoload.php';
 final class WPKirk
 {
     public const TEXTDOMAIN = 'wp-kirk';
+    public static string $textDomain ="wp-kirk";
     public static $plugin;
     public static $start;
 }
 
 WPKirk::$plugin = require_once __DIR__ . '/plugin.php';
 WPKirk::$start = microtime(true);
+if (! defined("WPBONES_TEXTDOMAIN")) {
+    $options = include_once "{$plugin->basePath}/config/options.php";
+    define("WPBONES_TEXTDOMAIN", isset($options["textdomain"]) ? $options["textdomain"] : "wp-kirk");
+    WPKirk::$textDomain = WPBONES_TEXTDOMAIN;
+}
 
 // Commodity function to get the plugin instance
 if (! function_exists('WPKirk')) {

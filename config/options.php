@@ -18,6 +18,7 @@ if (!defined('ABSPATH')) {
 
 return [
     'version' => '1.0',
+    "textdomain" => "wp-kirk",
     'General' => [
         'option_1' => 'true',
         'option_2' => 'true',
