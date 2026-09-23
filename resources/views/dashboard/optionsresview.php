@@ -19,36 +19,32 @@
 
   </form>
 
-  <hr/>
+  <hr />
 
   <form action="" method="post">
     <input type="hidden" name="_method" value="PUT">
     <button class="button">PUT</button>
-
   </form>
 
-  <hr/>
+  <hr />
 
   <form action="" method="post">
     <input type="hidden" name="_method" value="patch">
     <button class="button">PATCH</button>
-
   </form>
 
-  <hr/>
+  <hr />
 
   <form action="" method="post">
     <input type="hidden" name="_method" value="DELETE">
     <button class="button">DELETE</button>
-
   </form>
 
-  <hr/>
+  <hr />
 
   <form action="" method="post">
     <input type="hidden" name="_redirect" value="http://undolog.com">
     <button class="button">POST with redirect</button>
-
   </form>
 
 
